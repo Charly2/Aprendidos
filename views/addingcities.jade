@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="robots", content="noindex")
+    meta(name="googlebot", content="noindex")
+    include inc/base
+    include inc/baseone
+  body
+    include inc/header
+
+    main.mainCity
+      section.container
+        div.row
+          header.col.l12.col.m12.col.s12.isHeader
+            h5.titlte
+              | Agregar Ciudades
+          div.col.l12.col.m12.col.s12.isForm
+            form.offset-l3.col.l6.col.m6.col.s12(action="/adcities-codei-gofjg/save", method="post")
+              fieldset.fieldset
+                label Ingrese el nombre de la ciudad
+                input(type="text", name="iscity", placeholder="ciudad")
+              fieldset.fieldset
+                input.btn(type="submit")
+
+        div.row
+          if cinties.length == 0
+          else
+            table
+              thead
+                tr
+                  th(data-field='id') Nombre de la ciudad
+                  th(data-field='name') Id
+                  th(data-field='price') Borrar
+              tbody
+                each c in cinties
+                  tr
+                    td #{c.name}
+                    td #{c._id}
+                    td 
+                      a.jsDeleteCity.btn(data-id="#{c._id}", style="cursor:pointer;") Eliminar
+                    
+
+                   
+
+
+
+    include inc/footer

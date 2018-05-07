@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body
+    include inc/header
+    
+    main.main
+      section.main__Login
+        div.container
+          div.row
+            header.main__Login--Header.col.l12
+              h2.title
+                | Continue su registro
+          div.row
+            form.formContinue.col.l6
+              fieldset.formContinue__Fieldset.col.l12
+                label(for="")
+                  | ¿Género?
+                select(name="select")
+                  option(value="0") Seleccione
+                  option(value="m") Mujer
+                  option(value="h") Hombre
+              fieldset.formContinue__Fieldset.col.l12
+                label(for="")
+                  | ¿En qué fecha naciste?
+                input.datepicker(type="date")
+              fieldset.formContinue__Fieldset.col.l12.file-field.input-field
+                div.btn.red.accent-3
+                  span
+                    | FOTO
+                  input(type="file") 
+                div.file-path-wrapper
+                  input.file-path.validate(type="text", placeholder="Subir foto de perfil")
+              fieldset.formContinue__Fieldset.col.l12
+                input.waves-effect.waves-light.btn-large.red.accent-3.full-width.white-text(type="submit", value="Continuar")
+
+
+
+    include inc/footer

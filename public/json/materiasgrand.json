@@ -1,0 +1,1528 @@
+{
+
+    'A': [{
+        "id": "ma0",
+        "text": "Administración financiera",
+        "highlights": {}
+    }, {
+        "id": "ma1",
+        "text": "Administración financiera I",
+        "highlights": {}
+
+    }, {
+        "id": "ma2",
+        "text": "Administración general",
+        "highlights": {}
+    }, {
+        "id": "ma3",
+        "text": "Alemán advanced",
+        "highlights": {}
+    }, {
+        "id": "ma4",
+        "text": "Alemán beginner",
+        "highlights": {}
+    }, {
+        "id": "ma5",
+        "text": "Alemán intermediate",
+        "highlights": {}
+
+    }, {
+        "id": "ma6",
+        "text": "Álgebra university",
+        "highlights": {}
+    }, {
+        "id": "ma7",
+        "text": "Álgebra I university",
+        "highlights": {}
+    }, {
+        "id": "ma8",
+        "text": "Álgebra II university",
+        "highlights": {}
+    }, {
+        "id": "ma9",
+        "text": "Álgebra y geometría university",
+        "highlights": {}
+    }, {
+        "id": "mb0",
+        "text": "Algoritmos y estructuras de datos I",
+        "highlights": {}
+    }, {
+        "id": "mb1",
+        "text": "Algoritmos y programación I",
+        "highlights": {}
+    }, {
+        "id": "mb2",
+        "text": "Algoritmos y programación II",
+        "highlights": {}
+
+    }, {
+        "id": "mb3",
+        "text": "Análisis matemático",
+        "highlights": {}
+
+    }, {
+        "id": "mb4",
+        "text": "Análisis matemático",
+        "highlights": {}
+
+    }, {
+        "id": "mb5",
+        "text": "Análisis matemático I",
+        "highlights": {}
+
+    }, {
+        "id": "mb6",
+        "text": "Análisis matemático II",
+        "highlights": {}
+    }, {
+        "id": "mb6",
+        "text": "Anatomía",
+        "highlights": {}
+
+    }, {
+        "id": "mb7",
+        "text": "Anatomofisiología",
+        "highlights": {}
+
+    }, {
+        "id": "mb8",
+        "text": "Antropología",
+        "level": "university",
+        "highlights": {}
+
+    }, {
+        "id": "mb9",
+        "text": "Antropología cultural",
+        "highlights": {}
+
+    }, {
+        "id": "mc0",
+        "text": "Antropología y salud",
+        "highlights": {}
+
+    }, {
+        "id": "mc1",
+        "text": "Arquitectura I",
+        "highlights": {}
+    }, {
+        "id": "mc2",
+        "text": "Artes visuales",
+        "highlights": {}
+    }, {
+        "id": "mc3",
+        "text": "Autocad",
+        "highlights": {}
+    }],
+    'AD': [{
+        "id": "ma0",
+        "text": "Administración financiera",
+        "highlights": {}
+    }, {
+        "id": "ma1",
+        "text": "Administración financiera I",
+        "highlights": {}
+
+    }, {
+        "id": "ma2",
+        "text": "Administración general",
+        "highlights": {}
+    }],
+
+    'ADM': [{
+        "id": "ma0",
+        "text": "Administración financiera",
+        "highlights": {}
+    }, {
+        "id": "ma1",
+        "text": "Administración financiera I",
+        "highlights": {}
+
+    }, {
+        "id": "ma2",
+        "text": "Administración general",
+        "highlights": {}
+    }],
+
+    'ADMINISTRACION': [{
+        "id": "ma0",
+        "text": "Administración financiera",
+        "highlights": {}
+    }, {
+        "id": "ma1",
+        "text": "Administración financiera I",
+        "highlights": {}
+
+    }, {
+        "id": "ma2",
+        "text": "Administración general",
+        "highlights": {}
+    }],
+
+    'AL': [{
+        "id": "ma3",
+        "text": "Alemán advanced",
+        "highlights": {}
+    }, {
+        "id": "ma4",
+        "text": "Alemán beginner",
+        "highlights": {}
+    }, {
+        "id": "ma5",
+        "text": "Alemán intermediate",
+        "highlights": {}
+
+    }, {
+        "id": "ma6",
+        "text": "Álgebra university",
+        "highlights": {}
+    }, {
+        "id": "ma7",
+        "text": "Álgebra I university",
+        "highlights": {}
+    }, {
+        "id": "ma8",
+        "text": "Álgebra II university",
+        "highlights": {}
+    }, {
+        "id": "ma9",
+        "text": "Álgebra y geometría university",
+        "highlights": {}
+    }, {
+        "id": "mb0",
+        "text": "Algoritmos y estructuras de datos I",
+        "highlights": {}
+    }, {
+        "id": "mb1",
+        "text": "Algoritmos y programación I",
+        "highlights": {}
+    }, {
+        "id": "mb2",
+        "text": "Algoritmos y programación II",
+        "highlights": {}
+    }],
+
+
+    'ALE': [{
+        "id": "ma3",
+        "text": "Alemán advanced",
+        "highlights": {}
+    }, {
+        "id": "ma4",
+        "text": "Alemán beginner",
+        "highlights": {}
+    }, {
+        "id": "ma5",
+        "text": "Alemán intermediate",
+        "highlights": {}
+
+    }],
+
+
+    'ALEMAN': [{
+        "id": "ma3",
+        "text": "Alemán advanced",
+        "highlights": {}
+    }, {
+        "id": "ma4",
+        "text": "Alemán beginner",
+        "highlights": {}
+    }, {
+        "id": "ma5",
+        "text": "Alemán intermediate",
+        "highlights": {}
+
+    }],
+
+
+    'ALG': [{
+        "id": "ma6",
+        "text": "Álgebra university",
+        "highlights": {}
+    }, {
+        "id": "ma7",
+        "text": "Álgebra I university",
+        "highlights": {}
+    }, {
+        "id": "ma8",
+        "text": "Álgebra II university",
+        "highlights": {}
+    }, {
+        "id": "ma9",
+        "text": "Álgebra y geometría university",
+        "highlights": {}
+    }, {
+        "id": "mb0",
+        "text": "Algoritmos y estructuras de datos I",
+        "highlights": {}
+    }, {
+        "id": "mb1",
+        "text": "Algoritmos y programación I",
+        "highlights": {}
+    }, {
+        "id": "mb2",
+        "text": "Algoritmos y programación II",
+        "highlights": {}
+    }],
+
+
+    'ALGE': [{
+        "id": "ma6",
+        "text": "Álgebra university",
+        "highlights": {}
+    }, {
+        "id": "ma7",
+        "text": "Álgebra I university",
+        "highlights": {}
+    }, {
+        "id": "ma8",
+        "text": "Álgebra II university",
+        "highlights": {}
+    }, {
+        "id": "ma9",
+        "text": "Álgebra y geometría university",
+        "highlights": {}
+    }],
+
+    'ALGEBRA': [{
+        "id": "ma6",
+        "text": "Álgebra university",
+        "highlights": {}
+    }, {
+        "id": "ma7",
+        "text": "Álgebra I university",
+        "highlights": {}
+    }, {
+        "id": "ma8",
+        "text": "Álgebra II university",
+        "highlights": {}
+    }, {
+        "id": "ma9",
+        "text": "Álgebra y geometría university",
+        "highlights": {}
+    }],
+
+    'ALGO': [{
+        "id": "mb0",
+        "text": "Algoritmos y estructuras de datos I",
+        "highlights": {}
+    }, {
+        "id": "mb1",
+        "text": "Algoritmos y programación I",
+        "highlights": {}
+    }, {
+        "id": "mb2",
+        "text": "Algoritmos y programación II",
+        "highlights": {}
+    }],
+
+    'ALGORITMO': [{
+        "id": "mb0",
+        "text": "Algoritmos y estructuras de datos I",
+        "highlights": {}
+    }, {
+        "id": "mb1",
+        "text": "Algoritmos y programación I",
+        "highlights": {}
+    }, {
+        "id": "mb2",
+        "text": "Algoritmos y programación II",
+        "highlights": {}
+    }],
+
+    'ALGORITMOS': [{
+        "id": "mb0",
+        "text": "Algoritmos y estructuras de datos I",
+        "highlights": {}
+    }, {
+        "id": "mb1",
+        "text": "Algoritmos y programación I",
+        "highlights": {}
+    }, {
+        "id": "mb2",
+        "text": "Algoritmos y programación II",
+        "highlights": {}
+    }],
+
+    'B': [{
+        "id": "mc4",
+        "text": "Bajo advanced",
+        "highlights": {}
+    }, {
+        "id": "mc5",
+        "text": "Bajo beginner",
+        "highlights": {}
+    }, {
+        "id": "mc6",
+        "text": "Bajo intermediate",
+        "highlights": {}
+    }, {
+        "id": "mc7",
+        "text": "Bases de datos secondary",
+        "highlights": {}
+    }, {
+        "id": "mc8",
+        "text": "Batería advanced",
+        "highlights": {}
+    }, {
+        "id": "mc9",
+        "text": "Batería beginner",
+        "highlights": {}
+    }, {
+        "id": "md0",
+        "text": "Batería intermediate",
+        "highlights": {}
+    }, {
+        "id": "md1",
+        "text": "Bioética I university",
+        "highlights": {}
+    }, {
+        "id": "md2",
+        "text": "Biología secondary",
+        "highlights": {}
+    }, {
+        "id": "md3",
+        "text": "Biología university",
+        "highlights": {}
+    }, {
+        "id": "md4",
+        "text": "Biología e introducción a la biología celular university",
+        "highlights": {}
+    }, {
+        "id": "md5",
+        "text": "Biología general university",
+        "highlights": {}
+    }, {
+        "id": "md6",
+        "text": "Biología, genética y sociedad secondary",
+        "highlights": {}
+    }, {
+        "id": "md7",
+        "text": "Bioquímica aplicada university",
+        "highlights": {}
+    }],
+
+    'BA': [{
+        "id": "mc4",
+        "text": "Bajo advanced",
+        "highlights": {}
+    }, {
+        "id": "mc5",
+        "text": "Bajo beginner",
+        "highlights": {}
+    }, {
+        "id": "mc6",
+        "text": "Bajo intermediate",
+        "highlights": {}
+    }, {
+        "id": "mc7",
+        "text": "Bases de datos secondary",
+        "highlights": {}
+    }, {
+        "id": "mc8",
+        "text": "Batería advanced",
+        "highlights": {}
+    }, {
+        "id": "mc9",
+        "text": "Batería beginner",
+        "highlights": {}
+    }, {
+        "id": "md0",
+        "text": "Batería intermediate",
+        "highlights": {}
+    }, {
+        "id": "md1",
+        "text": "Bioética I university",
+        "highlights": {}
+    }, {
+        "id": "md2",
+        "text": "Biología secondary",
+        "highlights": {}
+    }, {
+        "id": "md3",
+        "text": "Biología university",
+        "highlights": {}
+    }, {
+        "id": "md4",
+        "text": "Biología e introducción a la biología celular university",
+        "highlights": {}
+    }, {
+        "id": "md5",
+        "text": "Biología general university",
+        "highlights": {}
+    }, {
+        "id": "md6",
+        "text": "Biología, genética y sociedad secondary",
+        "highlights": {}
+    }, {
+        "id": "md7",
+        "text": "Bioquímica aplicada university",
+        "highlights": {}
+    }],
+
+
+    'BAJ': [{
+        "id": "mc4",
+        "text": "Bajo advanced",
+        "highlights": {}
+    }, {
+        "id": "mc5",
+        "text": "Bajo beginner",
+        "highlights": {}
+    }, {
+        "id": "mc6",
+        "text": "Bajo intermediate",
+        "highlights": {}
+    }, {
+        "id": "mc7",
+        "text": "Bases de datos secondary",
+        "highlights": {}
+    }],
+
+    'BAJO': [{
+        "id": "mc4",
+        "text": "Bajo advanced",
+        "highlights": {}
+    }, {
+        "id": "mc5",
+        "text": "Bajo beginner",
+        "highlights": {}
+    }, {
+        "id": "mc6",
+        "text": "Bajo intermediate",
+        "highlights": {}
+    }, {
+        "id": "mc7",
+        "text": "Bases de datos secondary",
+        "highlights": {}
+    }],
+
+
+    'BAS': [{
+        "id": "mc7",
+        "text": "Bases de datos secondary",
+        "highlights": {}
+    }],
+
+
+    'BASE': [{
+        "id": "mc7",
+        "text": "Bases de datos secondary",
+        "highlights": {}
+    }],
+
+    'BAT': [{
+        "id": "mc8",
+        "text": "Batería advanced",
+        "highlights": {}
+    }, {
+        "id": "mc9",
+        "text": "Batería beginner",
+        "highlights": {}
+    }, {
+        "id": "md0",
+        "text": "Batería intermediate",
+        "highlights": {}
+    }],
+
+
+    'BATERIA': [{
+        "id": "mc8",
+        "text": "Batería advanced",
+        "highlights": {}
+    }, {
+        "id": "mc9",
+        "text": "Batería beginner",
+        "highlights": {}
+    }, {
+        "id": "md0",
+        "text": "Batería intermediate",
+        "highlights": {}
+    }],
+
+
+    'BIO': [{
+        "id": "md1",
+        "text": "Bioética I university",
+        "highlights": {}
+    }, {
+        "id": "md2",
+        "text": "Biología secondary",
+        "highlights": {}
+    }, {
+        "id": "md3",
+        "text": "Biología university",
+        "highlights": {}
+    }, {
+        "id": "md4",
+        "text": "Biología e introducción a la biología celular university",
+        "highlights": {}
+    }, {
+        "id": "md5",
+        "text": "Biología general university",
+        "highlights": {}
+    }, {
+        "id": "md6",
+        "text": "Biología, genética y sociedad secondary",
+        "highlights": {}
+    }, {
+        "id": "md7",
+        "text": "Bioquímica aplicada university",
+        "highlights": {}
+    }],
+
+
+    'BIOE': [{
+        "id": "md1",
+        "text": "Bioética I university",
+        "highlights": {}
+    }],
+
+    'BIOETICA': [{
+        "id": "md1",
+        "text": "Bioética I university",
+        "highlights": {}
+    }],
+
+
+
+    'BIOL': [{
+        "id": "md2",
+        "text": "Biología secondary",
+        "highlights": {}
+    }, {
+        "id": "md3",
+        "text": "Biología university",
+        "highlights": {}
+    }, {
+        "id": "md4",
+        "text": "Biología e introducción a la biología celular university",
+        "highlights": {}
+    }, {
+        "id": "md5",
+        "text": "Biología general university",
+        "highlights": {}
+    }, {
+        "id": "md6",
+        "text": "Biología, genética y sociedad secondary",
+        "highlights": {}
+    }],
+
+    'BIOL': [{
+        "id": "md2",
+        "text": "Biología secondary",
+        "highlights": {}
+    }, {
+        "id": "md3",
+        "text": "Biología university",
+        "highlights": {}
+    }, {
+        "id": "md4",
+        "text": "Biología e introducción a la biología celular university",
+        "highlights": {}
+    }, {
+        "id": "md5",
+        "text": "Biología general university",
+        "highlights": {}
+    }, {
+        "id": "md6",
+        "text": "Biología, genética y sociedad secondary",
+        "highlights": {}
+    }],
+
+
+    'BIOLOGIA': [{
+        "id": "md2",
+        "text": "Biología secondary",
+        "highlights": {}
+    }, {
+        "id": "md3",
+        "text": "Biología university",
+        "highlights": {}
+    }, {
+        "id": "md4",
+        "text": "Biología e introducción a la biología celular university",
+        "highlights": {}
+    }, {
+        "id": "md5",
+        "text": "Biología general university",
+        "highlights": {}
+    }, {
+        "id": "md6",
+        "text": "Biología, genética y sociedad secondary",
+        "highlights": {}
+    }],
+
+    'BIOQ': [{
+        "id": "md7",
+        "text": "Bioquímica aplicada university",
+        "highlights": {}
+    }],
+
+    'BIOQUIMICA': [{
+        "id": "md7",
+        "text": "Bioquímica aplicada university",
+        "highlights": {}
+    }],
+
+
+    'C': [{
+        "id": "md8",
+        "text": "Cálculo financiero university",
+        "highlights": {}
+    }, {
+        "id": "md9",
+        "text": "Cálculo I university",
+        "highlights": {}
+    }, {
+        "id": "me0",
+        "text": "Cálculo II university",
+        "highlights": {}
+    }, {
+        "id": "me1",
+        "text": "Cálculo numérico university",
+        "highlights": {}
+    }, {
+        "id": "me2",
+        "text": "Canto advanced",
+        "highlights": {}
+    }, {
+        "id": "me3",
+        "text": "Canto beginner",
+        "highlights": {}
+    }, {
+        "id": "me4",
+        "text": "Canto intermediate",
+        "highlights": {}
+    }, {
+        "id": "me5",
+        "text": "Certificate of proficiency in english - CPE advanced",
+        "highlights": {}
+    }, {
+        "id": "me6",
+        "text": "Charango advanced",
+        "highlights": {}
+    }, {
+        "id": "me7",
+        "text": "Charango beginner",
+        "highlights": {}
+    }, {
+        "id": "me8",
+        "text": "Charango intermediate",
+        "highlights": {}
+    }, {
+        "id": "me9",
+        "text": "Chino advanced",
+        "highlights": {}
+    }, {
+        "id": "mf0",
+        "text": "Chino beginner",
+        "highlights": {}
+    }, {
+        "id": "mf1",
+        "text": "Chino intermediate",
+        "highlights": {}
+    }, {
+        "id": "mf2",
+        "text": "Ciencia política university",
+        "highlights": {}
+    }, {
+        "id": "mf3",
+        "text": "Ciencias naturales primary",
+        "highlights": {}
+    }, {
+        "id": "mf4",
+        "text": "Ciencias naturales primary",
+        "highlights": {}
+    }, {
+        "id": "mf5",
+        "text": "Ciencias naturales secondary",
+        "highlights": {}
+    }, {
+        "id": "mf6",
+        "text": "Ciencias sociales primary",
+        "highlights": {}
+    }, {
+        "id": "mf7",
+        "text": "Ciencias sociales primary",
+        "highlights": {}
+    }, {
+        "id": "mf8",
+        "text": "Ciencias sociales secondary",
+        "highlights": {}
+    }, {
+        "id": "mf8",
+        "text": "Computación university",
+        "highlights": {}
+    }, {
+        "id": "mf9",
+        "text": "Comunicación, cultura y sociedad secondary",
+        "highlights": {}
+    }, {
+        "id": "mg0",
+        "text": "Comunicación I university",
+        "highlights": {}
+    }, {
+        "id": "mg1",
+        "text": "Conceptos básicos de química university",
+        "highlights": {}
+    }, {
+        "id": "mg2",
+        "text": "Conocimiento de materiales secondary",
+        "highlights": {}
+    }, {
+        "id": "mg3",
+        "text": "Conocimiento de materiales university",
+        "highlights": {}
+    }, {
+        "id": "mg4",
+        "text": "Construcción de ciudadanía secondary",
+        "highlights": {}
+    }, {
+        "id": "mg5",
+        "text": "Contabilidad básica university",
+        "highlights": {}
+
+    }, {
+        "id": "mg6",
+        "text": "Contabilidad I university",
+        "highlights": {}
+
+    }, {
+        "id": "mg7",
+        "text": "Contabilidad II university",
+        "highlights": {}
+
+    }, {
+        "id": "mg8",
+        "text": "Contabilidad III university",
+        "highlights": {}
+
+    }, {
+        "id": "mg9",
+        "text": "Contabilidad patrimonial y de gestión secondary",
+        "highlights": {}
+
+    }, {
+        "id": "mh0",
+        "text": "Costos secondary",
+        "highlights": {}
+
+    }, {
+        "id": "mh1",
+        "text": "Crecimiento y desarrollo university",
+        "highlights": {}
+    }, {
+        "id": "mh2",
+        "text": "Defensa del consumidor y del usuario university",
+        "highlights": {}
+    }],
+
+    'CA': [{
+        "id": "md8",
+        "text": "Cálculo financiero university",
+        "highlights": {}
+    }, {
+        "id": "md9",
+        "text": "Cálculo I university",
+        "highlights": {}
+    }, {
+        "id": "me0",
+        "text": "Cálculo II university",
+        "highlights": {}
+    }, {
+        "id": "me1",
+        "text": "Cálculo numérico university",
+        "highlights": {}
+    }, {
+        "id": "me2",
+        "text": "Canto advanced",
+        "highlights": {}
+    }, {
+        "id": "me3",
+        "text": "Canto beginner",
+        "highlights": {}
+    }],
+
+    'CAL': [{
+        "id": "md8",
+        "text": "Cálculo financiero university",
+        "highlights": {}
+    }, {
+        "id": "md9",
+        "text": "Cálculo I university",
+        "highlights": {}
+    }, {
+        "id": "me0",
+        "text": "Cálculo II university",
+        "highlights": {}
+    }, {
+        "id": "me1",
+        "text": "Cálculo numérico university",
+        "highlights": {}
+    }],
+
+    'CALCULO': [{
+        "id": "md8",
+        "text": "Cálculo financiero university",
+        "highlights": {}
+    }, {
+        "id": "md9",
+        "text": "Cálculo I university",
+        "highlights": {}
+    }, {
+        "id": "me0",
+        "text": "Cálculo II university",
+        "highlights": {}
+    }, {
+        "id": "me1",
+        "text": "Cálculo numérico university",
+        "highlights": {}
+    }],
+
+    'CAN': [{
+        "id": "me2",
+        "text": "Canto advanced",
+        "highlights": {}
+    }, {
+        "id": "me3",
+        "text": "Canto beginner",
+        "highlights": {}
+    }],
+
+
+    'CANTO': [{
+        "id": "me2",
+        "text": "Canto advanced",
+        "highlights": {}
+    }, {
+        "id": "me3",
+        "text": "Canto beginner",
+        "highlights": {}
+    }],
+
+
+    'CH': [{
+        "id": "me6",
+        "text": "Charango advanced",
+        "highlights": {}
+    }, {
+        "id": "me7",
+        "text": "Charango beginner",
+        "highlights": {}
+    }, {
+        "id": "me8",
+        "text": "Charango intermediate",
+        "highlights": {}
+    }, {
+        "id": "me9",
+        "text": "Chino advanced",
+        "highlights": {}
+    }, {
+        "id": "mf0",
+        "text": "Chino beginner",
+        "highlights": {}
+    }, {
+        "id": "mf1",
+        "text": "Chino intermediate",
+        "highlights": {}
+    }],
+
+
+    'CHA': [{
+        "id": "me6",
+        "text": "Charango advanced",
+        "highlights": {}
+    }, {
+        "id": "me7",
+        "text": "Charango beginner",
+        "highlights": {}
+    }, {
+        "id": "me8",
+        "text": "Charango intermediate",
+        "highlights": {}
+    }],
+
+    'CHARANGO': [{
+        "id": "me6",
+        "text": "Charango advanced",
+        "highlights": {}
+    }, {
+        "id": "me7",
+        "text": "Charango beginner",
+        "highlights": {}
+    }, {
+        "id": "me8",
+        "text": "Charango intermediate",
+        "highlights": {}
+    }],
+
+
+    'CHI': [{
+        "id": "me9",
+        "text": "Chino advanced",
+        "highlights": {}
+    }, {
+        "id": "mf0",
+        "text": "Chino beginner",
+        "highlights": {}
+    }, {
+        "id": "mf1",
+        "text": "Chino intermediate",
+        "highlights": {}
+    }],
+
+
+    'CHINO': [{
+        "id": "me9",
+        "text": "Chino advanced",
+        "highlights": {}
+    }, {
+        "id": "mf0",
+        "text": "Chino beginner",
+        "highlights": {}
+    }, {
+        "id": "mf1",
+        "text": "Chino intermediate",
+        "highlights": {}
+    }],
+
+
+    'CI': [{
+        "id": "mf2",
+        "text": "Ciencia política university",
+        "highlights": {}
+    }, {
+        "id": "mf3",
+        "text": "Ciencias naturales primary",
+        "highlights": {}
+    }, {
+        "id": "mf4",
+        "text": "Ciencias naturales primary",
+        "highlights": {}
+    }, {
+        "id": "mf5",
+        "text": "Ciencias naturales secondary",
+        "highlights": {}
+    }, {
+        "id": "mf6",
+        "text": "Ciencias sociales primary",
+        "highlights": {}
+    }, {
+        "id": "mf7",
+        "text": "Ciencias sociales primary",
+        "highlights": {}
+    }, {
+        "id": "mf8",
+        "text": "Ciencias sociales secondary",
+        "highlights": {}
+    }],
+
+    'CIEN': [{
+        "id": "mf2",
+        "text": "Ciencia política university",
+        "highlights": {}
+    }, {
+        "id": "mf3",
+        "text": "Ciencias naturales primary",
+        "highlights": {}
+    }, {
+        "id": "mf4",
+        "text": "Ciencias naturales primary",
+        "highlights": {}
+    }, {
+        "id": "mf5",
+        "text": "Ciencias naturales secondary",
+        "highlights": {}
+    }, {
+        "id": "mf6",
+        "text": "Ciencias sociales primary",
+        "highlights": {}
+    }, {
+        "id": "mf7",
+        "text": "Ciencias sociales primary",
+        "highlights": {}
+    }, {
+        "id": "mf8",
+        "text": "Ciencias sociales secondary",
+        "highlights": {}
+    }],
+
+    'CIENCIA': [{
+        "id": "mf2",
+        "text": "Ciencia política university",
+        "highlights": {}
+    }, {
+        "id": "mf3",
+        "text": "Ciencias naturales primary",
+        "highlights": {}
+    }, {
+        "id": "mf4",
+        "text": "Ciencias naturales primary",
+        "highlights": {}
+    }, {
+        "id": "mf5",
+        "text": "Ciencias naturales secondary",
+        "highlights": {}
+    }, {
+        "id": "mf6",
+        "text": "Ciencias sociales primary",
+        "highlights": {}
+    }, {
+        "id": "mf7",
+        "text": "Ciencias sociales primary",
+        "highlights": {}
+    }, {
+        "id": "mf8",
+        "text": "Ciencias sociales secondary",
+        "highlights": {}
+    }],
+
+    'CIENCIAS': [{
+        "id": "mf2",
+        "text": "Ciencia política university",
+        "highlights": {}
+    }, {
+        "id": "mf3",
+        "text": "Ciencias naturales primary",
+        "highlights": {}
+    }, {
+        "id": "mf4",
+        "text": "Ciencias naturales primary",
+        "highlights": {}
+    }, {
+        "id": "mf5",
+        "text": "Ciencias naturales secondary",
+        "highlights": {}
+    }, {
+        "id": "mf6",
+        "text": "Ciencias sociales primary",
+        "highlights": {}
+    }, {
+        "id": "mf7",
+        "text": "Ciencias sociales primary",
+        "highlights": {}
+    }, {
+        "id": "mf8",
+        "text": "Ciencias sociales secondary",
+        "highlights": {}
+    }],
+
+
+    'CIENCIAS POLITICA': [{
+        "id": "mf2",
+        "text": "Ciencia política university",
+        "highlights": {}
+    }],
+
+
+    'CIENCIAS NATURALES': [{
+        "id": "mf3",
+        "text": "Ciencias naturales primary",
+        "highlights": {}
+    }, {
+        "id": "mf4",
+        "text": "Ciencias naturales primary",
+        "highlights": {}
+    }, {
+        "id": "mf5",
+        "text": "Ciencias naturales secondary",
+        "highlights": {}
+    }],
+
+    'CIENCIAS SOCIALES': [{
+        "id": "mf6",
+        "text": "Ciencias sociales primary",
+        "highlights": {}
+    }, {
+        "id": "mf7",
+        "text": "Ciencias sociales primary",
+        "highlights": {}
+    }, {
+        "id": "mf8",
+        "text": "Ciencias sociales secondary",
+        "highlights": {}
+    }],
+
+    'CO': [{
+        "id": "mf8",
+        "text": "Computación university",
+        "highlights": {}
+    }, {
+        "id": "mf9",
+        "text": "Comunicación, cultura y sociedad secondary",
+        "highlights": {}
+    }, {
+        "id": "mg0",
+        "text": "Comunicación I university",
+        "highlights": {}
+    }, {
+        "id": "mg1",
+        "text": "Conceptos básicos de química university",
+        "highlights": {}
+    }, {
+        "id": "mg2",
+        "text": "Conocimiento de materiales secondary",
+        "highlights": {}
+    }, {
+        "id": "mg3",
+        "text": "Conocimiento de materiales university",
+        "highlights": {}
+    }, {
+        "id": "mg4",
+        "text": "Construcción de ciudadanía secondary",
+        "highlights": {}
+    }, {
+        "id": "mg5",
+        "text": "Contabilidad básica university",
+        "highlights": {}
+
+    }, {
+        "id": "mg6",
+        "text": "Contabilidad I university",
+        "highlights": {}
+
+    }, {
+        "id": "mg7",
+        "text": "Contabilidad II university",
+        "highlights": {}
+
+    }, {
+        "id": "mg8",
+        "text": "Contabilidad III university",
+        "highlights": {}
+
+    }, {
+        "id": "mg9",
+        "text": "Contabilidad patrimonial y de gestión secondary",
+        "highlights": {}
+
+    }, {
+        "id": "mh0",
+        "text": "Costos secondary",
+        "highlights": {}
+
+    }],
+
+
+    'COM': [{
+        "id": "mf8",
+        "text": "Computación university",
+        "highlights": {}
+    }, {
+        "id": "mf9",
+        "text": "Comunicación, cultura y sociedad secondary",
+        "highlights": {}
+    }, {
+        "id": "mg0",
+        "text": "Comunicación I university",
+        "highlights": {}
+    }],
+
+    'COMP': [{
+        "id": "mf8",
+        "text": "Computación university",
+        "highlights": {}
+    }],
+
+
+    'COMPUTA': [{
+        "id": "mf8",
+        "text": "Computación university",
+        "highlights": {}
+    }],
+
+    'COMPUTAACION': [{
+        "id": "mf8",
+        "text": "Computación university",
+        "highlights": {}
+    }],
+
+    'COMU': [{
+        "id": "mf9",
+        "text": "Comunicación, cultura y sociedad secondary",
+        "highlights": {}
+    }, {
+        "id": "mg0",
+        "text": "Comunicación I university",
+        "highlights": {}
+    }],
+
+    'COMUNI': [{
+        "id": "mf9",
+        "text": "Comunicación, cultura y sociedad secondary",
+        "highlights": {}
+    }, {
+        "id": "mg0",
+        "text": "Comunicación I university",
+        "highlights": {}
+    }],
+
+    'COMUNICACION': [{
+        "id": "mf9",
+        "text": "Comunicación, cultura y sociedad secondary",
+        "highlights": {}
+    }, {
+        "id": "mg0",
+        "text": "Comunicación I university",
+        "highlights": {}
+    }],
+
+
+    'CON': [{
+        "id": "mg1",
+        "text": "Conceptos básicos de química university",
+        "highlights": {}
+    }, {
+        "id": "mg2",
+        "text": "Conocimiento de materiales secondary",
+        "highlights": {}
+    }, {
+        "id": "mg3",
+        "text": "Conocimiento de materiales university",
+        "highlights": {}
+    }, {
+        "id": "mg4",
+        "text": "Construcción de ciudadanía secondary",
+        "highlights": {}
+    }, {
+        "id": "mg5",
+        "text": "Contabilidad básica university",
+        "highlights": {}
+
+    }, {
+        "id": "mg6",
+        "text": "Contabilidad I university",
+        "highlights": {}
+
+    }, {
+        "id": "mg7",
+        "text": "Contabilidad II university",
+        "highlights": {}
+
+    }, {
+        "id": "mg8",
+        "text": "Contabilidad III university",
+        "highlights": {}
+
+    }, {
+        "id": "mg9",
+        "text": "Contabilidad patrimonial y de gestión secondary",
+        "highlights": {}
+
+    }, {
+        "id": "mh0",
+        "text": "Costos secondary",
+        "highlights": {}
+
+    }],
+
+    'CONC': [{
+        "id": "mg1",
+        "text": "Conceptos básicos de química university",
+        "highlights": {}
+    }],
+
+    'CONCEPTOS': [{
+        "id": "mg1",
+        "text": "Conceptos básicos de química university",
+        "highlights": {}
+    }],
+
+    'CONCEPTOS BASICOS': [{
+        "id": "mg1",
+        "text": "Conceptos básicos de química university",
+        "highlights": {}
+    }],
+
+    'QUIMICA': [{
+        "id": "mg1",
+        "text": "Conceptos básicos de química university",
+        "highlights": {}
+    }],
+
+
+    'CONO': [{
+        "id": "mg2",
+        "text": "Conocimiento de materiales secondary",
+        "highlights": {}
+    }, {
+        "id": "mg3",
+        "text": "Conocimiento de materiales university",
+        "highlights": {}
+    }],
+
+    'CONOCIMIENTO': [{
+        "id": "mg2",
+        "text": "Conocimiento de materiales secondary",
+        "highlights": {}
+    }, {
+        "id": "mg3",
+        "text": "Conocimiento de materiales university",
+        "highlights": {}
+    }],
+
+    'MATERIAS': [{
+        "id": "mg2",
+        "text": "Conocimiento de materiales secondary",
+        "highlights": {}
+    }, {
+        "id": "mg3",
+        "text": "Conocimiento de materiales university",
+        "highlights": {}
+    }],
+
+
+    'CONT': [{
+        "id": "mg5",
+        "text": "Contabilidad básica university",
+        "highlights": {}
+
+    }, {
+        "id": "mg6",
+        "text": "Contabilidad I university",
+        "highlights": {}
+
+    }, {
+        "id": "mg7",
+        "text": "Contabilidad II university",
+        "highlights": {}
+
+    }, {
+        "id": "mg8",
+        "text": "Contabilidad III university",
+        "highlights": {}
+
+    }, {
+        "id": "mg9",
+        "text": "Contabilidad patrimonial y de gestión secondary",
+        "highlights": {}
+
+    }],
+
+    'CONTA': [{
+        "id": "mg5",
+        "text": "Contabilidad básica university",
+        "highlights": {}
+
+    }, {
+        "id": "mg6",
+        "text": "Contabilidad I university",
+        "highlights": {}
+
+    }, {
+        "id": "mg7",
+        "text": "Contabilidad II university",
+        "highlights": {}
+
+    }, {
+        "id": "mg8",
+        "text": "Contabilidad III university",
+        "highlights": {}
+
+    }, {
+        "id": "mg9",
+        "text": "Contabilidad patrimonial y de gestión secondary",
+        "highlights": {}
+
+    }],
+
+
+    'CONTABILIDAD': [{
+        "id": "mg5",
+        "text": "Contabilidad básica university",
+        "highlights": {}
+
+    }, {
+        "id": "mg6",
+        "text": "Contabilidad I university",
+        "highlights": {}
+
+    }, {
+        "id": "mg7",
+        "text": "Contabilidad II university",
+        "highlights": {}
+
+    }, {
+        "id": "mg8",
+        "text": "Contabilidad III university",
+        "highlights": {}
+
+    }, {
+        "id": "mg9",
+        "text": "Contabilidad patrimonial y de gestión secondary",
+        "highlights": {}
+
+    }],
+
+
+    'COS': [{
+        "id": "mh0",
+        "text": "Costos secondary",
+        "highlights": {}
+
+    }],
+
+    'COSTOS': [{
+        "id": "mh0",
+        "text": "Costos secondary",
+        "highlights": {}
+
+    }],
+
+
+    'CRE': [{
+        "id": "mh1",
+        "text": "Crecimiento y desarrollo university",
+        "highlights": {}
+    }, {
+        "id": "mh2",
+        "text": "Defensa del consumidor y del usuario university",
+        "highlights": {}
+    }],
+
+
+    'CRECIMI': [{
+        "id": "mh1",
+        "text": "Crecimiento y desarrollo university",
+        "highlights": {}
+    }],
+
+
+    'CRECIMIENTO': [{
+        "id": "mh1",
+        "text": "Crecimiento y desarrollo university",
+        "highlights": {}
+    }],
+
+
+
+    'DESARROLLO': [{
+        "id": "mh1",
+        "text": "Crecimiento y desarrollo university",
+        "highlights": {}
+    }, {
+        "id": "mh2",
+        "text": "Defensa del consumidor y del usuario university",
+        "highlights": {}
+    }],
+
+
+    'DE': [{
+        "id": "mh2",
+        "text": "Defensa del consumidor y del usuario university",
+        "highlights": {}
+    }],
+
+    'DEFEN': [{
+        "id": "mh2",
+        "text": "Defensa del consumidor y del usuario university",
+        "highlights": {}
+    }],
+
+    'DEFENSA': [{
+        "id": "mh2",
+        "text": "Defensa del consumidor y del usuario university",
+        "highlights": {}
+    }]
+
+};

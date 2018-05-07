@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="robots", content="noindex")
+    meta(name="googlebot", content="noindex")
+    include inc/base
+    include inc/baseone
+  body
+    include inc/header
+
+    main.mainCity
+      section.container
+       
+        div.row
+            table
+              thead
+                tr
+                  th(data-field='name') Nombre
+                  th(data-field='email') Email
+                  
+              tbody
+                each u in show
+                  if u.statusteacher
+                    tr
+                      td #{u.name}
+                      td #{u.email}
+                    
+
+                   
+
+
+
+    include inc/footer

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="description", content="#{teacher[0].teacher[0].nombreTeacher} #{teacher[0].teacher[0].nombreTeacher} Profesor en Aprendidos, Encuentra tu profesor cerca de donde te encuentras, contacta con el/ella, clases particulares & grupales.")
+    include inc/base
+  body.searchBG
+    include inc/header
+
+    main.main
+      section.reviewTeacher.container
+        div.card
+          div.row.uMargin
+            article.revieTeacher__Container.col.l12.col.s12
+              div.col.l7.myContainer.col.s12
+                header.reviewTeacher__Header.col.s12
+                  h2.title
+                    | Tu opinión sobre 
+                    b #{teacher[0].teacher[0].nombreTeacher} #{teacher[0].teacher[0].apellidoTeacher}
+                    //|  #{teacher[0].opciones[0].barrio}
+                div.reviewTeacher__Details.col.l12
+                  figure.figure.col.l5.col.s12
+                    img(src="#{teacher[0].teacher[0].fotoTeacher}", alt="", width="150px")
+                  div.col.l2
+                  aside.review.col.l5.col.s12
+                    header.review__Header
+                      h3.title.jsTitleHeader
+                        | ¿Calificación?
+                    div.review__Starts.col.l12.col.s12
+                      ul.ul
+                        li.list
+                          i.fa.fa-star
+                        li.list
+                          i.fa.fa-star
+                        li.list
+                          i.fa.fa-star
+                        li.list
+                          i.fa.fa-star
+                        li.list
+                          i.fa.fa-star
+          div.row.uMargin
+              div.col.l7.myContainer.col.s12
+                form.formReview(action="/save/teacher/review", method="post")
+                  
+                  input(type="hidden", name="emailSend", value="#{teacher[0].teacher[0].emailTeacher}")
+
+                  input(type="hidden", name="idreview", value="#{teacher[0]._id}")
+                  input(type="hidden", name="calificacion")
+                  input(type="hidden", name="calificacionCant")
+                  input(type="hidden", name="resultcalifi")
+                  
+                  fieldset.fieldset.col.s12
+                    label.label
+                      | Tu comentario
+                    textarea.materialize-textarea(name="mensajecalificacion", placeholder="¿Qué opinás sobre #{teacher[0].teacher[0].nombreTeacher} como profesor?", required)
+                  fieldset.fieldset.col.s12
+                    p.details
+                      | Tu opinión sobre 
+                      b #{teacher[0].teacher[0].nombreTeacher} #{teacher[0].teacher[0].apellidoTeacher[0]}.
+                      |es un aporte para formar su reputación y para que los demás estudiantes puedan conocerlo un poco más. Te agradecemos que comentes respetuosamente y sólo si alguna vez tomaste una clase con él.
+                    p.details
+                      | Te recordamos que los comentarios van a ser revisados individualmente y serán borrados en caso de ser agresivos o falsos.
+                  fieldset.fieldset.col.s12
+                    input.btn-large(type="submit", value="Calificar")
+
+
+
+
+    include inc/footer

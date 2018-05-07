@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body.searchBG
+    include inc/header
+
+    main.main
+      section.teacher__Register.container
+        div.row
+          section.teacher__Register--Container.card.col.l12
+            header.teacher__Register--Header.col.l12
+              h2.title
+                | Bienvenido al registro de Profesor
+            section.teacher__Register--Steps--Menu.col.l12
+              ul.ul
+                li.list.col.l3(onclick=" window.location.href = '/teacher/register/stepone';")
+                  div.list__Icon
+                    i.fa.fa-id-card
+                  div.list__Name
+                    span.name
+                      | Datos Personales
+                li.list.col.l3(onclick="window.location.href = '/teacher/register/steptwo'; ")
+                  div.list__Icon
+                    i.fa.fa-book
+                  div.list__Name
+                    span.name
+                      | Materias
+                li.list.col.l3(onclick="window.location.href = '/teacher/register/steptree';")
+                  div.list__Icon
+                    i.fa.fa-user-circle-o
+                  div.list__Name
+                    span.name
+                      | Tus Clases
+                li.list.col.l3(onclick="window.location.href = '/teacher/register/stepfour';")
+                  div.list__Icon
+                    i.fa.fa-comment
+                  div.list__Name
+                    span.name
+                      | Contacto
+            section.teacher__Register--Steps--Container.col.l12
+              article.teacher__Register__Steps--One.col.l8
+                form.form__One(action="/save/teacher/1", method="post").col.l12
+                  fieldset.header__Fieldset.col.l12
+                    label
+                      | Nombre y Apellidos
+                  fieldset.fieldset.col.l6
+                    input(type="text", placeholder="Nombre", name="isNombres", required)
+                  fieldset.fieldset.col.l6
+                    input(type="text", placeholder="Apellidos", name="isApellido", required)
+                  fieldset.header__Fieldset.col.l12
+                    label
+                      | Genero?
+                  fieldset.fieldset.col.l12
+                    select(name="isGenero", required)
+                      option(value="0") Seleccione su genero 
+                      option(value="Hombre") Hombre
+                      option(value="Mujer") Mujer
+
+                  fieldset.header__Fieldset.col.l12
+                    label
+                      | ¿Cuál es tu email?
+                  fieldset.fieldset.col.l12
+                    input(type="email", placeholder="Email", name="isEmail", required)
+                  fieldset.header__Fieldset.col.l12
+                    label
+                      | ¿En qué fecha naciste?
+                  fieldset.fieldset.col.l12
+                    input.datepicker(type="date", name="isDate", required)
+                  fieldset.fieldset.col.l12
+                    input.btn.right(type="submit", value="Continuar")
+              article.teacher__Register__steps--Two.none.col.l8
+                form.form__Two(action="/save/teacher/2", method="post").col.l12
+                  if user.teacher
+                    article.preview.card.col.l12
+                      figure.preview__Figure.col.l3
+                        img(src="#{user.teacher[0].fotoTeacher}", alt="", width="100%")
+                      div.preview__Description.col.l6
+                        header.preview__Description--Header.col.l12
+                          h4.title
+                           | #{user.teacher[0].nombreTeacher}
+                           | #{user.teacher[0].apellidoTeacher}
+                        div.preview__Description--Options.col.l12
+                          ul.ul.col.l5
+                            li.list.col.l4
+                              i.fa.fa-graduation-cap
+                            li.list.col.l4
+                              i.fa.fa-users
+                            li.list.col.l4
+                              i.fa.fa-car
+                          ul.col.l2
+                          ul.ul.col.l5
+                            li.list.col.l4
+                              i.fa.fa-sun-o
+                            li.list.col.l4
+                              i.fa.fa-circle-o-notch
+                            li.list.col.l4
+                              i.fa.fa-moon-o
+                      div.pewview__Date.col.3
+                  
+                  fieldset.fieldset__Header.col.l12
+                    label ¿De qué materias te gustaría dar clases?
+                  div.container__Materias
+                    fieldset.fieldset.col.l12
+
+                      // Administracion financiera
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[1][id]", value="1")
+                        input(type="hidden", name="clases[1][nivel]", value="Universitario")
+                        input(type="checkbox", id="my1", name="clases[1][name]" value="Administración financiera")
+                        label(for="my1")
+                          span.carrer
+                            |Administración financiera
+                          p.grade
+                            | Universitario  
+
+                      
+                      // Administracion financiera 1
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[2][id]", value="2")
+                        input(type="hidden", name="clases[2][nivel]", value="Universitario")
+                        input(type="checkbox", id="my2", name="clases[2][name]", value="Administración financiera I")
+                        label(for="my2")
+                          span.carrer
+                            |Administración financiera I
+                          p.grade
+                            | Universitario
+
+
+                      // Administracion general
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[3][id]", value="3")
+                        input(type="hidden", name="clases[3][nivel]", value="Universitario")
+                        input(type="checkbox", id="my3", name="clases[3][name]", value="Administración general")
+                        label(for="my3")
+                          span.carrer
+                            |Administración general
+                          p.grade
+                            | Universitario
+
+                    
+                    fieldset.fieldset.col.l12
+                      
+                      // Aleman Avanzado
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[4][id]", vlaue="4")
+                        input(type="hidden", name="clases[4][nivel]", value="Avanzado")
+                        input(type="checkbox", id="my4", name="clases", value="Aleman")
+                        label(for="my4")
+                          span.carrer
+                            |Alemán
+                          p.grade
+                            | Avanzado  
+
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[5][id]", vlaue="5")
+                        input(type="hidden", name="clases[5][nivel]", value="Básico")
+                        input(type="checkbox", id="my5", name="clases", value="Alemán")
+                        label(for="my5")
+                          span.carrer
+                            |Alemán
+                          p.grade
+                            | Básico
+
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[6][id]", vlaue="6")
+                        input(type="hidden", name="clases[6][nivel]", value="Intermedio")
+                        input(type="checkbox", id="my6", name="clases", value="Alemán")
+                        label(for="my6")
+                          span.carrer
+                            |Alemán
+                          p.grade
+                            | Intermedio
+
+                    fieldset.fieldset.col.l12
+                      
+                      // Álgebra Universitario
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[7][id]", vlaue="7")
+                        input(type="hidden", name="clases[7][nivel]", value="Universitario")
+                        input(type="checkbox", id="my7", name="clases", value="Álgebra")
+                        label(for="my7")
+                          span.carrer
+                            |Álgebra
+                          p.grade
+                            | Universitario  
+
+                      // Álgebra I Universitario
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[8][id]", vlaue="8")
+                        input(type="hidden", name="clases[8][nivel]", value="Universitario")
+                        input(type="checkbox", id="my8", name="clases", value="Álgebra I")
+                        label(for="my8")
+                          span.carrer
+                            |Álgebra I
+                          p.grade
+                            | Universitario  
+
+
+                      // Álgebra II Universitario
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[8][id]", vlaue="9")
+                        input(type="hidden", name="clases[8][nivel]", value="Universitario")
+                        input(type="checkbox", id="my9", name="clases", value="Álgebra II")
+                        label(for="my9")
+                          span.carrer
+                            |Álgebra II
+                          p.grade
+                            | Universitario  
+
+                    fieldset.fieldset.col.l12
+                      
+                      // Álgebra y geometria
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[9][id]", vlaue="9")
+                        input(type="hidden", name="clases[9][nivel]", value="Universitario")
+                        input(type="checkbox", id="my10", name="clases", value="Álgebra y Geometría")
+                        label(for="my10")
+                          span.carrer
+                            |Álgebra y Geometría
+                          p.grade
+                            | Universitario  
+
+                      // Algoritmos y estructuras de datos I
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[10][id]", vlaue="10")
+                        input(type="hidden", name="clases[10][nivel]", value="Universitario")
+                        input(type="checkbox", id="my11", name="clases", value="Algoritmos y estructuras de datos I")
+                        label(for="my11")
+                          span.carrer
+                            |Algoritmos y estructuras de datos I
+                          p.grade
+                            | Universitario 
+
+                      // Algoritmos y programación I
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[11][id]", vlaue="11")
+                        input(type="hidden", name="clases[11][nivel]", value="Universitario")
+                        input(type="checkbox", id="my12", name="clases", value="Algoritmos y programación I")
+                        label(for="my12")
+                          span.carrer
+                            |Algoritmos y programación I
+                          p.grade
+                            | Universitario  
+
+                    fieldset.fieldset.col.l12
+                      // Algoritmos y programación I
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[12][id]", vlaue="12")
+                        input(type="hidden", name="clases[12][nivel]", value="Universitario")
+                        input(type="checkbox", id="my13", name="clases", value="Algoritmos y programación II")
+                        label(for="my13")
+                          span.carrer
+                            |Algoritmos y programación II
+                          p.grade
+                            | Universitario  
+
+
+                      // Análisis matemático secundario
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[13][id]", vlaue="13")
+                        input(type="hidden", name="clases[13][nivel]", value="Secundario")
+                        input(type="checkbox", id="my14", name="clases", value="Análisis matemático")
+                        label(for="my14")
+                          span.carrer
+                            |Análisis matemático
+                          p.grade
+                            | Secundario  
+
+
+                      // Análisis matemático secundario
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[14][id]", vlaue="14")
+                        input(type="hidden", name="clases[14][nivel]", value="Universitario")
+                        input(type="checkbox", id="my15", name="clases", value="Análisis matemático")
+                        label(for="my15")
+                          span.carrer
+                            |Análisis matemático
+                          p.grade
+                            | Universitario  
+
+                    fieldset.fieldset.col.l12
+                      // Análisis matemático I
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[15][id]", vlaue="15")
+                        input(type="hidden", name="clases[15][nivel]", value="Universitario")
+                        input(type="checkbox", id="my16", name="clases", value="Análisis matemático I")
+                        label(for="my16")
+                          span.carrer
+                            |Análisis matemático I
+                          p.grade
+                            | Universitario
+
+                      // Análisis matemático II
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[16][id]", vlaue="16")
+                        input(type="hidden", name="clases[16][nivel]", value="Universitario")
+                        input(type="checkbox", id="my17", name="clases", value="Análisis matemático II")
+                        label(for="my17")
+                          span.carrer
+                            |Análisis matemático II
+                          p.grade
+                            | Universitario
+
+                      // Anatomía
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[17][id]", vlaue="17")
+                        input(type="hidden", name="clases[17][nivel]", value="Universitario")
+                        input(type="checkbox", id="my18", name="clases", value="Anatomía")
+                        label(for="my18")
+                          span.carrer
+                            |Anatomía
+                          p.grade
+                            | Universitario
+
+                    fieldset.fieldset.col.l12
+                      // Anatomofisiología
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[18][id]", vlaue="18")
+                        input(type="hidden", name="clases[18][nivel]", value="Universitario")
+                        input(type="checkbox", id="my19", name="clases", value="Anatomofisiología")
+                        label(for="my19")
+                          span.carrer
+                            |Anatomofisiología
+                          p.grade
+                            | Universitario
+
+                      // Antropología
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[20][id]", vlaue="20")
+                        input(type="hidden", name="clases[20][nivel]", value="Universitario")
+                        input(type="checkbox", id="my20", name="clases", value="Antropología")
+                        label(for="my20")
+                          span.carrer
+                            |Antropología
+                          p.grade
+                            | Universitario
+
+                      // Antropología
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[21][id]", vlaue="21")
+                        input(type="hidden", name="clases[21][nivel]", value="Secundario")
+                        input(type="checkbox", id="my21", name="clases", value="Antropología cultural")
+                        label(for="my21")
+                          span.carrer
+                            |Antropología cultural
+                          p.grade
+                            | Secundario
+                    
+                    fieldset.fieldset.col.l12
+                      // Antropología y salud
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[22][id]", vlaue="22")
+                        input(type="hidden", name="clases[22][nivel]", value="Universitario")
+                        input(type="checkbox", id="my22", name="clases", value="Antropología y salud")
+                        label(for="my22")
+                          span.carrer
+                            |Antropología y salud
+                          p.grade
+                            | Universitario
+
+
+                      // Arquitectura I
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[23][id]", vlaue="23")
+                        input(type="hidden", name="clases[23][nivel]", value="Universitario")
+                        input(type="checkbox", id="my23", name="clases", value="Arquitectura I")
+                        label(for="my23")
+                          span.carrer
+                            |Arquitectura I
+                          p.grade
+                            | Universitario
+
+
+                      // Artes visuales
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[24][id]", vlaue="24")
+                        input(type="hidden", name="clases[24][nivel]", value="Secundario")
+                        input(type="checkbox", id="my24", name="clases", value="Artes visuales")
+                        label(for="my24")
+                          span.carrer
+                            |Artes visuales
+                          p.grade
+                            | Secundario
+
+                    fieldset.fieldset.col.l12
+                      // Autocad
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[25][id]", vlaue="25")
+                        input(type="hidden", name="clases[25][nivel]", value="Universitario")
+                        input(type="checkbox", id="my25", name="clases", value="Autocad")
+                        label(for="my25")
+                          span.carrer
+                            |Autocad
+                          p.grade
+                            | Universitario
+
+                      // Bajo
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[26][id]", vlaue="26")
+                        input(type="hidden", name="clases[26][nivel]", value="Avanzado")
+                        input(type="checkbox", id="my26", name="clases", value="Bajo")
+                        label(for="my26")
+                          span.carrer
+                            |Bajo
+                          p.grade
+                            | Avanzado
+
+
+                      // Bajo
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[27][id]", vlaue="27")
+                        input(type="hidden", name="clases[27][nivel]", value="Básico")
+                        input(type="checkbox", id="my27", name="clases", value="Bajo")
+                        label(for="my27")
+                          span.carrer
+                            |Bajo
+                          p.grade
+                            | Básico
+
+                    fieldset.fieldset.col.l12
+
+                      // Bajo
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[28][id]", vlaue="28")
+                        input(type="hidden", name="clases[28][nivel]", value="Intermedio")
+                        input(type="checkbox", id="my28", name="clases", value="Bajo")
+                        label(for="my28")
+                          span.carrer
+                            |Bajo
+                          p.grade
+                            | Intermedio
+
+
+
+                      // Bases de datos
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[29][id]", vlaue="29")
+                        input(type="hidden", name="clases[29][nivel]", value="Secundario")
+                        input(type="checkbox", id="my29", name="clases", value="Bases de datos")
+                        label(for="my29")
+                          span.carrer
+                            |Bases de datos
+                          p.grade
+                            | Secundario
+
+
+                      // Batería
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[30][id]", vlaue="29")
+                        input(type="hidden", name="clases[30][nivel]", value="Avanzado")
+                        input(type="checkbox", id="my30", name="clases", value="Batería")
+                        label(for="my30")
+                          span.carrer
+                            |Batería
+                          p.grade
+                            | Avanzado
+
+
+                    fieldset.fieldset.col.l12
+                      
+                      // Batería
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[31][id]", value="31")
+                        input(type="hidden", name="clases[31][nivel]", value="Básico")
+                        input(type="checkbox", id="my31", name="clases", value="Batería")
+                        label(for="my31")
+                          span.carrer
+                            |Batería
+                          p.grade
+                            | Básico
+
+
+                      // Batería
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[32][id]", value="32")
+                        input(type="hidden", name="clases[32][nivel]", value="Intermedio")
+                        input(type="checkbox", id="my32", name="clases", value="Batería")
+                        label(for="my32")
+                          span.carrer
+                            |Batería
+                          p.grade
+                            | Intermedio
+
+
+                      // Bioética I
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[33][id]", value="33")
+                        input(type="hidden", name="clases[33][nivel]", value="Universitario")
+                        input(type="checkbox", id="my33", name="clases", value="Bioética I")
+                        label(for="my33")
+                          span.carrer
+                            |Bioética I
+                          p.grade
+                            | Universitario
+
+                    fieldset.fieldset.col.l12
+                      // Biología
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[34][id]", value="34")
+                        input(type="hidden", name="clases[34][nivel]", value="Secundario")
+                        input(type="checkbox", id="my34", name="clases", value="Biología")
+                        label(for="my34")
+                          span.carrer
+                            |Biología
+                          p.grade
+                            | Secundario
+
+                      //Biologia universitario
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[35][id]", value="35")
+                        input(type="hidden", name="clases[35][nivel]", value="Universitario")
+                        input(type="checkbox", id="my35", name="clases", value="Biología")
+                        label(for="my35")
+                          span.carrer
+                            |Biología
+                          p.grade
+                            | Universitario
+
+
+                      //Biología e introducción a la biología celular
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[36][id]", value="36")
+                        input(type="hidden", name="clases[36][nivel]", value="Universitario")
+                        input(type="checkbox", id="my36", name="clases", value="Biología e introducción a la biología celular")
+                        label(for="my36")
+                          span.carrer
+                            |Biología e introducción a la biología celular
+                          p.grade
+                            | Universitario
+                      
+                    fieldset.fieldset.col.l12
+                      //Biología general
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[37][id]", value="37")
+                        input(type="hidden", name="clases[37][nivel]", value="Universitario")
+                        input(type="checkbox", id="my37", name="clases", value="Biología general")
+                        label(for="my37")
+                          span.carrer
+                            |Biología general
+                          p.grade
+                            | Universitario
+
+                      //Biología, genética y sociedad
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[38][id]", value="38")
+                        input(type="hidden", name="clases[38][nivel]", value="Secundario")
+                        input(type="checkbox", id="my38", name="clases", value="Biología, genética y sociedad")
+                        label(for="my38")
+                          span.carrer
+                            |Biología, genética y sociedad
+                          p.grade
+                            | Secundario
+
+
+                      //Biología, genética y sociedad
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[39][id]", value="39")
+                        input(type="hidden", name="clases[39][nivel]", value="Universitario")
+                        input(type="checkbox", id="my39", name="clases", value="Bioquímica aplicada")
+                        label(for="my39")
+                          span.carrer
+                            |Bioquímica aplicada
+                          p.grade
+                            | Universitario
+
+                    fieldset.fieldset.col.l12
+                      //Cálculo financiero
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[40][id]", value="40")
+                        input(type="hidden", name="clases[40][nivel]", value="Universitario")
+                        input(type="checkbox", id="my40", name="clases", value="Cálculo financiero")
+                        label(for="my40")
+                          span.carrer
+                            |Cálculo financiero
+                          p.grade
+                            | Universitario
+
+                      //Cálculo I
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[41][id]", value="41")
+                        input(type="hidden", name="clases[41][nivel]", value="Universitario")
+                        input(type="checkbox", id="my41", name="clases", value="Cálculo I")
+                        label(for="my41")
+                          span.carrer
+                            |Cálculo I
+                          p.grade
+                            | Universitario
+
+                      //Cálculo II
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[42][id]", value="42")
+                        input(type="hidden", name="clases[42][nivel]", value="Universitario")
+                        input(type="checkbox", id="my42", name="clases", value="Cálculo II")
+                        label(for="my42")
+                          span.carrer
+                            |Cálculo II
+                          p.grade
+                            | Universitario
+
+                    fieldset.fieldset.col.l12
+                      //Cálculo numérico
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[43][id]", value="43")
+                        input(type="hidden", name="clases[43][nivel]", value="Universitario")
+                        input(type="checkbox", id="my43", name="clases", value="Cálculo numérico")
+                        label(for="my43")
+                          span.carrer
+                            |Cálculo numérico
+                          p.grade
+                            | Universitario
+
+                      //Canto
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[44][id]", value="44")
+                        input(type="hidden", name="clases[44][nivel]", value="Avanzado")
+                        input(type="checkbox", id="my44", name="clases", value="Canto")
+                        label(for="my44")
+                          span.carrer
+                            |Canto
+                          p.grade
+                            | Avanzado
+
+                      //Canto
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[45][id]", value="45")
+                        input(type="hidden", name="clases[45][nivel]", value="Básico")
+                        input(type="checkbox", id="my45", name="clases", value="Canto")
+                        label(for="my45")
+                          span.carrer
+                            |Canto
+                          p.grade
+                            | Básico
+                    
+                    fieldset.fieldset.col.l12
+
+                      //Canto
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[46][id]", value="46")
+                        input(type="hidden", name="clases[46][nivel]", value="Intermedio")
+                        input(type="checkbox", id="my46", name="clases", value="Canto")
+                        label(for="my46")
+                          span.carrer
+                            |Canto
+                          p.grade
+                            | Intermedio
+
+                      //Canto
+                      div.fieldset__Group.col.l4
+                        input(type="hidden", name="clases[47][id]", value="47")
+                        input(type="hidden", name="clases[47][nivel]", value="Avanzado")
+                        input(type="checkbox", id="my47", name="clases", value="Certificate of proficiency in english - CPE")
+                        label(for="my47")
+                          span.carrer
+                            |Certificate of proficiency in english - CPE
+                          p.grade
+                            | Avanzado
+
+                  fieldset.fieldset__Header.col.l12
+                    label ¿Cuál es tu nivel de estudios?
+                  fieldset.fieldset.col.l12
+                    select(name="lvlstude")
+                      option(value="0") Eliga sus estudios
+                      option(value="No recibido") No recibido
+                      option(value="Recibido") Recibido
+                      option(value="Posgrado") Posgrado
+                  
+                  fieldset.fieldset.col.l12
+                    input.btn.right(type="submit", value="Continuar")
+              article.teacher__Register__Steps--Tree.none.col.l8
+                form.form__Tree(action="/save/teacher/3", method="post").col.l12
+                  if user.teacher && user.materias
+                    article.preview.card.col.l12
+                      figure.preview__Figure.col.l3
+                        img(src="#{user.photo}", alt="", width="100%")
+                      div.preview__Description.col.l6
+                        header.preview__Description--Header.col.l12
+                          h4.title
+                            | #{user.name}
+                        div.preview__Description--Options.col.l12
+                          ul.ul.col.l5
+                            li.list.col.l4
+                              if user.materias[0].status == 'No recibido'
+                                i.fa.fa-graduation-cap.noRecibido
+                              if user.materias[0].status == 'Recibido'
+                                i.fa.fa-graduation-cap.siRecibido
+                              if user.materias[0].status == 'Posgrado'
+                                i.fa.fa-graduation-cap.siPosgrado
+                            li.list.col.l4
+                              i.fa.fa-users
+                            li.list.col.l4
+                              i.fa.fa-car
+                          ul.col.l2
+                          ul.ul.col.l5
+                            li.list.col.l4
+                              i.fa.fa-sun-o
+                            li.list.col.l4
+                              i.fa.fa-circle-o-notch
+                            li.list.col.l4
+                              i.fa.fa-moon-o
+                      div.pewview__Date.col.3
+                  else
+                    //
+                  fieldset.fieldset__Header.col.l12
+                    label
+                      | ¿Cuál es la dirección del lugar donde das clases particulares?
+                    br
+                    label
+                      | Tu dirección exacta no será mostrada, el alumno verá sólo la distancia a esta dirección.
+                  fieldset.fieldset.col.l12
+                    input(id="pac-input", type="text", placeholder="nombre + 872, ciudad, pais", name="direccion")
+                  fieldset.fieldset__Header.col.l12
+                    label
+                      | ¿Das también clases a domicilio?
+                  fieldset.fieldset.col.l12
+                    div.col.l2
+                      input(type="checkbox", id="isNo", name="domicilio", value="false")
+                      label(for="isNo")
+                        | No
+                    div.col.l3
+                      input(type="checkbox", id="isSi", name="domicilio", value="true")
+                      label(for="isSi")
+                        | Si
+                  fieldset.fieldset__Header.col.l12
+                    label
+                      | ¿En qué horarios das clases normalmente?
+                  fieldset.fieldset.col.l12
+                    div.col.l4
+                      input(type="checkbox", id="goodMorning", name="horarios[0][name]", value="mañana")
+                      label(for="goodMorning")
+                        | Mañana
+                    div.col.l4
+                      input(type="checkbox", id="goodAfter", name="horarios[1][name]", value="tarde")
+                      label(for="goodAfter")
+                        | Tarde
+                    div.col.l4
+                      input(type="checkbox", id="goodNight", name="horarios[2][name]", value="noche")
+                      label(for="goodNight")
+                        | Noche
+                  fieldset.fieldset__Header.col.l12
+                    label
+                      | ¿Cómo son las clases que das?
+                  fieldset.fieldset.col.l12
+                    div.col.l4
+                      input(type="checkbox", id="grupales", name="tipoclases", value="grupales")
+                      label(for="grupales")
+                        | Grupales
+                    div.col.l4
+                      input(type="checkbox", id="individuales", name="tipoclases", value="individuales")
+                      label(for="individuales")
+                        | Individuales
+
+                  fieldset.fieldset__Header.col.l12
+                    label
+                      | ¿Qué precio cobrás por hora de clase?
+                    br
+                    label
+                      | Este precio es estimado, podés detallarlo más adelante en tu descripción.
+                  fieldset.fieldset.col.l12
+                    span.col.l1.cost
+                      | $
+                    input.col.l4(type="text", placeholder="120", name="precio")
+                  fieldset.fieldset.col.l12
+                    input.btn.right(type="submit", value="Continuar")
+              article.teacher__Register__Steps--Four.none.col.l8
+                form.form__Four(action="/save/teacher/4", method="post").col.l12
+                  if user.teacher && user.materias
+                    article.preview.card.col.l12
+                      figure.preview__Figure.col.l3
+                        img(src="#{user.photo}", alt="", width="100%")
+                      div.preview__Description.col.l6
+                        header.preview__Description--Header.col.l12
+                          h4.title
+                            | #{user.name}
+                        div.preview__Description--Options.col.l12
+                          ul.ul.col.l5
+                            li.list.col.l4
+                              if user.materias[0].status == 'No recibido'
+                                i.fa.fa-graduation-cap.noRecibido
+                              if user.materias[0].status == 'Recibido'
+                                i.fa.fa-graduation-cap.siRecibido
+                              if user.materias[0].status == 'Posgrado'
+                                i.fa.fa-graduation-cap.siPosgrado
+                            if user.opciones
+                              li.list.col.l4
+                                if user.opciones[0].tipoclases == 'grupales'
+                                  i.fa.fa-users.siGrupales
+                                else
+                                  i.fa.fa-users
+                              li.list.col.l4
+                                if user.opciones[0].domicilio == 'true'
+                                   i.fa.fa-car.siDomicilio
+                                else
+                                  i.fa.fa-car
+                            else
+                              //
+                          ul.col.l2
+                          ul.ul.col.l5
+                              li.list.col.l4
+                                  i.fa.fa-sun-o
+                              li.list.col.l4
+                                  i.fa.fa-circle-o-notch
+                              li.list.col.l4
+                                  i.fa.fa-moon-o
+                            
+                              //
+                      div.pewview__Date.col.3
+                  else
+                    //
+                  fieldset.fieldset__Header.col.l12
+                    label
+                      | ¿Cuál es el número de teléfono al que querés ser contactado?
+                  fieldset.fieldset.col.l12
+                    input(type="number", placeholder="15 50273309", name="isphone", required)
+                  fieldset.fieldset__Header.col.l12
+                    label
+                      | ¿Recibís mensajes de texto de tus alumnos?
+                  fieldset.fieldset.col.l4
+                    input(type="checkbox", id="mensajeSi", name="istxtmsn", value="true")
+                    label(for="mensajeSi")
+                      | Si
+                  fieldset.fieldset.col.l4
+                    input(type="checkbox", id="mensajeNo", name="istxtmsn", value="false")
+                    label(for="mensajeNo")
+                      | No
+
+                  fieldset.fieldset__Header.col.l12
+                    label
+                      | ¿Recibís mensajes de Whatsapp?
+                  fieldset.fieldset.col.l4
+                    input(type="checkbox", id="whatSi", name="iswtp", value="true", required)
+                    label(for="whatSi")
+                      | Si
+                  fieldset.fieldset.col.l4
+                    input(type="checkbox", id="whatNo", name="iswtp", value="false")
+                    label(for="whatNo")
+                      | No
+
+                  fieldset.fieldset__Header.col.l12
+                    label
+                      | Escribí información adicional sobre vos, tus clases, tus materias o detalles sobre el precio, etc...
+                  fieldset.fieldset.col.l12
+                    textarea.materialize-textarea(name="isdetails", cols="30", rows="10", placeholder="Cuentanos los detalles")
+                  fieldset.fieldset.col.l12
+                    input.btn.right(type="submit" value="Continuar")
+              article.teacher__Register__Steps--Five.none.col.l8
+                  header.header
+                    h3.title
+                      | Gracias por completa el registro :) 
+                  if user.teacher && user.materias
+                    article.preview.card.col.l12
+                      figure.preview__Figure.col.l3
+                        img(src="#{user.photo}", alt="", width="100%")
+                      div.preview__Description.col.l6
+                        header.preview__Description--Header.col.l12
+                          h4.title
+                            | #{user.name}
+                        div.preview__Description--Options.col.l12
+                          ul.ul.col.l5
+                            li.list.col.l4
+                              if user.materias[0].status == 'No recibido'
+                                i.fa.fa-graduation-cap.noRecibido
+                              if user.materias[0].status == 'Recibido'
+                                i.fa.fa-graduation-cap.siRecibido
+                              if user.materias[0].status == 'Posgrado'
+                                i.fa.fa-graduation-cap.siPosgrado
+                            if user.opciones
+                              li.list.col.l4
+                                if user.opciones[0].tipoclases == 'grupales'
+                                  i.fa.fa-users.siGrupales
+                                else
+                                  i.fa.fa-users
+                              li.list.col.l4
+                                if user.opciones[0].domicilio == 'true'
+                                   i.fa.fa-car.siDomicilio
+                                else
+                                  i.fa.fa-car
+                            else
+                              //
+                          ul.col.l2
+                          ul.ul.col.l5
+                              li.list.col.l4
+                                  i.fa.fa-sun-o
+                              li.list.col.l4
+                                  i.fa.fa-circle-o-notch
+                              li.list.col.l4
+                                  i.fa.fa-moon-o
+                            
+                              //
+                      div.pewview__Date.col.3
+                  else
+                    //
+    include inc/footer

@@ -1,0 +1,2187 @@
+[{
+    "id": "383dd983-a7a7-4d1a-b702-8a2b49d2fc5d",
+    "text": "Administración financiera",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "5bde8c9e-8950-44fd-8025-d071d652560f",
+    "text": "Administración financiera I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "096968f3-be92-4787-b398-d27e97a59f4c",
+    "text": "Administración general",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "6b0a9faa-3943-4e6a-a600-dd9f46bd6586",
+    "text": "Alemán",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "23deb537-f466-45b0-81d4-ff5ed18b9b8d",
+    "text": "Alemán",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "44c413f8-5c92-41bd-a07f-9c40c56d5458",
+    "text": "Alemán",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "7e1b784f-3b08-4bfc-957b-4c64dc63753c",
+    "text": "Álgebra",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "81548ba7-173d-4f47-8b95-16b3f15167d1",
+    "text": "Álgebra I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "b606e6f7-af34-4fca-928d-472d0c2b8a93",
+    "text": "Álgebra II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "a69e5d2e-84d8-4db4-833c-6d1902b1f8ef",
+    "text": "Álgebra y geometría",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "f9399606-0943-4836-8ef7-2c0d4ac6b16d",
+    "text": "Algoritmos y estructuras de datos I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "0c0d61cc-e88e-4a07-8dbb-3ac9e75a9812",
+    "text": "Algoritmos y programación I",
+    "level": "university",
+    "highlights": {
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["6f860e7c-d4d0-48d6-ba57-68d81db2d4ea"]
+    },
+}, {
+    "id": "20c92ed9-aa49-40c8-9cc6-321c6f677825",
+    "text": "Algoritmos y programación II",
+    "level": "university",
+    "highlights": {
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["6f860e7c-d4d0-48d6-ba57-68d81db2d4ea"]
+    },
+}, {
+    "id": "7fd342cf-3c42-462d-8c1a-140caaf768dc",
+    "text": "Análisis matemático",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "7f4d7272-95f2-44c4-8ee8-c55851552a44",
+    "text": "Análisis matemático",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "32a69e56-1c7d-4d1b-b245-b9900f5e663f",
+    "text": "Análisis matemático I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "de5f4aee-cfac-4d49-a458-b1951528feb8",
+    "text": "Análisis matemático II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "c3d4c133-5d6f-4cc2-bf77-1b4736e7d408",
+    "text": "Anatomía",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "d10f0214-f45f-42dd-a531-78e605a0a1b2",
+    "text": "Anatomofisiología",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "82c24b46-fbbc-473c-aa1a-9a018a47dc02",
+    "text": "Antropología",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "a846f2db-1ebd-430d-9e29-bfdb9619d55e",
+    "text": "Antropología cultural",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "4bfdc40c-e2e3-4783-a32e-f283fe42ad53",
+    "text": "Antropología y salud",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "72607792-4b65-4d9b-ad41-25997d8bacb5",
+    "text": "Arquitectura I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "4d8261da-23c1-48a0-b783-48ab88dcfce4",
+    "text": "Artes visuales",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "851cd9c5-e2db-492d-b271-747b53ab2fcd",
+    "text": "Autocad",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "e7443460-1464-4d63-abe1-1d24babd6fb6",
+    "text": "Bajo",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "671fd12b-4550-4d6e-bc2a-aea8d88f8961",
+    "text": "Bajo",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "e6d9fe8b-f8ae-4bfa-9e0f-f9a7076a0ae6",
+    "text": "Bajo",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "db1d45fa-5d3c-45a1-9735-b539678a4104",
+    "text": "Bases de datos",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "1af22c03-b9ad-4e73-b9b9-db94db8d6daa",
+    "text": "Batería",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "1b788627-15bb-4046-b7f2-3e1173e69d15",
+    "text": "Batería",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "36e72cf0-f257-4127-bc5f-7a50f5ce50a8",
+    "text": "Batería",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "81b9e5ff-3b38-44db-b020-3c772d6f927a",
+    "text": "Bioética I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "58fc9645-fec7-43de-aedf-30dc7ee0eb99",
+    "text": "Biología",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "07dfe9a4-e2dc-4ef6-99e5-866a3a58f267",
+    "text": "Biología",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "02d912c8-2927-42b6-91fc-8ac5213cd0c1",
+    "text": "Biología e introducción a la biología celular",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "2540ba98-4488-4572-a0c4-9f41fe25a6df",
+    "text": "Biología general",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "03292810-38ab-4b13-925e-af7c282b2934",
+    "text": "Biología, genética y sociedad",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "feef739f-7d8d-4973-8e37-961a76483b1b",
+    "text": "Bioquímica aplicada",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "22572208-ed18-4061-8a41-f2fe30cc1c35",
+    "text": "Cálculo financiero",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "f6623d7a-c711-4865-b7f5-0ec90411b416",
+    "text": "Cálculo I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "9090028a-e5b2-4c77-a6c8-e4c9f6c6dd49",
+    "text": "Cálculo II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "f38862b8-1460-4e0b-9319-97a0f7098038",
+    "text": "Cálculo numérico",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "597596cb-64fd-4d5f-a412-8c1a42f37cd5",
+    "text": "Canto",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "9cf775ee-df84-48f6-9498-dac27f4b2b23",
+    "text": "Canto",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "6e1574c2-f909-481d-bef2-e4b3d7addd0d",
+    "text": "Canto",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "a9ef008b-dda7-4d94-aa3a-d988a4e61302",
+    "text": "Certificate of proficiency in english - CPE",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "57059f33-215d-4bf6-9ec3-3aee5b78295c",
+    "text": "Charango",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "6635af91-2fbd-4539-9a9e-860ab38e4a18",
+    "text": "Charango",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "d612ee7e-438f-42f8-81a8-c587f0fd8779",
+    "text": "Charango",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "67bf0458-031f-416b-9d44-907412f77fd9",
+    "text": "Chino",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "7b4beffd-ae9d-4d10-9006-f0fb823a635f",
+    "text": "Chino",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "e7f822b2-2cad-40e0-bd13-dfd4c46ed89f",
+    "text": "Chino",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "da5a6098-7203-4275-b611-a05246f679d7",
+    "text": "Ciencia política",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "483ae405-850f-4a04-856e-7cda8df22569",
+    "text": "Ciencias naturales",
+    "level": "primary",
+    "highlights": {},
+}, {
+    "id": "395f3773-fbaf-43d7-9299-5017bb12a2f0",
+    "text": "Ciencias naturales",
+    "level": "primary",
+    "highlights": {},
+}, {
+    "id": "7278c7fc-8066-44d4-8191-e54fe2e95d39",
+    "text": "Ciencias naturales",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "6107b5af-4303-4784-900a-c6f5b69017e8",
+    "text": "Ciencias sociales",
+    "level": "primary",
+    "highlights": {},
+}, {
+    "id": "7ec7e5a9-af8a-476c-abc3-ccccac9533df",
+    "text": "Ciencias sociales",
+    "level": "primary",
+    "highlights": {},
+}, {
+    "id": "062f329a-8c02-44b9-87b3-a4f08b7e6ae5",
+    "text": "Ciencias sociales",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "fa2e1c88-243d-4103-8c0c-ba99dccfeb8e",
+    "text": "Computación",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "23362f23-37fa-4b80-ad26-3aaceb98645f",
+    "text": "Comunicación, cultura y sociedad",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "a9079c2b-a5b6-4954-ba5b-c074d73da920",
+    "text": "Comunicación I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "c4a9ae2b-391e-4820-bf6d-350152051e75",
+    "text": "Conceptos básicos de química",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "214b69c8-0d9b-4b5f-b1e5-5fb00d2bdd60",
+    "text": "Conocimiento de materiales",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "dcdd9de7-4901-4dd8-8dd0-28589043b775",
+    "text": "Conocimiento de materiales",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "43c6da6e-a66b-4144-bc16-6cec9338e2b6",
+    "text": "Construcción de ciudadanía",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "291ab2ed-e91e-44e3-b561-38bbf1658d75",
+    "text": "Contabilidad básica",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "f5968763-e4ec-4cc9-bd78-a1596e5b0fa8",
+    "text": "Contabilidad I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "fa69282e-d77a-4dc4-a30f-7498fd034f03",
+    "text": "Contabilidad II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "0f00e9c7-607c-453a-bbd6-66574f5c6d2d",
+    "text": "Contabilidad III",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "110ad001-f379-4df4-8335-4084b0b434a2",
+    "text": "Contabilidad patrimonial y de gestión",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "3bb6666e-2cd0-4f30-b0a5-bd22f630ecc7",
+    "text": "Costos",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "841f7943-e111-4c65-b766-1b0394fc15c9",
+    "text": "Crecimiento y desarrollo",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "d3fce91e-e7e9-4636-aa35-44e00d36f8a1",
+    "text": "Defensa del consumidor y del usuario",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "319e5f3e-fb7b-4646-a2b9-51702446fe51",
+    "text": "Deontología I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "225c8141-994d-418d-99a9-b70297722359",
+    "text": "Derecho administrativo",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "97e6038e-7a30-463c-ba0c-3d2931f059bd",
+    "text": "Derecho administrativo I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "97a0542c-41ae-4155-ba1f-d7b06a2ca4c0",
+    "text": "Derecho administrativo II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "22c59892-5602-42c5-94ae-f9fc0efe3a20",
+    "text": "Derecho civil I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "feda26af-a6a2-45cd-8fd2-51f32690d039",
+    "text": "Derecho civil III",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ab0e6b10-a75a-49fc-bdaa-8baf082d66d9",
+    "text": "Derecho comercial I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "681ef19c-601c-49d1-9dc9-0903bf43848b",
+    "text": "Derecho constitucional",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "16212e90-482b-4f5b-9979-c4c24a165f32",
+    "text": "Derecho constitucional y administrativo",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "dbed5e70-25e3-40dd-b8b2-875b3af3cb88",
+    "text": "Derecho de la insolvencia (concursos y quiebras)",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "f3abf018-bad7-4822-87e8-99cafc28c074",
+    "text": "Derecho de la navegación, transporte y comunicaciones",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "59c6cbd4-4025-41fc-b8ca-db466a4018aa",
+    "text": "Derecho de las obligaciones",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "27bc8d39-8c7c-48c6-8a76-8df7d485f6cc",
+    "text": "Derecho del trabajo",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "853c3d0a-6c68-4983-b30d-f1ce35eaee94",
+    "text": "Derecho internacional privado",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "56f8d427-1ce5-4850-9f3c-fb9ccd2899bb",
+    "text": "Derecho internacional público",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "5186eb64-da03-448d-a381-918ef886df0b",
+    "text": "Derecho penal I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "45f17b25-9f89-42e1-9541-eff71ead9d2f",
+    "text": "Derecho penal II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "2426b72a-fc10-40c8-a893-024803a52de7",
+    "text": "Derecho privado VI familia y sucesiones",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "d3bd5517-4803-4afc-a1ab-21bce0e25b18",
+    "text": "Derecho procesal civil",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "f2f8c9df-a427-4299-b1db-b085ac431b91",
+    "text": "Derecho procesal constitucional",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "17916766-6faf-422d-90c1-7ed55bee2ee0",
+    "text": "Derecho procesal I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ad47c0c3-d1ce-4561-a85f-5bf1b9f4815e",
+    "text": "Derecho tributario",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "67f67dd8-6d67-4faf-9fba-6785e188c039",
+    "text": "Desarrollo de sistemas",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "36f6d9a1-7dd0-4267-ac68-c3e9b635e9a4",
+    "text": "Diseño de indumentaria y textil",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "36b16833-3878-4f61-8a3f-9ce1c2229e21",
+    "text": "Diseño I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "50b99635-6d93-448d-ae18-0af00b0306f8",
+    "text": "Diseño industrial I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "725b0215-57a1-4c02-970f-3ffe36ceaacc",
+    "text": "Ecología general",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "3a0d0001-33ac-4633-b90f-b1f6e4fbe989",
+    "text": "Econometría",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "c99771ee-90d3-4342-8d9c-778d5adc78c8",
+    "text": "Economía",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "ffda58ee-8da2-4a26-ae14-92bc8c1a5bd9",
+    "text": "Economía",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "72ea5910-967e-4d89-beb8-d4c5bf433112",
+    "text": "Economía política",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "c2fc481a-0879-4d69-afff-b52205b67912",
+    "text": "Economía política",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "f656c892-806e-4fd2-abb9-cf8766c97ea1",
+    "text": "Economía y desarrollo",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "1f3b4f99-f7b0-4aa0-bd6f-2094cce2da76",
+    "text": "Economía y gestión de las organizaciones",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "f3648c04-4dc0-44cf-985b-bbf7f90df2d5",
+    "text": "Educación artística",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "622aac5f-4998-4b70-9701-e4e0461eeae5",
+    "text": "Educación artística",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "01fbd916-6be5-4a15-92be-ca3d37e1349d",
+    "text": "Electromagnetismo",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "5fc16421-8384-42a4-a9e7-310a5b1b9082",
+    "text": "Elementos de álgebra y de geometría",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "4e9b875e-7187-4ffc-8c4d-ed4bced71bd5",
+    "text": "Elementos de contabilidad",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "f37e1aee-4d66-491f-945d-7d6da0aea82a",
+    "text": "Elementos de micro y macroeconomía",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "0f3a221d-086e-453a-a3a4-003470e08a65",
+    "text": "Elementos técnicos de la música I",
+    "level": "tertiary",
+    "highlights": {},
+}, {
+    "id": "fc5f872d-423c-4d6a-8250-85c6ddadab22",
+    "text": "Elementos técnicos de la música II",
+    "level": "tertiary",
+    "highlights": {},
+}, {
+    "id": "9dc59057-a419-4bc4-bf51-ca69f5fc097f",
+    "text": "Elementos técnicos de la música III",
+    "level": "tertiary",
+    "highlights": {},
+}, {
+    "id": "8833a6fe-7a98-4367-a379-24fdaf97dae9",
+    "text": "El ser humano y su medio",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "3d4345fc-822c-430a-b721-cad5f31cc471",
+    "text": "Emprendedorismo",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "0dcd094a-b39f-4579-bb8f-14b6873bed20",
+    "text": "Enfermería en cuidados críticos",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "1481ef10-32f5-4336-bb6a-543bedeeec15",
+    "text": "Enfermería en salud colectiva I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "25aafe26-8ce5-406a-94d4-512eb4705b96",
+    "text": "Enfermería en salud colectiva II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "d32394b0-7232-4007-8331-17822f417b62",
+    "text": "Enfermería en salud pública I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "7aa550e9-6f3d-4b09-8e06-4b947591e32a",
+    "text": "Enfermería familiar I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "206fb01a-34f0-4bf8-b8b9-dec329dff9d3",
+    "text": "Enfermería familiar II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "d2621929-3f3c-45b5-ae34-fc830416a006",
+    "text": "Enfermería familiar III",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "7347fe1e-c702-4e22-b05a-bbf867fc8abd",
+    "text": "Enfermería familiar IV",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "7d2582f0-9533-41b7-bf82-7642e219e372",
+    "text": "Enfermería: fundamentos, prácticas y tendencias I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "35e26763-c7ee-4edc-9f32-7c8764e9392a",
+    "text": "Enfermería: fundamentos, prácticas y tendencias II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "bd66cc1d-435a-4d84-ad94-91a5565a9d87",
+    "text": "Enfermería médica I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "979d2202-7add-4f37-842b-df49da21d20e",
+    "text": "Epistemología y metodología de la investigación",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "2891a03c-f3a1-420a-8b5b-e6e11b1d2389",
+    "text": "Español para extranjeros",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "3441e5aa-5f96-4274-956a-d6cb3c5af655",
+    "text": "Español para extranjeros",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "ec575780-e323-4a3a-8a17-1e73b253832d",
+    "text": "Español para extranjeros",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "eacd3e01-bff9-40f9-98fc-5c9ae93abb73",
+    "text": "Estabilidad I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "42b6070b-f105-437e-af12-ba989ae398a5",
+    "text": "Estabilidad II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "f20937c2-6579-4c20-8e3e-0b52389f420a",
+    "text": "Estabilidad III",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "fd6319e2-10b5-4934-896b-e8fb7533e237",
+    "text": "Estadística",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "1e718be9-1348-4c04-91a6-f5a50bebb0f1",
+    "text": "Estadística B",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "250ff497-12b6-4bc6-b6fc-314ec07ea406",
+    "text": "Estadística general",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "4da20430-8258-4d78-8d95-cccd44df9eef",
+    "text": "Estadística I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "2bb3fe10-2f5d-4797-b6ad-0f4509c5e38c",
+    "text": "Estadística II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "c8e3bf3f-d1ad-4dc0-9ec1-1d32a538ad0c",
+    "text": "Estructuras",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "4f0b6bdb-84f8-40b0-a030-f9beec8c312d",
+    "text": "Estructura y funcionamiento de los sistemas informáticos I",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "981ac87b-7b23-4034-a104-aba00dd7fd5d",
+    "text": "Estructura y funcionamiento de los sistemas informáticos II",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "8bbc94bb-6050-425a-9f5b-20370d4c1833",
+    "text": "Estructura y función del cuerpo humano I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "4b96d4af-32bd-4ccb-8563-996e3911c5d5",
+    "text": "Estructura y función del cuerpo humano II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "382ebe82-1f3d-42ca-9866-dffd196c638b",
+    "text": "Ética y ciudadanía",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "7adcf431-af3f-4d0c-b350-bfdda8a6263c",
+    "text": "Farmacología I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "495b0aa0-ef4b-40a1-96ea-c22c6e310236",
+    "text": "Farmacología y toxicología",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "fe5e284f-d4c6-45c3-b4cc-f84b522b94b3",
+    "text": "Filosofía",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "08d87283-13bc-4746-9710-ac3acc085c92",
+    "text": "Filosofía",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "dccb63a3-7258-48de-8b2f-c1d8a850104f",
+    "text": "First certificate in english - FCE",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "12a6f8c4-4734-48a6-8ba7-9ae51cec0815",
+    "text": "Física",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "5c3f3dba-4382-4eed-a809-c844ce121bec",
+    "text": "Física",
+    "level": "tertiary",
+    "highlights": {},
+}, {
+    "id": "9b8790e2-2462-4d0b-b06e-0ec373ff254f",
+    "text": "Física",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "95e29973-6fa7-4d63-b51a-dc9bc0815e9b",
+    "text": "Física aplicada",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "84009bdb-9d32-47ac-95a5-b6305fb7dc46",
+    "text": "Física aplicada",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "2fa2470b-6385-4b02-90d2-4a2c10afd725",
+    "text": "Física aplicada a la arquitectura",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "12adf154-9577-41e7-af0b-b55df6485427",
+    "text": "Física biológica",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "6dbb87f7-58cd-471c-ade5-daa7b1f1601c",
+    "text": "Física clásica y moderna",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "2ce46cbb-3f46-469a-bf7f-902323ab4a75",
+    "text": "Física e introducción a la biofísica",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "6009f45b-c4f9-4120-ae60-3993972aa0ed",
+    "text": "Física general",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "5000ed3a-6da8-451b-b92e-4bfe6fac9a11",
+    "text": "Física I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "e73a9dc0-f98f-4353-91e0-b5dde5490a02",
+    "text": "Física II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "afa52e81-d80f-462c-9143-998cb293490a",
+    "text": "Fisicoquímica",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "25b8aac3-864e-41f4-a57d-95a8401c34e9",
+    "text": "Fisicoquímica general",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "383d6334-f4ca-4944-b9f2-217c6f2d8356",
+    "text": "Fisiología y biofísica",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "e75c4d61-3d43-41a7-92a5-51770877cbb0",
+    "text": "Flauta",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "a7d609ab-b26b-4a14-b1ea-d3ddd9ee7956",
+    "text": "Flauta",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "8adeaa3d-557e-499e-b593-7475e0450e4a",
+    "text": "Flauta",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "b8552c5b-2553-4d9a-9d1b-2f98101ab087",
+    "text": "Francés",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "1ac433b4-79a0-408c-82c1-64239686373f",
+    "text": "Francés",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "88259bb4-153e-4abe-8f61-4fa174bf85ae",
+    "text": "Francés",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "2ed41802-ec31-48ca-ac0a-4d8c84182516",
+    "text": "Fundamentos de la economía",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "d19c1e72-2ffc-4b90-a829-34d87047ca33",
+    "text": "Fundamentos de la ingeniería química",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "7cd66b0e-e96d-4ef8-9df1-eaaf1acf62e7",
+    "text": "Fundamentos de química",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "f26fbe18-7c47-4ac5-86ee-88902edc3fc0",
+    "text": "Fundamentos de química general e inorgánica",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "09955c9d-922b-4f56-9306-452282db1b93",
+    "text": "Geografía",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "fdf57f46-8de3-40ab-a7fe-d1c214af1287",
+    "text": "Gramática española",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "e3a4e10b-4843-435c-94f9-024de3a11dda",
+    "text": "Griego I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "4854440a-3504-4d0d-a7a0-2eb65c9e5a1e",
+    "text": "Griego II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "f6b338c6-2d08-428c-a29f-b84ca58ef544",
+    "text": "Guitarra",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "07a68b69-2cea-4748-b65e-0c3ee4982f99",
+    "text": "Guitarra",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "b70f2772-3c15-491d-8068-738c5dbfb321",
+    "text": "Guitarra",
+    "level": "intermediate",
+    "highlights": {},
+}, 
+
+
+
+
+
+
+
+
+
+
+
+{
+    "id": "ms8",
+    "text": "Hebreo",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "ms9",
+    "text": "Hebreo",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "mx0",
+    "text": "Hebreo",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "mx1",
+    "text": "Histología, biología celular, embriología y genética",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "mx2",
+    "text": "Histología y biología celular",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "mx3",
+    "text": "Historia",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "mx4",
+    "text": "Historia - Ciencias naturales",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "mx5",
+    "text": "Historia - Ciencias sociales",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "mx6",
+    "text": "Historia constitucional",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "mx7",
+    "text": "Historia de la arquitectura I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "mx8",
+    "text": "Historia - Economía y administración",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "mx9",
+    "text": "Historia económica y social Argentina",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "mz0",
+    "text": "Historia económica y social general",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "mz1",
+    "text": "Historia I (arquitectura moderna y diseño)",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "mz2",
+    "text": "Historia - Informática",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "mz3",
+    "text": "Holandés",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "mz4",
+    "text": "Holandés",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "mz5",
+    "text": "Holandés",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "mz6",
+    "text": "Impuestos I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "mz7",
+    "text": "Impuestos II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "mz8",
+    "text": "Inglés",
+    "level": "advanced",
+    "highlights": {
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["8b5c1757-4aa6-4257-93f6-6eb45a087d82", "87215cd5-c0ce-4535-8563-ed8067aa9182"]
+    },
+}, {
+    "id": "mz9",
+    "text": "Inglés",
+    "level": "beginner",
+    "highlights": {
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["8b5c1757-4aa6-4257-93f6-6eb45a087d82", "87215cd5-c0ce-4535-8563-ed8067aa9182"]
+    },
+}, {
+    "id": "na0",
+    "text": "Inglés",
+    "level": "intermediate",
+    "highlights": {
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["8b5c1757-4aa6-4257-93f6-6eb45a087d82", "87215cd5-c0ce-4535-8563-ed8067aa9182"]
+    },
+}, {
+    "id": "na2",
+    "text": "Inglés",
+    "level": "primary",
+    "highlights": {
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["8b5c1757-4aa6-4257-93f6-6eb45a087d82"]
+    },
+}, {
+    "id": "na3",
+    "text": "Inglés",
+    "level": "secondary",
+    "highlights": {
+        "ChIJoYUAHyvmopUR4xJzVPBE_Lw": ["bc57be91-c76b-4c1c-99a6-3b54b53a7b36"],
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["8b5c1757-4aa6-4257-93f6-6eb45a087d82"]
+    },
+}, {
+    "id": "na4",
+    "text": "Inglés",
+    "level": "university",
+    "highlights": {
+        "ChIJoYUAHyvmopUR4xJzVPBE_Lw": ["bc57be91-c76b-4c1c-99a6-3b54b53a7b36"],
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["8b5c1757-4aa6-4257-93f6-6eb45a087d82"]
+    },
+}, {
+    "id": "na5",
+    "text": "Ingreso EMUNS - Lengua",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "na6",
+    "text": "Ingreso UNC - Biología",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "na7",
+    "text": "Ingreso UNC - Física",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "na8",
+    "text": "Ingreso UNC - Introducción a los estudios de la carrera de abogacía",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "na9",
+    "text": "Ingreso UNC - Lengua",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nb0",
+    "text": "Ingreso UNC - Matemática",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nb1",
+    "text": "Ingreso UNC - Quimica",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nb2",
+    "text": "Ingreso UNS - Análisis y comprensión de problemas",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nb3",
+    "text": "Ingreso UNS - Comprensión de textos",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nb4",
+    "text": "Ingreso UNS - Enfermería",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nb5",
+    "text": "Ingreso UNS - Física",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nb6",
+    "text": "Ingreso UNS - Formación ética y ciudadana",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nb7",
+    "text": "Ingreso UNS - Geografía",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nb8",
+    "text": "Ingreso UNS - Matemática",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nc0",
+    "text": "Ingreso UNS - Medicina",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nc1",
+    "text": "Ingreso UNS - Nociones básicas de administración y contabilidad",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nc2",
+    "text": "Ingreso UNS - Química",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nc3",
+    "text": "Ingreso UTN - Física",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nc4",
+    "text": "Ingreso UTN - Matemática",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nc5",
+    "text": "Inmunología humana",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nc6",
+    "text": "Instalaciones I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nc7",
+    "text": "Instalaciones II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nc8",
+    "text": "Instituciones de derecho público",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nc9",
+    "text": "International english language testing system - IELTS",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "nd0",
+    "text": "Introducción a la administración",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nd1",
+    "text": "Introducción a la arquitectura contemporánea",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nd2",
+    "text": "Introducción a la biología celular",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nd3",
+    "text": "Introducción a la enfermería en salud pública",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nd4",
+    "text": "Introducción a la física",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nd5",
+    "text": "Introducción a la geografía",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nd6",
+    "text": "Introducción a la historia de la arquitectura",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nd7",
+    "text": "Introducción a la ingeniería industrial",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "bd8",
+    "text": "Introducción a la matemática",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nd9",
+    "text": "Introducción a la química",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "ne0",
+    "text": "Introducción al conocimiento de la sociedad y el estado",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ne1",
+    "text": "Introducción al conocimiento proyectual I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ne2",
+    "text": "Introducción al conocimiento proyectual II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ne3",
+    "text": "Introducción al derecho",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ne4",
+    "text": "Introducción al diseño y a la arquitectura moderna",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ne5",
+    "text": "Introducción al estudio de las ciencias sociales D",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ne6",
+    "text": "Introducción a los estudios universitarios y la economía",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ne7",
+    "text": "Introducción a los fundamentos del diseño",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ne8",
+    "text": "Introducción a los tipos constructivos",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ne9",
+    "text": "Introducción a los tipos estructurales",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nf0",
+    "text": "Introducción al pensamiento científico",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nf1",
+    "text": "Italiano",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "nf2",
+    "text": "Italiano",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "nf3",
+    "text": "Italiano",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "nf4",
+    "text": "Laboratorio de algoritmos y estructura de datos",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nf4",
+    "text": "Laboratorio de programación orientada a objetos",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nf5",
+    "text": "Laboratorio de tecnología de la información en las organizaciones",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nf6",
+    "text": "Latín I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nf8",
+    "text": "Latín II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nf9",
+    "text": "Lenguaje musical I",
+    "level": "tertiary",
+    "highlights": {},
+}, {
+    "id": "ng0",
+    "text": "Lenguaje musical II",
+    "level": "tertiary",
+    "highlights": {},
+}, {
+    "id": "ng1",
+    "text": "Lenguaje musical III",
+    "level": "tertiary",
+    "highlights": {},
+}, {
+    "id": "ng2",
+    "text": "Lenguajes electrónicos",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "ng3",
+    "text": "Lengua y cultura griega I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ng4",
+    "text": "Lengua y cultura latina I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ng5",
+    "text": "Lengua y cultura latina II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ng6",
+    "text": "Lengua y literatura",
+    "level": "secondary",
+    "highlights": {
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["8693a6a1-9254-4915-82bd-af549dae64ec"]
+    },
+}, {
+    "id": "ng7",
+    "text": "Lingüística I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ng8",
+    "text": "Lingüística II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ng9",
+    "text": "Literatura",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nh0",
+    "text": "Lógica y epistemología de las ciencias",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nh1",
+    "text": "Macroeconomía I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nh2",
+    "text": "Matemática",
+    "level": "primary",
+    "highlights": {},
+}, {
+    "id": "nh3",
+    "text": "Matemática",
+    "level": "primary",
+    "highlights": {},
+}, {
+    "id": "nh3",
+    "text": "Matemática",
+    "level": "secondary",
+    "highlights": {
+        "ChIJoYUAHyvmopUR4xJzVPBE_Lw": ["14faa8e6-3bbd-43a1-bc7c-dc1c2311fcbc"],
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["8a49e728-e941-43ac-9a50-d9fcef96fe2a"],
+        "ChIJvQIT3Ku87ZUREXoeJI3Y0XY": ["504d9d05-ab59-4fe1-80ff-ed1a03c0c3b0"]
+    },
+}, {
+    "id": "nh4",
+    "text": "Matemática",
+    "level": "tertiary",
+    "highlights": {},
+}, {
+    "id": "nh5",
+    "text": "Matemática",
+    "level": "university",
+    "highlights": {
+        "ChIJoYUAHyvmopUR4xJzVPBE_Lw": ["14faa8e6-3bbd-43a1-bc7c-dc1c2311fcbc"]
+    },
+}, {
+    "id": "nh6",
+    "text": "Matemática aplicada",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nh7",
+    "text": "Matemática financiera",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nh8",
+    "text": "Matemática I A",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nh9",
+    "text": "Matemática I B",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ni0",
+    "text": "Matemática II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ni1",
+    "text": "Matemática II A",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ni2",
+    "text": "Matemática II B",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ni3",
+    "text": "Matemáticas",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ni4",
+    "text": "Medicina familiar I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ni5",
+    "text": "Medios de representación",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ni6",
+    "text": "Medios expresivos I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ni7",
+    "text": "Metodología de la investigación en salud",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ni8",
+    "text": "Metodología de las ciencias sociales",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ni9",
+    "text": "Metodología y técnicas de estudio",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nj0",
+    "text": "Microbiología y parasitología",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nj1",
+    "text": "Microbiología y parasitología I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nj2",
+    "text": "Microbiología y parasitología II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nj3",
+    "text": "Microeconomía",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nj4",
+    "text": "Modelado 3D",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nj5",
+    "text": "Modelos estadísticos",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nj6",
+    "text": "Modelos y sistemas",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "7",
+    "text": "Morfología",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nj8",
+    "text": "Morfología I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nj9",
+    "text": "Música",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nl0",
+    "text": "Neurociencias I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nl1",
+    "text": "Neurociencias II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nl2",
+    "text": "Neurociencias III",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nl3",
+    "text": "Nutrición",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nl4",
+    "text": "Nutrición",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nl5",
+    "text": "Patología I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nl6",
+    "text": "Patrimonio turístico argentino",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nl7",
+    "text": "Percusíon",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "nl8",
+    "text": "Percusíon",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "nl9",
+    "text": "Percusíon",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "nn0",
+    "text": "Piano",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "nn1",
+    "text": "Piano",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "nn2",
+    "text": "Piano",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "nn3",
+    "text": "Política y ciudadanía",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nn4",
+    "text": "Portugués",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "nn5",
+    "text": "Portugués",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "nn6",
+    "text": "Portugués",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "nn7",
+    "text": "Prácticas del lenguaje",
+    "level": "primary",
+    "highlights": {},
+}, {
+    "id": "nn8",
+    "text": "Prácticas del lenguaje",
+    "level": "primary",
+    "highlights": {},
+}, {
+    "id": "nn9",
+    "text": "Prácticas del lenguaje",
+    "level": "secondary",
+    "highlights": {
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["8693a6a1-9254-4915-82bd-af549dae64ec"]
+    },
+}, {
+    "id": "nm0",
+    "text": "Principios de derechos humanos y derecho constitucional",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nm1",
+    "text": "Principios de economía",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nm2",
+    "text": "Principios de farmacología",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nm3",
+    "text": "Principios generales del derecho Latinoamericano",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nm4",
+    "text": "Probabilidad y estadística",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nm5",
+    "text": "Psicoanálisis I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nm6",
+    "text": "Psicoanálisis II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nm7",
+    "text": "Psicoanálisis y psicopatología",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nm8",
+    "text": "Psicoestadística",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nm9",
+    "text": "Psicología",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nt0",
+    "text": "Psicología",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nt1",
+    "text": "Química",
+    "level": "secondary",
+    "highlights": {
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["8a49e728-e941-43ac-9a50-d9fcef96fe2a"]
+    },
+}, {
+    "id": "nt2",
+    "text": "Química",
+    "level": "tertiary",
+    "highlights": {},
+}, {
+    "id": "nt3",
+    "text": "Química",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nt4",
+    "text": "Química, alimentación y salud",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nt5",
+    "text": "Química analítica",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nt6",
+    "text": "Química analítica general",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nt7",
+    "text": "Química analítica instrumental",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nt8",
+    "text": "Química aplicada",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nt9",
+    "text": "Química aplicada",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nu0",
+    "text": "Química biológica",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nu1",
+    "text": "Química del carbono",
+    "level": "secondary",
+    "highlights": {
+        "ChIJoYUAHyvmopUR4xJzVPBE_Lw": ["14faa8e6-3bbd-43a1-bc7c-dc1c2311fcbc"]
+    },
+}, {
+    "id": "nu2",
+    "text": "Química general e inorgánica",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nu3",
+    "text": "Química general e inorgánica",
+    "level": "university",
+    "highlights": {
+        "ChIJoYUAHyvmopUR4xJzVPBE_Lw": ["14faa8e6-3bbd-43a1-bc7c-dc1c2311fcbc"],
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["8a49e728-e941-43ac-9a50-d9fcef96fe2a"]
+    },
+}, {
+    "id": "nu4",
+    "text": "Química general II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nu5",
+    "text": "Química general para ingeniería",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nu6",
+    "text": "Química I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nu7",
+    "text": "Química industrial",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nu8",
+    "text": "Química industrial I",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nu9",
+    "text": "Química industrial II",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nx0",
+    "text": "Química inorgánica",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nx1",
+    "text": "Química inorgánica",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nx2",
+    "text": "Química orgánica",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nx3",
+    "text": "Química orgánica I",
+    "level": "university",
+    "highlights": {
+        "ChIJoYUAHyvmopUR4xJzVPBE_Lw": ["14faa8e6-3bbd-43a1-bc7c-dc1c2311fcbc"]
+    },
+}, {
+    "id": "nx4",
+    "text": "Química orgánica II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nx5",
+    "text": "Química orgánica y biológica",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nx6",
+    "text": "Química orgánica y bio-orgánica",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nx7",
+    "text": "Resistencia de materiales",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nx8",
+    "text": "Resistencia y ensayo de materiales",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "nx9",
+    "text": "Resolución de problemas y algoritmos",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nz0",
+    "text": "Revit",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "nz1",
+    "text": "Revit",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "nz2",
+    "text": "Revit",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "nz3",
+    "text": "Salud colectiva I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nz4",
+    "text": "Salud colectiva II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nz5",
+    "text": "Salud mental",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "nz6",
+    "text": "Saxo",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "nz7",
+    "text": "Saxo",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "nz8",
+    "text": "Saxo",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "nz9",
+    "text": "Semiología",
+    "level": "university",
+    "highlights": {
+        "ChIJvQz5TjvKvJURh47oiC6Bs6A": ["8693a6a1-9254-4915-82bd-af549dae64ec"]
+    },
+}, {
+    "id": "oa1",
+    "text": "Sistema de costos",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "oa2",
+    "text": "Sistema de representación geométrica",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "oa3",
+    "text": "Sistemas administrativos",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "oa4",
+    "text": "Sistemas constructivos",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "oa5",
+    "text": "Sistemas de información contable",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "oa6",
+    "text": "Sistemas de representación",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "oa7",
+    "text": "Sistemas digitales",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "oa8",
+    "text": "Sketchup",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "oa9",
+    "text": "Sketchup",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "ob0",
+    "text": "Sketchup",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "ob1",
+    "text": "Sketchup",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "ob2",
+    "text": "Sketchup",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "ob3",
+    "text": "Sketchup",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "ob4",
+    "text": "Sociedades y asociaciones",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ob5",
+    "text": "Sociología",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "ob6",
+    "text": "Sociología",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ob7",
+    "text": "Sociología y antropología general",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ob8",
+    "text": "Taller de comprensión y producción de discursos",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "ob9",
+    "text": "Taller de comprensión y producción de discursos H",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "oc0",
+    "text": "Taller de dibujo",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "oc1",
+    "text": "Taller de programación",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "oc2",
+    "text": "Tango",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "oc3",
+    "text": "Técnicas de producción",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "oc4",
+    "text": "Tecnología electrónica",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "oc5",
+    "text": "Tecnología I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "oc6",
+    "text": "Tecnologías de la información",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "oc7",
+    "text": "Tecnologías de la información - Ciencias naturales",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "oc8",
+    "text": "Tecnologías de la información - Ciencias sociales",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "oc9",
+    "text": "Tecnologías de la información - Economía y administración",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "od0",
+    "text": "Tecnologías de la información - Informática",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "od1",
+    "text": "Teoría contable",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "od2",
+    "text": "Teoría política y derecho público",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "od3",
+    "text": "Teoría social",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "od4",
+    "text": "Teoría y técnica impositiva",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "od5",
+    "text": "Teoría y técnica impositiva II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "od6",
+    "text": "Teoría y técnica tributaria I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "od7",
+    "text": "Teoría y técnica tributaria II",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "od8",
+    "text": "Termodinámica y máquinas térmicas",
+    "level": "secondary",
+    "highlights": {},
+}, {
+    "id": "od9",
+    "text": "Test of english as a foreign language - TOEFL",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "oe0",
+    "text": "Tipografía I",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "oe1",
+    "text": "Trabajo y tiempo libre",
+    "level": "university",
+    "highlights": {},
+}, {
+    "id": "oe2",
+    "text": "Trompeta",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "oe3",
+    "text": "Trompeta",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "oe4",
+    "text": "Trompeta",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "oe4",
+    "text": "Violín",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "oe5",
+    "text": "Violín",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "oe6",
+    "text": "Violín",
+    "level": "intermediate",
+    "highlights": {},
+}, {
+    "id": "oe7",
+    "text": "Violoncello",
+    "level": "advanced",
+    "highlights": {},
+}, {
+    "id": "oe8",
+    "text": "Violoncello",
+    "level": "beginner",
+    "highlights": {},
+}, {
+    "id": "oe9",
+    "text": "Violoncello",
+    "level": "intermediate",
+    "highlights": {},
+}]

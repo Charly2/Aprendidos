@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="undefined"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="/css/materialize.min.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbwyo5G5fa4OCOXgUKezEiUOHZFHB7HLs&amp;libraries=places&amp;sensor=false"></script>
+  </head>
+  <body class="searchBG">
+    <header class="my__Header">
+      <section class="my__HeaderContain container">
+        <div class="row my__HeaderIzDe">
+          <figure class="col l4 col m2 col s12 contain__Header">
+            <h1 class="title"><a href="/" class="link">Aprendidos</a></h1><a href="#" data-activates="slide-out" class="button-collapse menuMobile"><i class="material-icons">menu</i></a>
+          </figure>
+          <nav class="col l8 col m10 container__Menu">
+            <ul class="ul">
+              <li class="list"><a href="/nosotros" class="link">Nosotros</a></li>
+              <li class="list"><a href="/teacher/register" class="link">Quiero Enseñar</a></li>
+              <!--li.list
+              a.link(href="/search/0")
+                | Quiero Aprender
+              
+              -->
+              <li class="list"><a href="/search/0" class="link">Quiero Aprender</a></li>
+              <li class="list"><a href="/login" class="link">INGRESAR</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <div class="containerDecored row">
+        <div class="col l3 linesHeader uno"></div>
+        <div class="col l3 linesHeader dos"></div>
+        <div class="col l3 linesHeader tres"></div>
+        <div class="col l3 linesHeader cuatro"></div>
+      </div>
+    </header>
+    <section class="my__HeaderMobil">
+      <ul id="slide-out" class="side-nav">
+        <li>
+          <div class="userView">
+            <div class="background"><img src=""/></div><a href="#!user"><img src="/img/logomobil.png" class="circle"/></a><a href="#!name"><span class="white-text name">Aprendidos</span></a>
+          </div>
+        </li>
+        <li><a href="/search/0" class="waves-effect">Buscar Profesor</a></li>
+        <li><a href="/nosotros">Nosotros</a></li>
+        <li><a href="/teacher/register">Quiero Enseñar</a></li>
+        <li><a href="/login" class="waves-effect">Ingresar</a></li>
+      </ul>
+    </section>
+    <main class="main">
+      <section class="teacher__Register container">
+        <div class="row">
+          <section class="teacher__Register--Container card col l12 col m12 col s12">
+            <header class="teacher__Register--Header col l12 col m12 col s12">
+              <h2 class="title">Bienvenido al registro de Profesor</h2>
+            </header>
+            <section class="teacher__Register--Steps--Menu col l12 col m12 col s12">
+              <ul class="ul">
+                <li onclick=" window.location.href = '/teacher/register/stepone';" class="list col l3 col m3 col s3">
+                  <div class="list__Icon"><i class="fa fa-id-card activeItem"></i></div>
+                  <div class="list__Name"><span class="name activeItem">Datos Personales</span></div>
+                </li>
+                <li onclick="window.location.href = '/teacher/register/steptwo'; " class="list col l3 col m3 col s3">
+                  <div class="list__Icon"><i class="fa fa-book"></i></div>
+                  <div class="list__Name"><span class="name">Materias</span></div>
+                </li>
+                <li class="list col l3 col m3 col s3 otherCursor">
+                  <div class="list__Icon"><i class="fa fa-user-circle-o"></i></div>
+                  <div class="list__Name"><span class="name">Tus Clases</span></div>
+                </li>
+                <li class="list col l3 col m3 col s3 otherCursor">
+                  <div class="list__Icon"><i class="fa fa-comment"></i></div>
+                  <div class="list__Name"><span class="name">Contacto</span></div>
+                </li>
+              </ul>
+            </section>
+            <section class="teacher__Register--Steps--Container col l12 col m12 col s12">
+              <article class="show__User--Exist">
+                <h3 class="show">Usted ya completo el paso 1</h3>
+              </article>
+            </section>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__Top">
+        <div class="container footer__Contain">
+          <div class="row">
+            <ul class="ul col l3 col m6 col s6">
+              <label class="title">NOSOTROS</label>
+              <li class="list"><a href="/nosotros" class="link">Quienes Somos?</a></li>
+              <li class="list"><a href="/prensa" class="link">Prensa</a></li>
+            </ul>
+            <ul class="ul col l3 col m6 col s6">
+              <label class="title">APRENDIDOS</label>
+              <li class="list"><a href="/terminos-y-condiciones" class="link">Terminos y Condiciones</a></li>
+              <li class="list"><a href="/preguntas-frecuentes" class="link">Preguntas Frecuentes</a></li>
+              <li class="list"><a href="/plataforma" class="link">La Plataforma</a></li>
+            </ul>
+            <ul class="ul col l3 col m6 col s6">
+              <label class="title">REDES SOCIALES</label>
+              <li class="list"><a href="https://www.facebook.com/aprendidos/" class="link"><i aria-hidden="true" class="fa fa-facebook"></i>Facebook</a></li>
+              <li class="list"><a href="https://twitter.com/aprendidos" class="link"><i aria-hidden="true" class="fa fa-twitter"></i>Twitter</a></li>
+              <li class="list"><a href="https://www.instagram.com/aprendidos/" class="link"><i aria-hidden="true" class="fa fa-instagram"></i>Instagram</a></li>
+            </ul>
+            <ul class="ul col l3 col m6 col s6">
+              <li class="list"><a href="#" class="link"><img src="/img/googleplay.png" width="120px"/></a></li>
+              <li class="list"><a href="#" class="link"><img src="/img/appstore.png" width="120px"/></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__Bottom">
+        <div class="container footer__Derechos">
+          <p class="description">© 2017 - Todos los derechos reservados</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/jquery.materialize-autocomplete.min.js"></script>
+    <script src="/js/codigo.js"></script>
+    <script src="/js/jquery.timeago.js"></script>
+    <script src="/js/jquery.scrollTo.min.js"></script>
+    <script>
+      var geocoder = new google.maps.Geocoder();
+      var directionsService = new google.maps.DirectionsService();
+      
+      var getLatitud, getLongitud
+      
+      var Latitud = $(".jsObtainData").attr('data-lat');
+      var Longitud = $(".jsObtainData").attr('data-lon');
+      
+      if(navigator.geolocation){
+          
+          navigator.geolocation.getCurrentPosition(display, err);
+      
+          function display(data){
+      
+                  var directionsRequest = {
+                        origin: new google.maps.LatLng(data.coords.latitude,data.coords.longitude),
+      
+                        destination: new google.maps.LatLng(Latitud,Longitud),
+                        
+                        travelMode: google.maps.DirectionsTravelMode.DRIVING,
+                        unitSystem: google.maps.UnitSystem.METRIC
+                  };
+      
+                  directionsService.route(directionsRequest, function (response, status) {
+                      if (status == google.maps.DirectionsStatus.OK) {                   
+                          console.log(response); 
+                          
+                          //Insert in document
+                          var insertKM = response.routes[0].legs[0].distance.text;
+      
+                          $(".jsDateKm").text(insertKM);
+      
+                      }
+      
+                      else {console.log('error')}
+                          //Error has occured
+                  })
+      
+          }
+      
+          function err(e){
+            return e;
+          }
+      
+      
+      } else {
+          alert('Porfavor actualize un navegador mas actual');
+      }
+      
+      var autocomplete = new google.maps.places.Autocomplete($("#pac-input")[0], {});      
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+                //console.log(autocomplete);
+      
+                var place = autocomplete.getPlace();
+                
+                //console.log(place);
+                //console.log(place.address_components);
+                /*console.log(place.geometry.location.lat()); */
+      
+                //var ciudades = ['Buenos Aires', 'CABA', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fe', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán'];
+      
+                var resultCity = '';
+      
+                var components = place.address_components;
+                
+                for (var i = 0, component; component = components[i]; i++) {
+                    //console.log(component);
+                    if (component.types[0] == 'locality') {
+                        resultCity = component['short_name'];
+                    }
+                }
+                
+                //console.log(resultCity);
+                
+      
+                //adding in barrio to part in step tree
+                //$(".jsAddress").val(place.address_components[2].long_name);
+                $(".jsAddress").val(resultCity);
+              
+      
+      
+                //adding in barrio to part in step tre to maps
+                $(".jsLinkMap").val(place.formatted_address);
+      
+                //adding in barrio to get latitud
+                $(".jsLatitud").val(place.geometry.location.lat());
+      
+                //adding in barrio to get latitud
+                $(".jsLongitud").val(place.geometry.location.lng());
+      
+                /* var address = "bca";
+                 address = place.formatted_address;
+               
+                 geocoder.geocode( { 'address': address}, function(results, status) {
+      
+                  if (status == google.maps.GeocoderStatus.OK) {
+                    var latitude = results[0].geometry.location.lat();
+                    var longitude = results[0].geometry.location.lng();
+      
+                  }
+      
+                }); */
+        
+        });
+      
+    </script>
+    <script src="/js/aprendidos.js"></script>
+    <script>
+      jQuery(document).ready(function() {
+          jQuery("time.timeago").timeago();
+        });
+      
+        jQuery.timeago.settings.strings = {
+        suffixAgo: "",
+        suffixFromNow: "a partir de ahora",
+        seconds: "Ahora",
+        minute: "Hace un minuto",
+        minutes: "Hace unos %d minutos",
+        hour: "Hace una hora",
+        hours: "Hace %d horas",
+        day: "Hace un día",
+        days: "Hace %d días",
+        month: "Hace un mes atrás",
+        months: "Hace %d meses",
+        year: "Hace un año atrás",
+        years: "Hace %d años atrás"
+        };
+    </script>
+  </body>
+</html>

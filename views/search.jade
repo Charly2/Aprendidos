@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body.searchBG
+    include inc/header
+
+    main.main
+      section.search__Contain
+        div.container
+          div.row
+            article.card.search__Filter.col.l12.col.m12.col.s12
+              div.search__Filter--Top
+                ul.ul
+                  li.list.col.l3.col.m3.col.s12
+                    | Ordernar por:
+                  if menugeora
+                    li.list.col.l3.col.m3.col.s4.geoItemSelect(title="Random", onclick="window.location.href ='/search/find?geo=random&page=1' ")
+                      i.fa.fa-map-marker.geoItemSelect
+                      -var show = Number(isNumber)
+                      -var gen = show.toFixed(2);
+                      | Distancia
+                  else
+                    li.list.col.l3.col.m3.col.s4(title="Random", onclick="window.location.href ='/search/find?geo=random&page=1' ")
+                      i.fa.fa-map-marker
+                      | Distancia
+
+                  if menurtp
+                    li.list.col.l3.col.m3.col.s4.menuRtp(title="Aleatorio", onclick="window.location.href = '/search/find?ptn=up&page=1' ")
+                      i.fa.fa-long-arrow-down
+                      i.fa.fa-star.menuRtp
+                      -var show = Number(isNumber)
+                      -var gen = show.toFixed(2);
+                      | Puntaje
+                  else
+                    if menuptn
+                      li.list.col.l3.col.m3.col.s4.menuRtp(title="Aleatorio", onclick="window.location.href = '/search/find?rtp=down&page=1' ")
+                        i.fa.fa-long-arrow-up
+                        i.fa.fa-star
+                        | Puntaje
+                    else
+                      li.list.col.l3.col.m3.col.s4(title="Aleatorio", onclick="window.location.href = '/search/find?rtp=down&page=1' ")
+                        i.fa.fa-star
+                        | Puntaje
+
+
+                  if menupre
+                    li.list.col.l3.col.m3.col.s4.menuPre(title="Aleatorio", onclick="window.location.href = '/search/find?upri=up&page=1' ")
+                      i.fa.fa-long-arrow-down
+                      i.fa.fa-usd.menuPre
+                      -var show = Number(isNumber)
+                      -var gen = show.toFixed(2);
+                      | Precio  
+                  else
+
+                    if menuuppri
+                      li.list.col.l3.col.m3.col.s4.menuPre(title="Aleatorio", onclick="window.location.href = '/search/find?pre=down&page=1' ")
+                        i.fa.fa-long-arrow-up
+                        i.fa.fa-usd.menuPre
+                        -var show = Number(isNumber)
+                        -var gen = show.toFixed(2);
+                        | Precio  
+                    else
+                      li.list.col.l3.col.m3.col.s4(title="Aleatorio", onclick="window.location.href = '/search/find?pre=down&page=1' ")
+                        i.fa.fa-usd
+                        | Precio
+
+
+              div.search__Filter--Bottom.col.m12
+                ul.ul
+                  li.list.col.l3.col.m6.col.s6
+                    if Number(menuRating) == 1
+                      ul.subUl--Start.col.m12.col.s12
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=1&page=1' ")
+                            i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=2&page=1' ")
+                            i.fa.fa-star
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=3&page=1' ")
+                            i.fa.fa-star
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=4&page=1' ")
+                          i.fa.fa-star
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=5&page=1' ")
+                          i.fa.fa-star
+                      div.list__Bottom.col.m12.col.s12
+                        span.title.isVerde
+                          | Calificacion 1
+                    else if Number(menuRating) == 2
+                      ul.subUl--Start.col.m12.col.s12
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=1&page=1' ")
+                            i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=2&page=1' ")
+                            i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=3&page=1' ")
+                            i.fa.fa-star
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=4&page=1' ")
+                          i.fa.fa-star
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=5&page=1' ")
+                          i.fa.fa-star
+                      div.list__Bottom.col.m12.col.s12
+                        span.title.isVerde
+                          | Calificacion 2 
+                    else if Number(menuRating) == 3
+                      ul.subUl--Start.col.m12.col.s12
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=1&page=1' ")
+                            i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=2&page=1' ")
+                            i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=3&page=1' ")
+                            i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=4&page=1' ")
+                          i.fa.fa-star
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=5&page=1' ")
+                          i.fa.fa-star
+                      div.list__Bottom.col.m12.col.s12
+                        span.title.isVerde
+                          | Calificacion 3
+                    else if Number(menuRating) == 4
+                      ul.subUl--Start.col.m12.col.s12
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=1&page=1' ")
+                            i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=2&page=1' ")
+                            i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=3&page=1' ")
+                            i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=4&page=1' ")
+                          i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=5&page=1' ")
+                          i.fa.fa-star
+                      div.list__Bottom.col.m12.col.s12
+                        span.title.isVerde
+                          | Calificacion 4 
+                    else if Number(menuRating) == 5
+                      ul.subUl--Start.col.m12.col.s12
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=1&page=1' ")
+                            i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=2&page=1' ")
+                            i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=3&page=1' ")
+                            i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=4&page=1' ")
+                          i.fa.fa-star.startSelect
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=5&page=1' ")
+                          i.fa.fa-star.startSelect
+                      div.list__Bottom.col.m12.col.s12
+                        span.title.isVerde
+                          | Calificacion 5 
+                    else
+                      ul.subUl--Start.col.m12.col.s12
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=1&page=1' ")
+                            i.fa.fa-star
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=2&page=1' ")
+                            i.fa.fa-star
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=3&page=1' ")
+                            i.fa.fa-star
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=4&page=1' ")
+                          i.fa.fa-star
+                        li.listSub.col.l2.col.m2.col.s1(onclick="window.location.href = 'find?averageRating=5&page=1' ")
+                          i.fa.fa-star
+                      div.list__Bottom.col.m12.col.s12
+                        span.title
+                          | Calificaciones
+
+                  if menuindiv
+                    li.list.pCero.txtCenter.col.l1.col.m6.col.s6(onclick="window.location.href = 'find?lessons=grupales&page=1' ")
+                      div.list__Top
+                        i.fa.fa-user.isVerde
+                      div.list__Bottom.lineMedium.col.m12.col.s12
+                        span.title.isVerde
+                          | Clases Individuales
+                  else
+                    if menugrupal
+                      li.list.pCero.txtCenter.col.l1.col.m6.col.s6(onclick="window.location.href = '0' ")
+                        div.list__Top
+                          i.fa.fa-users.isVerde
+                        div.list__Bottom.lineMedium.col.m12.col.s12
+                          span.title.isVerde
+                            | Clases Grupales
+                    else
+
+                      li.list.pCero.txtCenter.col.l1.col.m6.col.s6(onclick="window.location.href = 'find?lessons=individuales&page=1' ")
+                        div.list__Top
+                          i.fa.fa-user
+                        div.list__Bottom.lineMedium.col.m12.col.s12
+                          span.title
+                            | Clases Individuales
+
+                  li.list.col.l3.col.m12.col.s12.turnHor
+                    ul.subUL.col.m12.col.s12
+                      if menuhour == 'mañana'
+                        li.listSub.col.l4.col.s4(onclick="window.location.href = '0' ")
+                          i.fa.fa-sun-o.siManana
+                      else
+                        li.listSub.col.l4.col.s4(onclick="window.location.href = 'find?hour=mañana&page=1' ")
+                          i.fa.fa-sun-o
+                      if menuhour == 'tarde'
+                        li.listSub.col.l4.col.s4(onclick="window.location.href = '0' ")
+                          i.fa.fa-circle-o-notch.siTarde
+                      else
+                        li.listSub.col.l4.col.s4(onclick="window.location.href = 'find?hour=tarde&page=1' ")
+                          i.fa.fa-circle-o-notch
+                      if menuhour == 'noche'
+                        li.listSub.col.l4.col.s4(onclick="window.location.href = '0' ")
+                          i.fa.fa-moon-o.siNoche
+                      else
+                        li.listSub.col.l4.col.s4(onclick="window.location.href = 'find?hour=noche&page=1' ")
+                          i.fa.fa-moon-o
+                    div.list__Bottom.col.m12.col.s12
+                        span.title
+                          | Horarios
+                  if showClass
+                    li.list.col.l1.col.m4.col.s4(class="jsPriceFilter selectItemOne")
+                      span.number
+                            | $ #{numberPrice}
+                      p.numberTitle.lineMedium
+                        | Precio Max.
+                  else
+                    li.list.col.l1.col.m4.col.s4(class="jsPriceFilter")
+                      span.number
+                            | $ #{numberPrice}
+                      p.numberTitle.lineMedium
+                        | Precio Max.
+
+                  if menucar
+                    li.list.col.l2.col.m4.col.s4(onclick="window.location.href = '0' ")
+                      div.container--Icon
+                        i.fa.fa-car.isAddressTrue
+                      div.container--Name
+                        span.name.isAddressTrue
+                          | ¿va a domicilio?
+                  else
+                    li.list.col.l2.col.m4.col.s4(onclick="window.location.href = 'find?car=si&page=1' ")
+                      div.container--Icon
+                        i.fa.fa-car
+                      div.container--Name
+                        span.name
+                          | ¿va a domicilio?
+                  if menusearch
+                    li.list.col.l2.col.m4.col.s4.tOne(onclick="window.location.href = 'find?training=cursando&page=1' ")
+                      div.container--Icon
+                        i.fa.fa-graduation-cap.isRecibido
+                      div.container--Name
+                        span.name.isRecibido
+                          |  Formación académicas
+
+                  else if menusearchrecibido
+                    li.list.col.l2.col.m4.col.s4.tOne(onclick="window.location.href = '0' ")
+                      div.container--Icon
+                        i.fa.fa-graduation-cap.isCursando
+                      div.container--Name
+                        span.name.isCursando
+                          |  Formación académica
+                  else
+                    li.list.col.l2.col.m4.col.s4.tOne(onclick="window.location.href = 'find?training=recibido&page=1' ")
+                      div.container--Icon
+                        i.fa.fa-graduation-cap
+                      div.container--Name
+                        span.name
+                          |  Formación académica 
+      section.search__Show
+        div.container
+          div.row.mobileContentAlert
+            div.col.l12.col.s12.container__Show--Ads
+              section.search__Show--Ads.card.orange.lighten-5
+                a()
+                  p.description
+                    |  Para ver la distancía Enciende el Gps y Actualiza La Página
+          div.row
+            section.search__Show--Iz.col.l4.col.m3.col.s12
+              form.search__Show--Form.card.jsFormSearchAjaxHome(action="/search/find", name="homeSearch", method="get")
+                div
+                  input(type="text", name="barrio", placeholder="Escriba su ciudad", class="autocomplete cityauto", autocomplete="off", required)
+                  div.jsAppendCity
+                div
+                  input(type="text", class="materiasauto", autocomplete="off", placeholder="Escriba su materia", required)
+                  div.jsAppendMaterias
+             
+                div.fieldset.pTB
+                  button.waves-effect.waves-light.btn.white-text.amber.colorAprendidos(type="submit")
+                    | Encontrar
+
+              article.search__Show--Fb.card
+                iframe(src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faprendidos&tabs&width=340&height=214&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=1417229651915092', width='100%', height='214', style='border:none;overflow:hidden', scrolling='no', frameborder='0', allowtransparency='true')
+
+            div.none.separateTablet.col.m1
+
+            if teachers.length > 0
+                aside.search__Show--De.col.l8.col.m8.col.s12
+                  div.containerSearch
+                    //h2 hola en geolocalizacion
+                    each t in teachers
+                      if t.statusteacher
+                        article.search__Profile__Teacher.relative.card.jsProfileTeacher.col.l12.col.m12.col.s12
+                          a(href="/teacher/#{t._id}#profile?name=#{t.teacher[0].nombreTeacher}")
+                            figure.profile__Teacher--Figure.col.l3.col.m4.col.s4
+                              if t.teacher[0].fotoTeacher.search('.jpg') == -1
+                                img(src="/users/avataraprendidos.jpg", alt="")
+                              else
+                                img(src="#{t.teacher[0].fotoTeacher}", alt="")
+                            div.mobilSeparate.col.m1
+                            div.profile__Teacher--Description.col.l5.col.m8.col.s8
+                              header.description__Header
+                                h3.title
+                                  | #{t.teacher[0].nombreTeacher} #{t.teacher[0].apellidoTeacher}
+                              div.description__Teacher
+                                blockquote.details|  #{t.contacto[0].details}
+                              div.description__Details.col.l7.col.m12.col.s12
+                                ul.ulDetails.col.l12.col.m12.col.s12
+                                  if t.materias[0].status == "Recibido"
+                                    li.list
+                                      i.fa.fa-graduation-cap.isRecibido
+                                  else if t.materias[0].status == "Cursando"
+                                    li.list
+                                      i.fa.fa-graduation-cap.isCursando
+                                  else
+                                    li.list
+                                      i.fa.fa-graduation-cap
+                                  
+
+                                  if t.opciones[0].tipoclases
+                                    if t.opciones[0].tipoclases.length == 1
+                                      if t.opciones[0].tipoclases[0].name == 'individuales'
+                                        li.list
+                                          i.fa.fa-user.isVerde
+                                        li.list
+                                          i.fa.fa-users
+                                      else
+                                        li.list
+                                          i.fa.fa-user
+                                        li.list
+                                          i.fa.fa-users.isVerde
+                                    else
+                                      li.list
+                                        i.fa.fa-user.isVerde
+                                      li.list
+                                        i.fa.fa-users.isVerde
+                                  else
+                                    li.list
+                                      i.fa.fa-user
+                                    li.list
+                                      i.fa.fa-users
+
+
+
+                                  if t.opciones[0].domicilio == "true"
+                                    li.list
+                                      i.fa.fa-car.isAddressTrue
+                                  else
+                                    li.list
+                                      i.fa.fa-car
+                                ul.ulDetails.col.l12.col.m12.col.s12
+                                  if t.opciones[0]
+                                    if t.opciones[0].horarios
+                                      if t.opciones[0].horarios.length
+                                        if t.opciones[0].horarios.length == 1
+                                            if t.opciones[0].horarios[0].name == 'mañana'
+                                              //mañana
+                                              li.list
+                                                i.fa.fa-sun-o.siManana
+                                              li.list
+                                                i.fa.fa-circle-o-notch
+                                              li.list
+                                                i.fa.fa-moon-o
+                                            else if t.opciones[0].horarios[0].name == 'tarde'
+                                              //tarde
+                                              li.list
+                                                i.fa.fa-sun-o
+                                              li.list
+                                                i.fa.fa-circle-o-notch.siTarde
+                                              li.list
+                                                i.fa.fa-moon-o
+                                            else
+                                              //noche
+                                              li.list
+                                                i.fa.fa-sun-o
+                                              li.list
+                                                i.fa.fa-circle-o-notch
+                                              li.list
+                                                i.fa.fa-moon-o.siNoche
+                                        else if t.opciones[0].horarios.length == 2
+                                           
+                                            if t.opciones[0].horarios[0].name == 'mañana' && t.opciones[0].horarios[1].name == 'tarde' || t.opciones[0].horarios[0].name == 'tarde' && t.opciones[0].horarios[1].name == 'mañana'
+                                                li.list
+                                                  i.fa.fa-sun-o.siManana
+                                                li.list
+                                                  i.fa.fa-circle-o-notch.siManana
+                                                li.list
+                                                  i.fa.fa-moon-o
+                                            else if t.opciones[0].horarios[0].name == 'mañana' && t.opciones[0].horarios[1].name == 'noche' || t.opciones[0].horarios[0].name == 'noche' && t.opciones[0].horarios[1].name == 'mañana'
+                                               li.list
+                                                  i.fa.fa-sun-o.siManana
+                                                li.list
+                                                  i.fa.fa-circle-o-notch
+                                                li.list
+                                                  i.fa.fa-moon-o.siNoche
+
+                                            else if t.opciones[0].horarios[0].name == 'tarde' && t.opciones[0].horarios[1].name == 'noche' || t.opciones[0].horarios[0].name == 'mañana' && t.opciones[0].horarios[1].name == 'tarde'
+                                                li.list
+                                                  i.fa.fa-sun-o
+                                                li.list
+                                                  i.fa.fa-circle-o-notch.siTarde
+                                                li.list
+                                                  i.fa.fa-moon-o.siNoche
+                                        else if t.opciones[0].horarios.length == 3
+                                           li.list
+                                                  i.fa.fa-sun-o.siManana
+                                                li.list
+                                                  i.fa.fa-circle-o-notch.siTarde
+                                                li.list
+                                                  i.fa.fa-moon-o.siNoche
+                                    else
+                                      li.list
+                                        i.fa.fa-sun-o
+                                      li.list
+                                        i.fa.fa-circle-o-notch
+                                      li.list
+                                        i.fa.fa-moon-o
+
+                                  else
+                                    li.list
+                                      i.fa.fa-sun-o
+                                    li.list
+                                      i.fa.fa-circle-o-notch
+                                    li.list
+                                      i.fa.fa-moon-o
+
+                            div.profile__Teacher--Options.col.l4.col.m12.col.s12
+                              div.options__Start.col.l12
+                                - var resultado = 0
+                                - var resultadoSingle = 0
+                                - var formula
+                                if t.calificacion
+                                  if t.calificacion.length == 1
+                                    - var final = t.calificacion[0].calificacion
+                                  else
+                                    each res in t.calificacion
+                                      - resultado += Number(res.calificacionResult)
+                                      - resultadoSingle += Number(res.calificacionCant)
+
+                                    - formula = resultado / resultadoSingle
+                                    - var final = parseInt(formula.toFixed(2))
+
+                                   
+
+                                   if final == 1
+                                        ul.ulStart
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                   else if final == 2
+                                        ul.ulStart
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                   else if final == 3
+                                        ul.ulStart
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+
+                                   else if final == 4
+                                        ul.ulStart
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+
+                                   else if final == 5
+                                        ul.ulStart
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+                                            i.fa.fa-star.visitedReview
+                                          li.list.col.l2
+
+                                   else
+                                    ul.ulStart
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                else
+                                  ul.ulStart
+                                          li.list.col.l2
+                                            i.fa.fa-star.
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                                            i.fa.fa-star
+                                          li.list.col.l2
+                              div.options__Price.fontSize.pL.col.l12.col.m5.col.s6
+                                  if t.opciones[0].precio == 0
+                                    div.price__Iz.col.l12
+                                        h5.priceShow
+                                          | Curso
+                                      //div.price__De.col.l6
+                                        span.name
+                                          |/ Taller
+                                    
+                                  else
+                                      div.price__Iz.col.l6
+                                        h4.price
+                                          | $#{t.opciones[0].precio} 
+                                      div.price__De.col.l6
+                                        span.name
+                                          |/ Hora
+
+                                
+                              div.options__Geo.col.l12.col.m5.col.s6(data-lat="#{t.opciones[0].latitud}", data-lon="#{t.opciones[0].longitud}")
+
+                                    i.fa.fa-map-marker.col.l2
+                                    span.name__Geo.col.l10(id="#{t._id}")
+                                      script.
+                                         (function(){
+
+                                              
+                                          var diService = new google.maps.DirectionsService();
+
+                                          if(navigator.geolocation){
+                                             var latitud = '#{t.opciones[0].latitud}';
+                                             var long = '#{t.opciones[0].longitud}';
+
+
+                                             navigator.geolocation.getCurrentPosition(display, err);
+
+                                             function display(data){
+
+                                                var requestAddress = {
+                                                    origin: new google.maps.LatLng(data.coords.latitude,data.coords.longitude),
+
+                                                    destination: new google.maps.LatLng(latitud,long),
+                                                    
+                                                    travelMode: google.maps.DirectionsTravelMode.DRIVING,
+                                                    unitSystem: google.maps.UnitSystem.METRIC
+                                                };
+
+
+                                                diService.route(requestAddress, function (response, status) {
+                                                    if (status == google.maps.DirectionsStatus.OK) {
+
+                                                      GLOBALGEO = response.routes[0].legs[0].distance.value
+
+                                                        
+
+                                                        //Insert in document
+                                                        var insertKM = response.routes[0].legs[0].distance.text;
+
+                                                        var id = "#{t._id}";
+
+                                                        document.getElementById(id).innerHTML = insertKM;
+                                                    }
+
+                                                    else {console.log('error')}
+                                                        //Error has occured
+                                                })
+
+
+                                             }
+
+                                             function err(e){
+                                                return err;
+                                             }
+
+                                          } 
+
+                                         })();
+                              
+                    
+                  div.containerPaginator.col.l12.col.s12
+                    if paginatorName == 'cursando'
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="/search/find?training=cursando&page='+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/find?training=cursando&page='+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/find?training=cursando&page='+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="/search/find?training=cursando&page='+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage,all)
+                    
+                    else if paginatorName == 'recibido'
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="/search/find?training=recibido&page='+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/find?training=recibido&page='+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/find?training=recibido&page='+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="/search/find?training=recibido&page='+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage,all)
+
+                    else if paginatorName == 'individuales'
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="/search/find?lessons=individuales&page='+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/find?lessons=individuales&page='+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/find?lessons=individuales&page='+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="/search/find?lessons=individuales&page='+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage,all)
+                    
+                    else if paginatorName == 'grupales'
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="/search/find?lessons=grupales&page='+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/find?lessons=grupales&page='+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/find?lessons=grupales&page='+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="/search/find?lessons=grupales&page='+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage,all)
+
+
+                    else if paginatorName == 'car'
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="/search/find?car=si&page='+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/find?car=si&page='+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/find?car=si&page='+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="/search/find?car=si&page='+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage,all)
+
+
+                    else if paginatorName == 'price'
+                      ul.ul
+                        li.list
+                          a.link(href="find?price=#{numberPrice}&page=1")
+                            | Principal
+                        if showpage > 1
+                          li.list
+                            - var prev = Number(showpage) - 1
+                            a.link(href="find?price=#{numberPrice}&page=#{prev}")
+                              | #{prev}
+                        else
+                          //
+                        li.list
+                          - var next = Number(showpage) + 1
+                          a.link(href="find?price=#{numberPrice}&page=#{next}")
+                            | #{next}
+                        
+
+                        li.list
+                          
+                          if pageUltimate == -1
+                            - var page = 0
+                          else
+                            - var page = pageUltimate
+
+                          - var ultimate = (page) * (longitudPage)
+                          - var result = ultimate + 1
+                          a.link(href="find?price=#{numberPrice}&page=#{result}")
+                            | Ultimo
+
+                    else if paginatorName == 'hour'
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="/search/find?hour=#{menuhour}&page='+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/find?hour=#{menuhour}&page='+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/find?hour=#{menuhour}&page='+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="/search/find?hour=#{menuhour}&page='+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage,all)
+
+
+                    else if paginatorName == 'rating'
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="/search/find?averageRating=#{menuRating}&page='+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/find?averageRating=#{menuRating}&page='+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/find?averageRating=#{menuRating}&page='+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="/search/find?averageRating=#{menuRating}&page='+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage,all)
+
+
+                    else if paginatorName == 'complet'
+
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="/search/find?barrio=#{queryComplet.barrio}&materias=#{queryComplet.materias}&page='+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/find?barrio=#{queryComplet.barrio}&materias=#{queryComplet.materias}&page='+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/find?barrio=#{queryComplet.barrio}&materias=#{queryComplet.materias}&page='+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="/search/find?barrio=#{queryComplet.barrio}&materias=#{queryComplet.materias}&page='+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage, all)
+                    
+                    else if paginatorName == 'georandomg'
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="/search/find?geo=random&page='+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/find?geo=random&page='+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/find?geo=random&page='+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="/search/find?geo=random&page='+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage,all)
+
+                
+                    else if paginatorName == 'menurtp'
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="/search/find?rtp=down&page='+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/find?rtp=down&page='+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/find?rtp=down&page='+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="/search/find?rtp=down&page='+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage,all)
+
+                  
+
+                    else if paginatorName == 'menupre'
+                      
+
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="/search/find?pre=down&page='+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/find?pre=down&page='+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/find?pre=down&page='+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="/search/find?pre=down&page='+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage,all)
+
+                    else if paginatorName == 'upprice'
+                      
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="'+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/'+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/'+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="'+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage,all)
+                        
+
+                    else
+                      ul.pagination.center#insertPaginator
+                      script.
+
+                        var showpage = "#{showpage}";
+                        var all = "#{all.length}"
+
+
+                        var pagination = function(current, total){
+                              var list = [];
+                              var pageLimit = 5;
+                              var upperLimit, lowerLimit;
+                              var currentPage = lowerLimit = upperLimit = Math.min(current, total);
+
+                              if(showpage != 0) {
+
+                                  list.push('<li class="waves-effect"><a href="'+ (Number(showpage) - 1) +'"><i class="material-icons">chevron_left</i></a></li>');
+                              }
+
+                              for (var b = 1; b < pageLimit && b < total;) {
+                                  if (lowerLimit > 1 ) {
+                                      lowerLimit--; b++; 
+                                  }
+                                  if (b < pageLimit && upperLimit < total) {
+                                      upperLimit++; b++; 
+                                  }
+                              }
+
+                              for (var i = lowerLimit; i <= upperLimit; i++) {
+                                  if (i == currentPage){
+
+
+
+                                    if (i == 0){
+
+                                    } else {
+                                      list.push('<li class="active"><a href="/search/'+i+'">'+i+'</a></li>');
+                                    }
+
+
+
+                                  }
+                                  else{
+                                   
+                                    list.push('<li class="waves-effect"><a href="/search/'+i+'">'+i+'</a></li>');
+                                   
+                                  }
+                              }
+                              
+                              //Ultimate page
+
+                              if(Number(i - 1) != -1) {
+
+                               
+                                  list.push('<li class="waves-effect"><a href="'+ (Number(showpage) + 1) +'"><i class="material-icons">chevron_right</i></a></li>');
+                              }
+
+                              document.getElementById('insertPaginator').innerHTML = list.join('');
+                              return list;
+                        }
+
+                        pagination(showpage,all)
+
+              
+            else
+                aside.search__Show--De.col.l8.col.s12
+                  article.showNotFind
+                    header.showNotFind__Header.textCenter
+                      h5.title
+                        | ¡Uh! No hay nadie que cumpla esas condiciones :(
+
+            
+    include inc/footer

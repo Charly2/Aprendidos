@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body
+    include inc/header
+
+    main.main
+      div.container
+        section.row
+          article.col.l12.showError
+            header.showError__Header
+              h2.title
+                | Usted ya se encuentra registrado
+            div.showError__Btn
+              a.linkHome(href="/teacher/#{user._id}")
+                | Visitar Perfil Profesor
+            figure.showError__Figure
+              img(src="/img/teacherexist.png", alt="error not found", width="750px")
+
+
+    include inc/footer

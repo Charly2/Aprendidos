@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+    include inc/baseone
+  body
+    include inc/header
+
+
+    div#website
+      
+      section.slider
+        div.container
+          div.row
+            form.formSearch.jsFormAjaxHome.col.l6.col.m10.col.s12
+              fieldset.col.l4.col.m4.col.s12.input-field.formContainer
+                input.waves-light.btn-large.white.black-text(type="text", id="autocomplete-input", name="barrio", class="autocomplete cityauto", placeholder="Escriba su ciudad", autocomplete="off")
+                div.jsAppendCity
+              div.col.l5.col.m4.col.s12.input-field.formContainer.jsMateriasShow
+                input(type="text", id="autocomplete-input", class="materiasauto", autocomplete="off", placeholder="Escriba su materia")
+                div.jsAppendMaterias
+
+              fieldset.col.l2.col.m4.col.s12.input-field.formContainer
+                button.waves-effect.waves-light.btn-large.black-text.white(type="submit")
+                  i.fa.fa-search(aria-hidden="true")
+              div.formSearchError.none.col.l12.col.m12.col.s12
+                p.description
+                  | ERROR: porfavor complete todo los campos
+      main.main
+        section.contenido.container
+          div.row
+            header.contenido__Header.col.l12
+              h2.title
+                | PROFESORES A UN CLIC DE DISTANCIA
+            div.contenido__Video.col.l12
+              img(src="/img/aprendidosvideo.jpg", alt="")
+              //video(autoplay, loop)
+                source(src="https://www.upclaz.com/images/how-it-works-desktop.mp4", type="video/mp4")
+        section.headerBG
+          div.container
+            div.row
+              //header.headerBG__Header.col.l12.col.m12.col.s12
+                h2.title
+                  | Testimonios
+          
+        section.contenidoBG
+          div.container
+            div.row
+              //header.headerBG.col.l12.col.m12
+                h2.title
+                  | Testimonios
+              div.testimoniosContainer.col.l12.col.m12.col.s12
+                article.testimoniosArticl.col.l5.col.m5.col.s12
+                  figure.testimoniosArticl__Figure
+                    img(src="/img/test1.jpg", alt="", width="90")
+                    div.testimoniosArticl__Figure--Name
+                      span.name
+                        | @Mica
+                  div.testminosArticl___Description
+                    p.description
+                      | "Encontre un profe de matemática rapidisimo, lo contacte al instante"
+                div.col.l2.col.m2.col.s12
+                article.testimoniosArticl.col.l5.col.m5.col.s12
+                  figure.testimoniosArticl__Figure
+                    img(src="/img/test2.jpg", alt="", width="90")
+                    div.testimoniosArticl__Figure--Name
+                      span.name
+                        | @Pablo
+                  div.testminosArticl___Description
+                    p.description
+                      | "Me dí cuenta que tenía un profe a 2 cuadras, me ahorré tremendo viaje" 
+
+                article.testimoniosArticl.col.l5.col.m5.col.s12
+                  figure.testimoniosArticl__Figure
+                    img(src="/img/test3.jpg", alt="", width="90")
+                    div.testimoniosArticl__Figure--Name
+                      span.name
+                        | @Ale
+                  div.testminosArticl___Description
+                    p.description
+                      | "Very dificult con mi inglés, pero la profe Sofía lo cambió todo"
+                div.col.l2.col.m2.col.s12
+                article.testimoniosArticl.col.l5.col.m5.col.s12
+                  figure.testimoniosArticl__Figure
+                    img(src="/img/test4.jpg", alt="", width="90")
+                    div.testimoniosArticl__Figure--Name
+                      span.name
+                        | @Leo
+                  div.testminosArticl___Description
+                    p.description
+                      | "Safé el primer parcial, para el segundo ya estoy joya"
+               
+        section.contenido.container.users
+          div.row
+            article.col.l5.col.m5.col.s12.newsUsers
+              header.newsUsers__Header
+                h2.title(onclick="window.location.href= '/profiles/0'; ")
+                  |  Ultimos Estudiantes
+              div.newsUsers__Container.jsStudentUltimate
+                ul.ul
+                  
+                  each e, index in home
+
+                      if index < 50
+                     
+                        if e.statusteacher != true
+
+                            li.list(data-css="#{index}")
+                              a.link(href="/view/#{e._id}")
+                                figure.link__Figure
+                                  if e.photo
+                                      img(src="#{e.photo}", alt="", width="50")
+                                  else
+                                    img(src="/img/logomobil.png", alt="", width="50", style="background-color: #ff5848;")
+                                div.link__Name
+                                  span.name
+                                    | #{e.name} #{e.username}
+                  
+            div.col.l2.col.m2
+            aside.col.l5.col.m5.col.s12.newsUsers
+              header.newsUsers__Header
+                h2.title
+                  |  Ultimos Profesionales
+              div.newsUsers__Container.jsTeacherUltimate
+                ul.ul
+                  each t, index in home
+
+                    if index < 50
+                      if t.statusteacher
+                          li.list
+                            a.link(href="teacher/#{t._id}#profile?name=#{t.teacher[0].nombreTeacher}")
+                              figure.link__Figure
+                                if t.teacher[0].fotoTeacher.search('.jpg') == -1
+                                  img(src="/users/avataraprendidos.jpg", alt="#{t.teacher[0].nombreTeacher}", width="50")
+                                else 
+                                  img(src="#{t.teacher[0].fotoTeacher}", alt="#{t.teacher[0].nombreTeacher}", width="50")
+                              div.link__Name
+                                span.name
+                                  | #{t.teacher[0].nombreTeacher} #{t.teacher[0].apellidoTeacher} 
+                  
+        section.contenido.container.callToAction
+          div.row
+            div.col.l8.callToAction__Container
+              header.callToAction__Header
+                h2.title
+                  | ¿ESTÁS PREPARADO?
+              div.callToAction__Buttons
+                a.col.l5.col.m5.col.s12.link.waves-effect.waves-light.btn-large.full-width.white-text.cGreen(href="/search/0")
+                  | BUSCAR PROFESOR
+                if user
+                 a.col.l5.col.m5.col.s5.link.waves-effect.waves-light.btn-large.red.lighten-1.full-width.white-text(href="/teacher/register")
+                    | QUIERO ENSEÑAR
+                else
+                  a.col.l5.col.m5.col.s5.link.waves-effect.waves-light.btn-large.red.lighten-1.full-width.white-text(href="/register")
+                    | QUIERO ENSEÑAR
+    
+    
+    include inc/footer
+    
+  

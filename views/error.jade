@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body
+    include inc/header
+
+    main.main
+      div.container
+        section.row
+          article.col.l12.showError
+            header.showError__Header
+              h2.title
+                | No se encontro ningun profesor
+            div.showError__Btn
+              a.linkHome(href="/")
+                | Regresar a inicio
+            figure.showError__Figure
+              img(src="/img/error.jpg", alt="error not found", width="450px")
+
+
+    include inc/footer

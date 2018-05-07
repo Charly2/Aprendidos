@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="undefined"/>
+    <title></title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="/css/materialize.min.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAbwyo5G5fa4OCOXgUKezEiUOHZFHB7HLs&amp;libraries=places&amp;sensor=false"></script>
+  </head>
+  <body>
+    <header class="my__Header">
+      <section class="my__HeaderContain container">
+        <div class="row my__HeaderIzDe">
+          <figure class="col l6 contain__Header">
+            <h1 class="title"><a href="/" class="link">Aprendidos</a></h1>
+          </figure>
+          <nav class="col l6 container__Menu">
+            <ul class="ul">
+              <li class="list"><a href="/nosotros" class="link">Nosotros</a></li>
+              <!--li.list
+              a.link(href="/guia")
+                | Guía
+              -->
+              <li class="list"><a href="/teacher/register" class="link">Quiero Enseñar</a></li>
+              <li class="list"><a href="/login" class="link">INGRESAR</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <div class="containerDecored row">
+        <div class="col l3 linesHeader uno"></div>
+        <div class="col l3 linesHeader dos"></div>
+        <div class="col l3 linesHeader tres"></div>
+        <div class="col l3 linesHeader cuatro"></div>
+      </div>
+    </header>
+    <section class="slider">
+      <div class="container">
+        <div class="row">
+          <form action="/search/find" name="homeSearch" method="get" class="formSearch col l6">
+            <fieldset class="col l4 input-field formContainer">
+              <select name="barrio" class="browser-default isHomeSelect">
+                <option value="Abasto">Abasto</option>
+                <option value="Agronomia">Agronomia</option>
+                <option value="Almagro">Almagro</option>
+                <option value="Balvanera">Balvanera</option>
+                <option value="Barracas">Barracas</option>
+                <option value="BarrioNorte">BarrioNorte</option>
+                <option value="Belgrano">Belgrano</option>
+                <option value="Boedo">Boedo</option>
+                <option value="Caballito">Caballito</option>
+                <option value="Chacarita">Chacarita</option>
+                <option value="Coghlan">Coghlan</option>
+                <option value="Colegiales">Colegiales</option>
+                <option value="Congreso">Congreso</option>
+                <option value="Constitucion">Constitucion</option>
+                <option value="Flores">Flores</option>
+                <option value="Floresta">Floresta</option>
+                <option value="La Boca">La Boca</option>
+                <option value="Liniers">Liniers</option>
+                <option value="Mataderos">Mataderos</option>
+                <option value="Micro Centro">Micro Centro</option>
+                <option value="Monserrat">Monserrat</option>
+                <option value="Monte Castro">Monte Castro</option>
+                <option value="Nueva Pompeya">Nueva Pompeya</option>
+                <option value="Nuñez">Nuñez</option>
+                <option value="Palermo">Palermo</option>
+                <option value="Palermo Viejo">Palermo Viejo</option>
+                <option value="Parque Avellaneda">Parque Avellaneda</option>
+                <option value="Parque Centenario">Parque Centenario</option>
+                <option value="Parque Chacabuco">Parque Chacabuco</option>
+                <option value="Parque Chas">Parque Chas</option>
+                <option value="Parque Patricios">Parque Patricios</option>
+                <option value="Paternal">Paternal</option>
+                <option value="Puerto Madero">Puerto Madero</option>
+                <option value="Recoleta">Recoleta</option>
+                <option value="Retiro">Retiro</option>
+                <option value="Saavedra">Saavedra</option>
+                <option value="San Cristobal">San Cristobal</option>
+                <option value="San Nicolas">San Nicolas</option>
+                <option value="San Telmo">San Telmo</option>
+                <option value="Velez Sarsfield">Velez Sarsfield</option>
+                <option value="Versalles">Versalles</option>
+                <option value="Villa Crespo">Villa Crespo</option>
+                <option value="Villa del Parque">Villa del Parque</option>
+                <option value="Villa Devoto">Villa Devoto</option>
+                <option value="Villa General Mitre">Villa General Mitre</option>
+                <option value="Villa Lugano">Villa Lugano</option>
+                <option value="Villa Luro">Villa Luro</option>
+                <option value="Villa Ortuzar">Villa Ortuzar</option>
+                <option value="Villa Pueyrredon">Villa Pueyrredon</option>
+                <option value="Villa Real">Villa Real</option>
+                <option value="Villa Santa Rita">Villa Santa Rita</option>
+                <option value="Villa Soldati">Villa Soldati</option>
+                <option value="Villa Urquiza">Villa Urquiza</option>
+              </select>
+            </fieldset>
+            <div id="multiple" class="col l4 input-field formContainer autocomplete showAuto">
+              <div class="ac-users"></div>
+              <div class="ac-input">
+                <input id="multipleInput" type="text" placeholder="Ingrese las materias a buscar" data-activates="multipleDropdown" data-beloworigin="true" autocomplete="off"/>
+              </div>
+              <ul id="multipleDropdown" class="dropdown-content ac-dropdown"></ul>
+              <input type="hidden" name="page" value="0"/>
+            </div>
+            <!--input(type="text", placeholder="Escribí acá el nombre de tus materias...")-->
+            <fieldset class="col l4 input-field formContainer">
+              <button type="submit" class="waves-effect waves-light btn-large black-text white"><i aria-hidden="true" class="fa fa-search"></i>BUSCAR</button>
+            </fieldset>
+          </form>
+          <div id="multiple">
+            <div class="ac-users"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main class="main">
+      <section class="contenido container">
+        <div class="row">
+          <header class="contenido__Header col l12">
+            <h2 class="title">NUESTRA PLATAFORMA</h2>
+          </header>
+          <div class="contenido__Video col l12">
+            <video autoplay="autoplay" loop="loop">
+              <source src="https://www.upclaz.com/images/how-it-works-desktop.mp4" type="video/mp4"/>
+            </video>
+          </div>
+        </div>
+      </section>
+      <section class="contenidoBG">
+        <div class="container">
+          <div class="row">
+            <header class="headerBG col l12">
+              <h2 class="title">Testimonios</h2>
+            </header>
+            <div class="testimoniosContainer col l12">
+              <article class="testimoniosArticl col l5">
+                <figure class="testimoniosArticl__Figure"><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/14713560_1294434373942362_463324259529446542_n.jpg?oh=ddc28f49e44318510f2045c0f5c69939&amp;oe=58FC0287" alt="" width="90"/>
+                  <div class="testimoniosArticl__Figure--Name"><span class="name">@Edinson</span></div>
+                </figure>
+                <div class="testminosArticl___Description">
+                  <p class="description">Hice el curso de Frontend en Coderhouse, y se lo recomendé a un amigo. Al finalizarlo juntos emprendimos nuestros proyecto, ya tenemos varios clientes y vamos ganando experiencia.</p>
+                </div>
+              </article>
+              <div class="col l2"></div>
+              <article class="testimoniosArticl col l5">
+                <figure class="testimoniosArticl__Figure"><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/14713560_1294434373942362_463324259529446542_n.jpg?oh=ddc28f49e44318510f2045c0f5c69939&amp;oe=58FC0287" alt="" width="90"/>
+                  <div class="testimoniosArticl__Figure--Name"><span class="name">@Edinson</span></div>
+                </figure>
+                <div class="testminosArticl___Description">
+                  <p class="description">Hice el curso de Frontend en Coderhouse, y se lo recomendé a un amigo. Al finalizarlo juntos emprendimos nuestros proyecto, ya tenemos varios clientes y vamos ganando experiencia.  </p>
+                </div>
+              </article>
+              <article class="testimoniosArticl col l5">
+                <figure class="testimoniosArticl__Figure"><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/14713560_1294434373942362_463324259529446542_n.jpg?oh=ddc28f49e44318510f2045c0f5c69939&amp;oe=58FC0287" alt="" width="90"/>
+                  <div class="testimoniosArticl__Figure--Name"><span class="name">@Edinson</span></div>
+                </figure>
+                <div class="testminosArticl___Description">
+                  <p class="description">Hice el curso de Frontend en Coderhouse, y se lo recomendé a un amigo. Al finalizarlo juntos emprendimos nuestros proyecto, ya tenemos varios clientes y vamos ganando experiencia.</p>
+                </div>
+              </article>
+              <div class="col l2"></div>
+              <article class="testimoniosArticl col l5">
+                <figure class="testimoniosArticl__Figure"><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/14713560_1294434373942362_463324259529446542_n.jpg?oh=ddc28f49e44318510f2045c0f5c69939&amp;oe=58FC0287" alt="" width="90"/>
+                  <div class="testimoniosArticl__Figure--Name"><span class="name">@Edinson</span></div>
+                </figure>
+                <div class="testminosArticl___Description">
+                  <p class="description">Hice el curso de Frontend en Coderhouse, y se lo recomendé a un amigo. Al finalizarlo juntos emprendimos nuestros proyecto, ya tenemos varios clientes y vamos ganando experiencia.  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contenido container users">
+        <div class="row">
+          <article class="col l5 newsUsers">
+            <header class="newsUsers__Header">
+              <h2 class="title"> Ultimos Estudiantes</h2>
+            </header>
+            <div class="newsUsers__Container">
+              <ul class="ul">
+                <li class="list"><a href="#" class="link">
+                    <figure class="link__Figure"><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/14713560_1294434373942362_463324259529446542_n.jpg?oh=ddc28f49e44318510f2045c0f5c69939&amp;oe=58FC0287" alt="" width="50"/></figure>
+                    <div class="link__Name"><span class="name">Edinson Carranza</span></div></a></li>
+                <li class="list"><a href="#" class="link">
+                    <figure class="link__Figure"><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/14713560_1294434373942362_463324259529446542_n.jpg?oh=ddc28f49e44318510f2045c0f5c69939&amp;oe=58FC0287" alt="" width="50"/></figure>
+                    <div class="link__Name"><span class="name">Edinson Carranza</span></div></a></li>
+                <li class="list"><a href="#" class="link">
+                    <figure class="link__Figure"><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/14713560_1294434373942362_463324259529446542_n.jpg?oh=ddc28f49e44318510f2045c0f5c69939&amp;oe=58FC0287" alt="" width="50"/></figure>
+                    <div class="link__Name"><span class="name">Edinson Carranza</span></div></a></li>
+                <li class="list"><a href="#" class="link">
+                    <figure class="link__Figure"><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/14713560_1294434373942362_463324259529446542_n.jpg?oh=ddc28f49e44318510f2045c0f5c69939&amp;oe=58FC0287" alt="" width="50"/></figure>
+                    <div class="link__Name"><span class="name">Edinson Carranza</span></div></a></li>
+              </ul>
+            </div>
+          </article>
+          <div class="col l2"></div>
+          <aside class="col l5 newsUsers">
+            <header class="newsUsers__Header">
+              <h2 class="title"> Ultimos Profesionales</h2>
+            </header>
+            <div class="newsUsers__Container">
+              <ul class="ul">
+                <li class="list"><a href="#" class="link">
+                    <figure class="link__Figure"><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/14713560_1294434373942362_463324259529446542_n.jpg?oh=ddc28f49e44318510f2045c0f5c69939&amp;oe=58FC0287" alt="" width="50"/></figure>
+                    <div class="link__Name"><span class="name">Edinson Carranza</span></div></a></li>
+                <li class="list"><a href="#" class="link">
+                    <figure class="link__Figure"><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/14713560_1294434373942362_463324259529446542_n.jpg?oh=ddc28f49e44318510f2045c0f5c69939&amp;oe=58FC0287" alt="" width="50"/></figure>
+                    <div class="link__Name"><span class="name">Edinson Carranza</span></div></a></li>
+                <li class="list"><a href="#" class="link">
+                    <figure class="link__Figure"><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/14713560_1294434373942362_463324259529446542_n.jpg?oh=ddc28f49e44318510f2045c0f5c69939&amp;oe=58FC0287" alt="" width="50"/></figure>
+                    <div class="link__Name"><span class="name">Edinson Carranza</span></div></a></li>
+                <li class="list"><a href="#" class="link">
+                    <figure class="link__Figure"><img src="https://scontent.xx.fbcdn.net/v/t1.0-9/14713560_1294434373942362_463324259529446542_n.jpg?oh=ddc28f49e44318510f2045c0f5c69939&amp;oe=58FC0287" alt="" width="50"/></figure>
+                    <div class="link__Name"><span class="name">Edinson Carranza</span></div></a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section class="contenido container callToAction">
+        <div class="row">
+          <div class="col l8 callToAction__Container">
+            <header class="callToAction__Header">
+              <h2 class="title">¿ESTÁS PREPARADO?</h2>
+            </header>
+            <div class="callToAction__Buttons"><a href="/search/0" class="link waves-effect waves-light btn-large blue darken-3 full-width white-text">BUSCAR PROFESOR</a><a href="#" class="link waves-effect waves-light btn-large red lighten-1 full-width white-text">QUIERO ENSEÑAR</a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__Top">
+        <div class="container footer__Contain">
+          <div class="row">
+            <ul class="ul col l3">
+              <label class="title">NOSOTROS</label>
+              <li class="list"><a href="#" class="link">Quienes Somos?</a></li>
+              <li class="list"><a href="#" class="link">Prensa</a></li>
+            </ul>
+            <ul class="ul col l3">
+              <label class="title">APRENDIDOS</label>
+              <li class="list"><a href="#" class="link">Terminos y Condiciones</a></li>
+              <li class="list"><a href="#" class="link">Preguntas Frecuentes</a></li>
+              <li class="list"><a href="#" class="link">La Plataforma</a></li>
+            </ul>
+            <ul class="ul col l3">
+              <label class="title">REDES SOCIALES</label>
+              <li class="list"><a href="#" class="link"><i aria-hidden="true" class="fa fa-facebook"></i>Facebook</a></li>
+              <li class="list"><a href="#" class="link"><i aria-hidden="true" class="fa fa-twitter"></i>Twitter</a></li>
+              <li class="list"><a href="#" class="link"><i aria-hidden="true" class="fa fa-instagram"></i>Instagram</a></li>
+            </ul>
+            <ul class="ul col l3">
+              <li class="list"><a href="#" class="link"><img src="/img/googleplay.png" width="120px"/></a></li>
+              <li class="list"><a href="#" class="link"><img src="/img/appstore.png" width="120px"/></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__Bottom">
+        <div class="container footer__Derechos">
+          <p class="description">© 2017 - Todos los derechos reservados</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/codigo.js"></script>
+    <script src="/js/jquery.timeago.js"></script>
+    <script src="/js/jquery.materialize-autocomplete.minb.js"></script>
+    <script>
+      var geocoder = new google.maps.Geocoder();
+      var directionsService = new google.maps.DirectionsService();
+      
+      var getLatitud, getLongitud
+      
+      var Latitud = $(".jsObtainData").attr('data-lat');
+      var Longitud = $(".jsObtainData").attr('data-lon');
+      
+      if(navigator.geolocation){
+          
+          navigator.geolocation.getCurrentPosition(display, err);
+      
+          function display(data){
+      
+                  var directionsRequest = {
+                        origin: new google.maps.LatLng(data.coords.latitude,data.coords.longitude),
+      
+                        destination: new google.maps.LatLng(Latitud,Longitud),
+                        
+                        travelMode: google.maps.DirectionsTravelMode.DRIVING,
+                        unitSystem: google.maps.UnitSystem.METRIC
+                  };
+      
+                  directionsService.route(directionsRequest, function (response, status) {
+                      if (status == google.maps.DirectionsStatus.OK) {                   
+                          console.log(response); 
+                          
+                          //Insert in document
+                          var insertKM = response.routes[0].legs[0].distance.text;
+      
+                          $(".jsDateKm").text(insertKM);
+      
+                      }
+      
+                      else {console.log('error')}
+                          //Error has occured
+                  })
+      
+          }
+      
+          function err(e){
+            return e;
+          }
+      
+      
+      } else {
+          alert('Porfavor actualize un navegador mas actual');
+      }
+      
+      var autocomplete = new google.maps.places.Autocomplete($("#pac-input")[0], {});      
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+                //console.log(autocomplete);
+      
+                var place = autocomplete.getPlace();
+                
+                /*console.log(place);
+                console.log(place.address_components);
+                console.log(place.geometry.location.lat()); */
+      
+                //adding in barrio to part in step tree
+                $(".jsAddress").val(place.address_components[2].long_name);
+      
+                //adding in barrio to part in step tre to maps
+                $(".jsLinkMap").val(place.formatted_address);
+      
+                //adding in barrio to get latitud
+                $(".jsLatitud").val(place.geometry.location.lat());
+      
+                //adding in barrio to get latitud
+                $(".jsLongitud").val(place.geometry.location.lng());
+      
+                /* var address = "bca";
+                 address = place.formatted_address;
+               
+                 geocoder.geocode( { 'address': address}, function(results, status) {
+      
+                  if (status == google.maps.GeocoderStatus.OK) {
+                    var latitude = results[0].geometry.location.lat();
+                    var longitude = results[0].geometry.location.lng();
+      
+                  }
+      
+                }); */
+        
+        });
+      
+    </script>
+    <script src="/js/aprendidos.js"></script>
+    <script>
+      jQuery(document).ready(function() {
+          jQuery("time.timeago").timeago();
+        });
+      
+        jQuery.timeago.settings.strings = {
+        suffixAgo: "",
+        suffixFromNow: "a partir de ahora",
+        seconds: "Ahora",
+        minute: "Hace un minuto",
+        minutes: "Hace unos %d minutos",
+        hour: "Hace una hora",
+        hours: "Hace %d horas",
+        day: "Hace un día",
+        days: "Hace %d días",
+        month: "Hace un mes atrás",
+        months: "Hace %d meses",
+        year: "Hace un año atrás",
+        years: "Hace %d años atrás"
+        };
+    </script>
+  </body>
+</html>

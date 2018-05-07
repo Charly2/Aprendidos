@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body
+    include inc/header
+
+    #website
+
+      - if (messages.info)
+          section.modalProfile
+            #modal1.modal
+              .modal-content
+                h4 Perfil
+                p= messages.info
+
+              .modal-footer
+                a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Cerrar
+
+      
+      if user.photo.length == 0
+        section.modalProfile
+          #modal1.modal
+            .modal-content
+              h4 Editar Información
+              p Porfavor se le pide cargar la siguiente información
+            .modal-content.container
+              div.row
+                form.formUpdateProfile.col.l12.col.m12.col.s12(action="/save/teacher/updatefinish", method="post")
+                  input(type="hidden", name="id", value="#{user._id}")
+
+                  input.jsAddress(type="hidden", name="myinfo[1][barrio]")
+                  input.jsLinkMap(type="hidden", name="myinfo[1][mapa]")
+                  input.jsLatitud(type="hidden", name="myinfo[1][latitud]")
+                  input.jsLongitud(type="hidden", name="myinfo[1][longitud]")
+                  
+
+                  fieldset.fieldset
+                    input.datepicker(type="text", name="fecha", placeholder="Ingrese su fecha de nacimiento", required)
+                  
+                  fieldset.fieldset
+                    //input.validate(id="pac-input", type="text", placeholder="Ingrese su dirección", name="myinfo[1][direccion]", required)
+
+                  fieldset.fieldset
+                    select.browser-default(name="genero", required)
+                      option(value="") Seleccione su genero
+                      option(value="Hombre") Hombre
+                      option(value="Mujer") Mujer
+                  fieldset.fieldset
+                    input.btn(type="submit", value="Cargar Informacion")
+
+
+
+            //.modal-footer
+              a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Agree
+      
+      if user.email.length == 0 || user.genero.length == 0
+         
+           section.modalProfile
+            #modal1.modal
+              .modal-content
+                 h4 Editar Información
+                 if (messages.info)
+                    p.errorTxt= messages.info
+                 else
+                    p Porfavor se le pide cargar la siguiente información
+              .modal-content.container
+                div.row
+                  if user.email.length > 4
+                    form.formUpdateProfile.col.l12.col.m12.col.s12(action="/save/teacher/updatetwitter", method="post")
+                      input(type="hidden", name="id", value="#{user._id}")
+                      input(type="hidden", name="type", value="facebook")
+
+                      input.jsAddress(type="hidden", name="myinfo[1][barrio]")
+                      input.jsLinkMap(type="hidden", name="myinfo[1][mapa]")
+                      input.jsLatitud(type="hidden", name="myinfo[1][latitud]")
+                      input.jsLongitud(type="hidden", name="myinfo[1][longitud]")
+
+                      fieldset.fieldset.col.l12.col.m6.col.s12.pR.pLMob
+                        //input.validate(id="pac-input", type="text", placeholder="Ingrese su dirección", name="myinfo[1][direccion]", required)
+
+                        if user.email == 'alumnos@aprendidos.com'
+                          fieldset.fieldset.col.l6.col.m6.col.s12
+                             input.validate(type="email", placeholder="Ingrese su email", name="email", required)
+                        else
+
+                      fieldset.fieldset.col.l6.col.m6.col.s12.pL
+                          input(type="password", name="password", placeholder="Ingrese su contraseña", minlength="4", required)
+
+
+                      fieldset.fieldset.col.l6.col.m6.col.s12.pR.pLMob
+                        input(type="password", name="confirmpassword", placeholder="Confirme su contraseña", minlength="4", required)
+
+                      fieldset.fieldset.col.l6.col.m6.col.s12.pL.pLMob
+                        input.datepicker(type="text", name="fecha", placeholder="Ingrese su fecha de nacimiento")
+
+                      fieldset.fieldset.col.l6.col.m6.col.s12.pR.pLMob
+                          select.browser-default(name="genero", required)
+                            option(value="", disabled, selected) Seleccione su genero
+                            option(value="Hombre") Hombre
+                            option(value="Mujer") Mujer
+                      fieldset.fieldset.col.l12.col.m12.col.s12.pLR
+                        input.btn(type="submit", value="Cargar Informacion")
+                  else
+                    form.formUpdateProfile.col.l12.col.m12.col.s12(action="/save/teacher/updatetwitter", method="post")
+                      input(type="hidden", name="id", value="#{user._id}")
+                      input(type="hidden", name="type", value="twitter")
+
+                      input.jsAddress(type="hidden", name="myinfo[1][barrio]")
+                      input.jsLinkMap(type="hidden", name="myinfo[1][mapa]")
+                      input.jsLatitud(type="hidden", name="myinfo[1][latitud]")
+                      input.jsLongitud(type="hidden", name="myinfo[1][longitud]")
+                      
+                      fieldset.fieldset.col.l12.col.m12.col.s12.pL.pLMob
+                          input.validate(type="email", name="email", placeholder="Ingrese email", required)
+
+                      //fieldset.fieldset.col.l6.col.m6.col.s12.pR.pLMob
+                        input.validate(id="pac-input", type="text", placeholder="Ingrese su dirección", name="myinfo[1][direccion]", required)
+                      
+                      fieldset.fieldset.col.l6.col.m6.col.s12.pL.pLMob
+                          input.validate(type="password", name="password", placeholder="Ingrese su contraseña", minlength="4", required)
+                      
+                      fieldset.fieldset.col.l6.col.m6.col.s12.pR.pLMob
+                        input.validate(type="password", name="confirmpassword", placeholder="Confirme su contraseña", minlength="4", required)
+                      
+                      fieldset.fieldset.col.l6.col.m6.col.s12.pL
+                        input.datepicker(type="text", name="fecha", placeholder="Ingrese su fecha de nacimiento")
+                      fieldset.fieldset.col.l6.col.m6.col.s12.pR.pLMob
+                          select.validate.browser-default(name="genero", required)
+                            option(value="", disabled, selected) Seleccione su genero
+                            option(value="Hombre") Hombre
+                            option(value="Mujer") Mujer
+                      fieldset.fieldset.col.l12.col.m12.col.s12
+                        input.btn(type="submit", value="Cargar Informacion")
+
+
+
+
+              //.modal-footer
+                a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Agree
+
+      main.main
+        section.profileUser
+          div.profileUser__Contain
+            div.container.relative
+              
+              if user.resetPassword
+                  div.row
+                    div.profileUser__Alert.col.l12.card
+                      p.description
+                        | Su contraseña se genero, porfavor continué a cambiar su contraseña 
+                        a(href="/profile/changepassword")
+                          | Cambiar Contraseña
+                  div.row
+
+              div.row
+                figure.profileUser__Figure.col.l3.col.m4.col.s12
+                  div.profileUser__Figure--Contain
+                    if user.photo.search('.jpg') == -1
+                      img.jsHoverImgProfile(src="/users/avataraprendidos.jpg", alt="")
+                    else
+                      img.jsHoverImgProfile(src="#{user.photo}", alt="")
+                    div.profileUser__Edit.col.l13.col.s12
+                      form.form(action="/save/teacher/userphoto", method="post", enctype="multipart/form-data")
+                        input(type="hidden", name="id", value="#{user._id}")
+                        fieldset.fieldset
+                          input.none(type="file", id="upload", name="file", accept="image/*")
+                          label(for="upload")
+                            | Seleccionar Imagen
+                        div.fieldset
+                          input.btn.none#submit(type="submit", value="Guardar")
+                          label(for="submit")
+                            | Guardar
+                div.col.m1
+                aside.profileUser__Aside.col.l9.col.m7.col.s12
+                  header.profileUser__Aside--Header.col.l12.col.s12
+                    h2.title
+                      | Mi Perfil
+                  form.profileUser__Form.col.l12.col.s12(action="/save/teacher/saveprofilecomplet", method="post")
+                    input(type="hidden", name="id", value="#{user._id}")
+                    fieldset.profileUser__Form--Fieldset.col.l4.col.s12
+                      label(for="")
+                        | Nombre
+                      input(type="text", name="name", value="#{user.name}", required)
+                    if user.username
+
+                      fieldset.profileUser__Form--Fieldset.col.l4.col.s12
+                        label(for="")
+                          | Apellidos
+                        input(type="text", name="surname", placeholder="Ingrese su apellido", value="#{user.username}", required)
+
+                    else
+
+                      fieldset.profileUser__Form--Fieldset.col.l4.col.s12
+                        label(for="")
+                          | Apellidos
+                        input(type="text", name="surname", placeholder="Ingrese su apellido", required)
+
+
+                    
+                    if user.email
+                      fieldset.profileUser__Form--Fieldset.col.l4.col.s12
+                        label(for="")
+                          | Email
+                        input(type="email", name="email", value="#{user.email}", required)
+                    else
+                      fieldset.profileUser__Form--Fieldset.col.l4.col.s12
+                        label(for="")
+                          | Email
+                        input(type="email", name="email", placeholder="Ingrese su email", required)
+
+
+                    fieldset.profileUser__Form--Fieldset.col.l6.col.s12
+                      label(for="")
+                        | Sexo
+                      if user.genero
+                        if user.genero == 'Hombre'
+                          select.browser-default.whiteTransparent(name="genero")
+                            option(value="") Seleccióne su genero
+                            option(value="Hombre", selected) Hombre
+                            option(value="Mujer") Mujer
+                        else if user.genero == 'Mujer'
+                          select.browser-default(name="genero")
+                            option(value="") Seleccióne su genero
+                            option(value="Hombre") Hombre
+                            option(value="Mujer", selected) Mujer
+                        else 
+                          select.browser-default(name="genero")
+                            option(value="", selected, disabled) Seleccióne su genero
+                            option(value="Hombre") Hombre
+                            option(value="Mujer") Mujer
+
+                      else
+                       select.browser-default(name="genero")
+                            option(value="", selected, disabled) Seleccióne su genero
+                            option(value="Hombre") Hombre
+                            option(value="Mujer") Mujer
+                    
+                    if user.edad
+                      fieldset.profileUser__Form--Fieldset.col.l6.col.s12
+                        label(for="")
+                          | Fecha de nacimiento
+                        input.datepicker(type="text", name="fecha", value="#{user.edad}")
+                    else 
+                      fieldset.profileUser__Form--Fieldset.col.l6.col.s12
+                          label(for="")
+                            | Fecha de nacimiento
+                          input.datepicker(type="text", name="fecha")
+
+                    fieldset.profileUser__Form--Fieldset.col.l12.col.s12
+                      div.col.l4.col.m12.col.s12.pL.pR.BtnTablet
+                        input.btn(type="submit", value="Actualizar")
+                      if user.statusteacher
+                        div.col.l8.col.m12.col.s12.pL.pR
+                         a.btn(href="/teacher/#{user._id}")
+                          | Ver Perfil
+                      else
+                        div.col.l8.col.m12.col.s12.pL.pR
+                         a.btn(href="/view/#{user._id}")
+                          | Ver Perfil
+
+
+
+
+          div.profileUser__Details
+            div.container
+              div.row
+                section.profesoresVisited.col.l4.col.m5.col.s12
+                  header.profesoresVisited__Header
+                    h3.title
+                      if profile[0].visitas
+                          | Profesores Visitados
+                      else
+                        | Profesores Visitados
+
+                  div.profesoresVisited__Container
+                    if profile[0].visitas
+                      each v, index in profile[0].visitas.reverse()
+                        if index < 5
+                          if v.imgTeacher
+                            article.profesoresVisited__Articls
+                              - var name = v.nameTeacher
+                              - var nameOne = name.split(' ')
+                              a(href="/teacher/#{v.idTeacher}#profile?name=#{nameOne[0]}#ref")
+                                figure.figure
+                                      img(src="#{v.imgTeacher}", alt="#{v.nameTeacher}")
+                                header.description
+                                  h4.name
+                                    | #{nameOne[0]}
+                    else
+                      p.descriptionProfile
+                        | Aun no visitaste a ningún profesor
+                    
+
+                div.col.l4.col.m2.col.s12
+                aside.profesoresComment.col.l4.col.m5.col.s8
+                  header.profesoresComment__Header
+                    h3.title
+                      | Materias del mes
+                  div.profesoresComment__Container
+                     article.materia
+                      figure.materia__Figure
+                      header.materia__Header
+                        div.materia__Details
+                          span.details
+                            | Te sugerimos visitar
+                        h5.title
+                          | Materias Aleatorio
+                      div.materia__Continue
+                        a.link(href="/search/find?aleatorio=subjects&page=0")
+                          | Visitar
+                 
+
+    include inc/footer

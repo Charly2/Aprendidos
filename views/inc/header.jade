@@ -1,0 +1,234 @@
+header.my__Header
+  section.my__HeaderContain.container
+    div.row.my__HeaderIzDe
+      figure.col.l4.col.m2.col.s12.contain__Header
+        h1.title
+          a.link(href="/")
+            | Aprendidos
+        a.button-collapse.menuMobile(href='#', data-activates='slide-out')
+          i.material-icons menu
+      nav.col.l8.col.m10.container__Menu
+        ul.ul
+          if menuNav == 'nosotros'
+            li.list.selectItemMenu
+              a.link(href="/nosotros")
+                | Nosotros
+          else
+            li.list
+              a.link(href="/nosotros")
+                | Nosotros
+          if menuNav == 'teacheregister'
+            li.list.selectItemMenu
+              a.link(href="/teacher/register")
+                | Quiero Enseñar
+          else
+            li.list
+              a.link(href="/teacher/register")
+                | Quiero Enseñar
+
+          if menuNav == 'tareas'
+            li.list.selectItemMenu
+              a.link(href="/tareas")
+                | Tareas
+          else
+            li.list
+              a.link(href="/tareas")
+                | Tareas
+          
+
+          if user
+            if menunav == 'search'
+              li.list.selectItemMenu
+                a.link(href="/search/1")
+                  | Quiero Aprender
+            else
+              li.list
+                a.link(href="/search/1")
+                  | Quiero Aprender
+
+            if menuNav == 'profile'
+              
+              if menuOther == 'profile'
+
+                li.list.selectItemMenu.relative.menuProfile
+                  a.dropdown-button.link.flex.flexCenter(href="#", data-activates='dropdown1')
+                    div.list.profileName
+                      | #{user.name}  
+                    div.list.profileHeader
+                      if user.photo.length == 0
+                        img(src="#{user.photo}", alt="", width="30px", style="border:none;")
+
+                      else
+                        img(src="#{user.photo}", alt="", width="30px")
+                  ul#dropdown1.dropdown-content
+                    li.selecItemDropDown
+                      a(href='/profile') Mi Perfil
+
+                    li
+                      a(href="/profile/changepassword")
+                        | Seguridad
+                    if user.statusteacher
+                      li
+                        a(href="/anunciantes") Anunciar
+                    else
+                      
+                    li
+                      a(href='/logout') Salir
+
+              else
+
+                li.list.selectItemMenu.relative.menuProfile
+                  a.dropdown-button.link.flex.flexCenter(href="#", data-activates='dropdown1')
+                    div.list.profileName
+                      | #{user.name}  
+                    div.list.profileHeader
+                      if user.photo.length == 0
+                        img(src="#{user.photo}", alt="", width="30px", , style="border:none;")
+
+                      else
+                        img(src="#{user.photo}", alt="", width="30px")
+                  ul#dropdown1.dropdown-content
+                    li
+                      a(href='/profile') Mi Perfil
+
+                    li
+                      a(href="/profile/changepassword")
+                        | Seguridad
+                    if user.statusteacher
+                      li
+                        a(href="/anunciantes") Anunciar
+                    else
+                      //
+                    li
+                      a(href='/logout') Salir
+
+            else
+              
+              if menuNav == 'password'
+                li.list.selectItemMenu.relative.menuProfile
+                  a.dropdown-button.link.flex.flexCenter(href="#", data-activates='dropdown1')
+                    div.list.profileName
+                      | #{user.name}  
+                    div.list.profileHeader
+                      if user.photo.length == 0
+                        img(src="#{user.photo}", alt="", width="30px", , style="border:none;")
+
+                      else
+                        img(src="#{user.photo}", alt="", width="30px")
+                  ul#dropdown1.dropdown-content
+                    li
+                      a(href='/profile') Mi Perfil
+                    li.selecItemDropDown
+                      a(href="/profile/changepassword")
+                        |Seguridad
+                    if user.statusteacher
+                      li
+                        a(href="/anunciantes") Anunciar
+                    else
+                      //
+                    li
+                      a(href='/logout') Salir
+
+              else
+                li.list.relative.menuProfile
+                  a.dropdown-button.link.flex.flexCenter(href="#", data-activates='dropdown1')
+                    div.list.profileName
+                      | #{user.name}  
+                    div.list.profileHeader
+                      if user.photo.length == 0
+                        img(src="/img/logomobil.png", alt="", width="30px", style="border:none;")
+                      else
+                        img(src="#{user.photo}", alt="", width="30px")
+                  ul#dropdown1.dropdown-content
+                    li
+                      a(href='/profile') Mi Perfil
+                    li
+                      a(href="/profile/changepassword")
+                        | Seguridad
+                    if user.statusteacher
+                      li
+                        a(href="/anunciantes") Anunciar
+                    else
+                    //               
+                    li
+                      a(href='/logout') Salir
+          else
+            if menunav == 'search'
+              li.list.selectItemMenu
+                a.link(href="/search/1")
+                  | Quiero Aprender
+            else
+              li.list
+                a.link(href="/search/1")
+                  | Quiero Aprender
+
+
+            if menuNav == 'login'
+              li.list.selectItemMenu
+                a.link(href="/login")
+                  | INGRESAR
+            else
+              li.list
+                a.link(href="/login")
+                  | INGRESAR
+
+  div.containerDecored.row
+    div.col.l3.linesHeader.uno
+    div.col.l3.linesHeader.dos
+    div.col.l3.linesHeader.tres
+    div.col.l3.linesHeader.cuatro
+
+section.my__HeaderMobil
+    if user
+      ul#slide-out.side-nav
+        li
+          .userView
+            .background
+              img(src='')
+            a(href='/profile')
+              img.circle(src='#{user.photo}')
+            a(href='#!name')
+              span.white-text.name #{user.name}
+           
+        li
+          a(href="/") Inicio
+        li
+          a.waves-effect(href='/search/1') Quiero Aprender
+        li
+          a(href='/nosotros')
+            | Nosotros
+        li
+          a(href='/teacher/register') Quiero Enseñar
+        li
+          a.waves-effect(href='/profile') Mi Perfil
+        ul.subMenuMobi
+          li
+            a(href="/profile/changepassword") Seguridad
+          if user.statusteacher
+            li
+             a(href="/anunciantes") Anunciar
+          else
+            //
+        li
+          a.waves-effect(href='/logout') Salir
+    else
+      ul#slide-out.side-nav
+        li
+          .userView
+            .background
+              img(src='')
+            a(href='#!user')
+              img.circle(src='/img/logomobil.png')
+            a(href='#!name')
+              span.white-text.name Aprendidos
+           
+        li
+          a.waves-effect(href='/search/0') Quiero Aprender
+        li
+          a(href='/nosotros')
+            | Nosotros
+        li
+          a(href='/teacher/register') Quiero Enseñar
+
+        li
+          a.waves-effect(href='/login') Ingresar

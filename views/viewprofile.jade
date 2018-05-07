@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body
+    include inc/header
+
+    main.main
+     section.profileVisited
+      section.container
+        div.row
+          header.myHeader.col.l3.col.m6.col.s12
+            figure.figure
+              img(src="#{profileView[0].photo}", alt="", width="200px")
+          section.details.col.l6.col.m6.col.s12
+            header.details__Header.col.l12.col.m12.col.s12
+              h5.title
+                | #{profileView[0].name}
+            div.details__Profile.col.l12.col.m12.col.s12
+              span.genero
+                | Genero: #{profileView[0].genero}
+            div.details__Profile.col.l12.col.m12.col.s12
+              span.genero
+                | Fecha Nacimiento: #{profileView[0].edad}
+            div.details__Profile.col.l12.col.m12.col.s12
+              - var isData = profileView[0].createdAt
+              - var date_Two = isData.toISOString().slice('0,-5') 
+              span.time
+                | En aprendidos 
+                strong
+                 time.date.timeago(datetime="#{date_Two}")
+                  | ...
+
+        div.row
+
+     section.profileMap
+        section.container
+          div.row
+           
+            if profileView[0].visitas
+
+              section.myMap.col.12.col.m12.col.s12
+                header.myMap__Header
+                  h6.title
+                    | Ultimos Profesores Visitados
+                section.myUser__VisitedTeacher.col.l12.col.md12.col.s12
+                  each t, index in profileView[0].visitas.reverse()
+                    if index < 5
+                      article.visitedTeacher.card.col.l2.col.m4.col.s12
+                        a(href="/teacher/#{t.idTeacher}#profile?name=#{t.nameTeacher}")
+                          figure.visitedTeacher__Figure
+                            img(src="#{t.imgTeacher}", alt="", width="150")
+                          header.visitedTeacher__Header
+                            h5.title
+                              | #{t.nameTeacher}
+
+            else
+              section.myMap.col.12.col.m12.col.s12
+                header.myMap__Header
+                  h6.title
+                    | No tiene profesores visitados :(
+          
+          div.row.uMargin
+            section.viewProfile__Shared.col.l12.col.s12
+              header.viewProfile__Shared--Header.col.l12.col.s12
+                h5.title
+                  | Compartir Este Perfil
+              div.viewProfile__Shared--Icons.col.l12.col.s12
+                ul.ul
+                  li.list
+                    a.facebook.jsSharedFacebookView()
+                      i.fa.fa-facebook-square
+                  li.list
+                    a.twitter.jsSharedTwiitterView
+                      i.fa.fa-twitter-square
+                  li.list
+                   script.
+                     var name = "#{profileView[0].name}"
+                     var urlWeb = window.location.href;
+
+                     document.write('<a class="wtp" href="whatsapp://send?text=Aprendidos, profesores a un clic de distancia, Perfil: '+name+ ' ' +urlWeb+'"><i class="fa fa-whatsapp"></i></a>');
+
+    include inc/footer

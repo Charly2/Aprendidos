@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body.searchBG
+    include inc/header
+
+    main.main
+      section.teacher__Register.container
+        div.row
+          section.teacher__Register--Container.card.col.l12.col.m12.col.s12
+            header.teacher__Register--Header.col.l12.col.m12.col.s12
+              if user.statusteacher
+                h2.title
+                  | Editar perfil de profesor
+              else
+                h2.title
+                  | Bienvenido al registro de Profesor
+            section.teacher__Register--Steps--Menu.col.l12.col.m12.col.s12
+              ul.ul
+                li.list.col.l3.col.m3.col.s3(onclick=" window.location.href = '/teacher/register/stepone';")
+                  div.list__Icon
+                    i.fa.fa-id-card.activeItem
+                  div.list__Name
+                    span.name.activeItem
+                      | Datos Personales
+                li.list.col.l3.col.m3.col.s3(onclick="window.location.href = '/teacher/register/steptwo'; ")
+                  div.list__Icon
+                    i.fa.fa-book
+                  div.list__Name
+                    span.name
+                      | Materias
+                li.list.col.l3.col.m3.col.s3.otherCursor
+                  div.list__Icon
+                    i.fa.fa-user-circle-o
+                  div.list__Name
+                    span.name
+                      | Tus Clases
+                li.list.col.l3.col.m3.col.s3.otherCursor
+                  div.list__Icon
+                    i.fa.fa-comment
+                  div.list__Name
+                    span.name
+                      | Contacto
+            if user.statusteacher
+              section.teacher__Register--Steps--Container.col.l12.col.s12
+                article.teacher__Register__Steps--One.col.l8.col.s12
+                  form.form__One(action="/save/teacher/update1", method="post").col.l12.col.s12
+                    fieldset.header__Fieldset.col.l12.col.s12
+                      label
+                        | Nombre y Apellidos
+                    if user.teacher[0].nombreTeacher
+                      fieldset.fieldset.col.l6.col.s12
+                        input(type="text", placeholder="Nombre", name="isNombres", required, value="#{user.teacher[0].nombreTeacher}")
+                    else
+                      fieldset.fieldset.col.l6.col.s12
+                        input(type="text", placeholder="Nombre", name="isNombres", required)
+
+                    if user.teacher[0].apellidoTeacher
+
+                      fieldset.fieldset.col.l6.col.s12
+                        input(type="text", placeholder="Apellidos", name="isApellido", required, value="#{user.teacher[0].apellidoTeacher}")
+
+                    else
+
+                      fieldset.fieldset.col.l6.col.s12
+                        input(type="text", placeholder="Apellidos", name="isApellido", required)
+
+
+                    fieldset.header__Fieldset.col.l12.col.s12
+                      label
+                        | Genero?
+                    fieldset.fieldset.col.l12.col.s12
+                      if user.teacher[0].generoTeacher == 'Hombre'
+                        select.browser-default(name="isGenero", required)
+                          option(value="", disabled) Seleccione su genero 
+                          option(value="Hombre", selected) Hombre
+                          option(value="Mujer") Mujer
+
+                      else if user.teacher[0].generoTeacher == 'Mujer'
+                        select.browser-default(name="isGenero", required)
+                          option(value="", disabled) Seleccione su genero 
+                          option(value="Hombre") Hombre
+                          option(value="Mujer", selected) Mujer
+
+                      else
+
+                        select.browser-default(name="isGenero", required)
+                          option(value="", selected, disabled) Seleccione su genero 
+                          option(value="Hombre") Hombre
+                          option(value="Mujer") Mujer
+
+
+                    fieldset.header__Fieldset.col.l12.col.s12
+                      label
+                        | ¿Cuál es tu email?
+                    if user.teacher[0].emailTeacher
+                      fieldset.fieldset.col.l12.col.s12
+                        input(type="email", placeholder="Email", name="isEmail", required, value="#{user.teacher[0].emailTeacher}")
+                    else
+                      fieldset.fieldset.col.l12.col.s12
+                        input(type="email", placeholder="Email", name="isEmail", required)
+
+                    fieldset.header__Fieldset.col.l12.col.s12
+                      label
+                        | ¿En qué fecha naciste?
+                    if user.teacher[0].nacimientoTeacher
+                      fieldset.fieldset.col.l12.col.s12
+                        input.datepicker(type="text", name="isDate", required, value="#{user.teacher[0].nacimientoTeacher}")
+                    else
+                      fieldset.fieldset.col.l12.col.s12
+                        input.datepicker(type="text", name="isDate", required, value="#{user}")
+
+                    fieldset.fieldset.col.l12.col.s12
+                      input.btn.right(type="submit", value="Actualizar")
+            else  
+                section.teacher__Register--Steps--Container.col.l12.col.m12.col.s12
+                 article.show__User--Exist
+                  h3.show
+                    | Usted ya completo el paso 1
+    
+    include inc/footer

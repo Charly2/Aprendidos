@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body
+    include inc/header
+    div#website
+      section.slider.aboutSlider
+        header.aboutSlider__Header
+          h2.title
+            | ¿QUIÉNES SOMOS?
+
+      main.main
+        div.aboutMain
+          div.container
+            div.col.l12.aboutMain__Description
+              p.description
+                | Somos un equipo de personas que creemos en la educación de calidad y en que todos aprenden de formas diferentes. Sabemos que la educación es el arma más poderosa para cambiar al mundo y por eso decidimos crear este sitio. Queremos ayudar a las personas a encontrar profesores de cualquier materia y área de estudio, facilitando el proceso de selección de acuerdo a las necesidades de cada alumno.
+        div.aboutMain.bgProfiles
+          div.container
+            div.row
+              div.col.l12.aboutMain__Profiles
+                article.profiles__Articl.col.l5.col.m5
+                  figure.profiles__Articl--Figure
+                    img(src="/img/Axel-Web_1.jpg", class="img1")
+                    img(src="/img/Axel-Web_2.jpg", class="img2")
+                  header.profiles__Articl--Header
+                    h3.title
+                      | Alex Collazos
+                  div.profiles__Articl--Ocupation
+                    span.ocupation
+                      | Co-Founder
+                div.col.l2.col.m2
+                article.profiles__Articl.col.l5.col.m5
+                  figure.profiles__Articl--Figure
+                    img(src="/img/Vale-web_1.jpg", class="img1")
+                    img(src="/img/Vale-web_2.jpg", class="img2")
+                  header.profiles__Articl--Header
+                    h3.title
+                      | Vale Angeleri
+                  div.profiles__Articl--Ocupation
+                    span.ocupation
+                      | Co-Founder
+
+        div.aboutMain
+          div.container
+            div.col.l12.aboutMain__Description
+              h4.show
+                  | Misión
+              p.description
+                | Nuestra misión es conectar alumnos con profesores particulares teniendo en cuenta los requerimientos de cada usuario. Uno elige qué, cuándo, cómo y con quién. Sabemos que encontrar un profesor particular nunca es fácil y que cada alumno es diferente, por eso son necesarios profesores que se ajusten a cada perfil. Aprendidos surge para solucionar el problema de miles de personas y otorgarle a los estudiantes la posibilidad de aprender con quienes ellos se sientan más cómodos.
+
+        div.aboutMain__Footer
+          div.container
+            div.col.l12.aboutMain__Description
+              h4.show
+                  | Valores
+              p.description
+                | Trabajamos de forma dinámica, responsable y consciente de las necesidades de nuestros usuarios, como así también de los profesores que forman parte de nuestro sitio. 
+
+
+
+    include inc/footer

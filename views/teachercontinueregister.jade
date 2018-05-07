@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body
+    include inc/header
+
+    main.main
+      section.containerFix
+          #modal1.modal
+            .modal-content
+              div.header
+                if user.statusteacher
+                  h4 Editar perfil de profesor
+                else
+                  h4 Registro para profesores
+              div.description
+                if user.statusteacher
+                  p Usted ya tiene un perfil de profesor creado, si desea modificar le invitamos a continuar el proceso de edición
+                else
+                  p Para poder continuar con la creación de su perfil de profesor le sugerimos tener toda su información exacta, presione en continuar para realizar el registro o cancelar para salir de esta pantalla
+              figure.showError__Figure
+                if user.statusteacher
+                  img(src="/img/profiledit.png", alt="error not found", width="50%", style="display:block;margin:0 auto;")
+                else
+                  img(src="/img/continueregister.jpg", alt="error not found", width="100%")
+            .modal-footer
+              a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='/profile') Cancelar
+              a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='/teacher/register/stepone') Continuar
+      div.container
+
+        section.row
+          article.col.l12.col.s12.showError
+            header.showError__Header.jsOpenContinueTeacherRegister(style="height:320px;")
+              //h2.title
+                | Usted va a crear un perfil de profesor
+            div.showError__Btn
+              //a.linkHome(href="/teacher/register/stepone")
+                | Continuar
+
+
+    include inc/footer

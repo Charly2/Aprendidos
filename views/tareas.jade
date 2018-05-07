@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+
+    include inc/base
+    include inc/baseone
+  body
+    include inc/header
+  
+    #modala1.modal.none
+      .modal-content
+        h5 Pregunta sobre tu tarea
+        form(action="/tareas/save/newtarea", method="post")
+          fieldset.formTareas__Fieldset
+            textarea.materialize-textarea(name="details", cols="30", rows="70", placeholder="Escribe tu pregunta (De forma clara y fácil de entender para obtener la mejor respuesta)", required)
+          fieldset.formTareas__Fieldset
+            select.browser-default(name='category', required)
+              option(value='', selected, disabled)
+                | Elige un tema
+              option(value="Matemáticas") Matemáticas
+              option(value="Baldor") Baldor
+              option(value="Estadística y Cálculo") Estadística y Cálculo
+              option(value="Castellano") Castellano
+              option(value="Historia") Historia
+              option(value="Ciencias Sociales") Ciencias Sociales
+              option(value="Geografía") Geografía
+              option(value="Derecho") Derecho 
+              option(value="Contabilidad") Contabilidad
+              option(value="Administración") Administración
+              option(value="Exámenes Nacionales") Exámenes Nacionales
+              option(value="PAU-Selectividad") PAU-Selectividad
+              option(value="Inglés") Inglés
+              option(value="Física") Física
+              option(value="Química") Química
+              option(value="Salud") Salud
+              option(value='Biología') Biología
+              option(value='Informática') Informática
+              option(value='Tecnología y Electrónica') Tecnología y Electrónica
+              option(value='Religión') Religión
+              option(value='Filosofía') Filosofía
+              option(value='Psicología') Psicología
+              option(value='Educ. Fisica') Educ. Fisica
+              option(value='Arte') Arte
+              option(value='Musica') Musica
+              option(value='Francés') Francés
+              option(value='Catalàn') Catalàn
+              option(value='Galego') Galego
+              option(value='Euskera') Euskera
+              option(value='Alemán') Alemán
+              option(value='Latín / Griego') Latín / Griego
+              option(value='Análisis de la materia y la energía') Análisis de la materia y la energía
+              option(value='Tratamiento de datos y azar') Tratamiento de datos y azar
+          fieldset.formTareas__Fieldset
+            input.btn(type="submit", value="PREGUNTAR")
+
+      .modal-footer
+        a.modal-action.modal-close.waves-effect.waves-green.btn-flat.modal-close-two(href='') Cerrar
+
+
+    div#website
+      
+      section.slider.slider__Tareas
+        div.container
+          div.row
+            form.formTareas.col.l6.col.m10.col.s12
+              div.col.l9.col.m4.col.s12.input-field.formContainer.jsMateriasShow
+                input(type="text", id="autocomplete-input", class="tareasbginput", autocomplete="off", placeholder="Pregunta sobre tu tarea aquí")
+                div.jsAppendMaterias
+
+              fieldset.col.l3.col.m4.col.s12.input-field.formContainer
+                button.waves-effect.waves-light.btn-large.black-text.white(type="submit")
+                  i.fa.fa-search(aria-hidden="true")
+      main.main.tareas__Main
+        div.container
+          div.row
+            section.tareas__Iz.col.l8.m10.s12
+              each tareas in posts
+                article.tareas__Iz--Article.card
+                  header.tareas__Iz--Article--Header
+                    figure.image
+                      img(src="#{tareas.fotoUser}", alt="")
+                    ul.category
+                      li.level
+                        b #{tareas.nameuser}
+                      li.name
+                        | #{tareas.categoria}
+                      li.horario
+                         - var isData = tareas.fecha
+                         - var date_Two = isData.toISOString().slice('0,-5')
+                         time.date.timeago(datetime="#{date_Two}")
+                  div.tareas__Container
+                    p.description
+                      a.link.jsTextTareas(href="/tareas/view/#{tareas._id}")
+                        | #{tareas.detalle}
+                    p.continue
+                      a.link.btn.btn-flat(href="/tareas/view/#{tareas._id}")
+                        | RESOLVER
+             
+            aside.tareas__De.col.l4.md2.s12
+              article.tareas__De--Article.card
+                header.header
+                  h3.title
+                    | ¿Qué quieres saber?
+                div.continue
+                  if user
+                    a.link.btn.waves-light(href="#modala1")
+                      | Preguntar
+                  else
+                    a.link.btn.waves-light(href="/login")
+                      | Preguntar
+       
+    
+    include inc/footer

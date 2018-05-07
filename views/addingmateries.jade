@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="robots", content="noindex")
+    meta(name="googlebot", content="noindex")
+    include inc/base
+    include inc/baseone
+  body
+    include inc/header
+
+    main.mainCity
+      section.container
+        div.row
+          header.col.l12.col.m12.col.s12.isHeader
+            h5.titlte
+              | Agregar Materias
+          div.col.l12.col.m12.col.s12.isForm
+            form.offset-l3.col.l6.col.m6.col.s12(action="/admateries-code-gofjg/save", method="post")
+              fieldset.fieldset
+                label Nombre de la materia + Nivel
+                input(type="text", name="idmateria", placeholder="Ingrese un identificador de la materia", minlength="3", maxlength="3", required)
+                input(type="text", name="ismateria", placeholder="Ingles Basico")
+              fieldset.fieldset
+                input.btn(type="submit")
+
+        div.row
+          
+            table
+              thead
+                tr
+                  th(data-field='id') Nombre de la materia
+                  th(data-field='name') ID
+                  th(data-field='price') Borrar
+              tbody
+                each m in materias
+                  tr
+                    td #{m.name}
+                    td #{m.idmateria}
+                    td 
+                      a.jsDeleteMateria.btn(data-id="#{m._id}", style="cursor:pointer;") Eliminar
+                    
+
+                   
+
+
+
+    include inc/footer

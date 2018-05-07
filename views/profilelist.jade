@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body
+    include inc/header
+
+    main.main
+      section.container.mainProfile
+        div.row
+          section.col.l12.col.m6.col.s12
+         
+            each p in usuariosFinish
+              article.profileUsers.card-panel.hoverable.col.l6.m6.s12
+                a(href="/view/#{p._id}")
+                  figure.profilesUsers__Figure.col.l5.col.m6.col.s12(style="background-image:url('#{p.photo}')")
+                  header.profilesUsers.col.l7.col.m6.col.s12
+                    div.profileUsers__Name
+                      h2.title
+                        | #{p.name}
+                    div.profileUsers__Name
+                      span.name
+                        | Fecha de nac: #{p.edad}
+                    div.profileUsers__Genero
+                      span.name
+                        |Genero: #{p.genero}
+                    div.profileUsers__Genero
+                      - var isData = p.createdAt
+                      - var date_Two = isData.toISOString().slice('0,-5') 
+                      span.name
+                        |Registro: 
+                        time.date.timeago(datetime="#{date_Two}")
+                         | ...
+          
+          div.col.l12.m12.ms12
+            ul.pagination.txtCenter
+              li.disabled
+                a(href='/profiles/0')
+                  i.material-icons chevron_left
+              li.active
+               if Number(pagination) === 0
+                a(href='/profiles/1') 1
+               else
+                  a(href="/profiles/#{n}") #{n}
+              li.waves-effect
+                a(href='/profiles/#{Number(pagination) + 1}')
+                  i.material-icons chevron_right
+
+
+
+    include inc/footer

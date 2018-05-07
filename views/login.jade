@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body
+    include inc/header
+    
+    main.main
+      section.main__Login#website
+        div.container
+          div.row
+            header.main__Login--Header.col.l12
+              h2.title
+                | Bienvenido a Aprendidos
+            //div.main__Login--Description.col.l12.col.s12
+              h3.title
+                | Inicia sesión
+            .main__Login--Forms.col.l12.col.s12
+              div.Forms--Iz.col.l5.col.s12
+                header.Forms--Iz--Header
+                  h4.title
+                    | Con tus redes sociales
+                div.Forms--Iz--Socials
+                  a.link.socials.waves-effect.waves-light.btn-large.blue.darken-4.full-width.white-text(href="/auth/facebook")
+                    i.fa.fa-facebook
+                    | Ingresa con facebook
+                  a.link.socials.waves-effect.waves-light.btn-large.blue.darken-5.full-width.white-text(href="/auth/twitter")
+                    i.fa.fa-twitter
+                    | Ingresa con twitter
+              div.col.l2.col.s2
+              aside.Forms--De.col.l5.col.s12
+                header.Forms--De--Header
+                  h4.title
+                    | Con Tu Email
+                  - if (messages.info)
+                  div.showSuccess
+                     span= messages.info
+                  - if (messages.error)
+                  div.showAlert
+                     span= messages.error
+                form.Forms--De-Access(action="/access", method="post")
+                  fieldset.fieldset
+                    label.fieldset__Label
+                      | Correo electrónico
+                    input(type="email", name="email", required, title="Porfavor ingrese un email")
+                  fieldset.fieldset
+                    label.fieldset__Label
+                      | Contraseña
+                    input(type="password", name="password", required)
+                  fieldset.fieldset
+                    button.waves-effect.waves-light.btn-large.full-width.white-text.colorGreen(type="submit")
+                      | Inicia Sesión
+              div.Forms--News.col.l6.col.s12
+                span.show
+                  | Olvidastes tu contraseña? 
+                a.link(href="/resetpassword")
+                  | Recuperar
+              div.Forms--News.col.l6.col.s12
+                span.show
+                  | ¿Aún no tienes cuenta? 
+                a.link(href="/register")
+                  | Regístrate aquí
+
+
+
+    include inc/footer

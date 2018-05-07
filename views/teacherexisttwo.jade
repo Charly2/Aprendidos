@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body.searchBG
+    include inc/header
+
+    section.modalProfile.none
+     #modal1.modal
+      .modal-content
+        h4 Error
+        p Porfavor seleccione una materia para continuar
+
+      .modal-footer
+        a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Cerrar
+
+    main.main
+      section.teacher__Register.container
+        div.row
+          section.teacher__Register--Container.card.col.l12.col.m12.col.s12
+            header.teacher__Register--Header.col.l12.col.m12.col.s12
+              header.teacher__Register--Header.col.l12.col.m12.col.s12
+                if user.statusteacher
+                  h2.title
+                    | Editar perfil de profesor
+                else
+                  h2.title
+                    | Bienvenido al registro de Profesor
+            section.teacher__Register--Steps--Menu.col.l12.col.m12.col.s12
+              ul.ul
+                li.list.col.l3.col.m3.col.s3(onclick=" window.location.href = '/teacher/register/stepone';")
+                  div.list__Icon
+                    i.fa.fa-id-card.activeItem
+                  div.list__Name
+                    span.name.activeItem
+                      | Datos Personales
+                li.list.col.l3.col.m3.col.s3(onclick="window.location.href = '/teacher/register/steptwo'; ")
+                  div.list__Icon
+                    i.fa.fa-book.activeItem
+                  div.list__Name
+                    span.name.activeItem
+                      | Materias
+                li.list.col.l3.col.m3.col.s3(onclick="window.location.href = '/teacher/register/steptree';")
+                  div.list__Icon
+                    i.fa.fa-user-circle-o
+                  div.list__Name
+                    span.name
+                      | Tus Clases
+                li.list.col.l3.col.m3.col.s3.otherCursor
+                  div.list__Icon
+                    i.fa.fa-comment
+                  div.list__Name
+                    span.name
+                      | Contacto
+            
+            if user.statusteacher
+              section.teacher__Register--Steps--Container.col.l12.col.s12
+
+                article.teacher__Register__steps--Two.col.l12
+                
+                  div.form__Two
+                    if user.teacher
+                      article.preview.card.col.l8.col.m10.col.s12
+                        figure.preview__Figure.col.l3.col.s4
+                          img(src="#{user.teacher[0].fotoTeacher}", alt="", width="100%")
+                        div.preview__Description.col.l9.col.s8
+                          header.preview__Description--Header.col.l12.col.s12
+                            h4.title
+                             | #{user.teacher[0].nombreTeacher}
+                             | #{user.teacher[0].apellidoTeacher}
+                          div.preview__Description--Options.col.l12
+                            ul.ul.col.l5.col.m12.col.s12
+                              li.list.col.l3.col.m3.col.s3
+                                i.fa.fa-graduation-cap
+                              li.list.col.l3.col.m3.col.s3
+                                i.fa.fa-users
+                              li.list.col.l3.col.m3.col.s3
+                                i.fa.fa-user
+                              li.list.col.l3.col.m3.col.s3
+                                i.fa.fa-car
+                            ul.col.l2.col.m2.col.s2
+                            ul.ul.col.l5.col.m12.col.s12
+                              li.list.col.l4.col.m3.col.s3
+                                i.fa.fa-sun-o
+                              li.list.col.l4.col.m3.col.s3
+                                i.fa.fa-circle-o-notch
+                              li.list.col.l4.col.m3.col.s3
+                                i.fa.fa-moon-o
+                    
+                    fieldset.fieldset__Header.col.l12.col.s12
+                      label ¿De qué materias te gustaría dar clases?
+                      p 
+                         label ¿No encontraste la materia que querés dar? Escribinos un email a  contacto@aprendidos.com o un mensaje a 
+                         a(href="http://facebook.com/aprendidos", target="_blank") nuestro Facebook.
+                    fieldset.fieldset__Letter.col.l12.col.s12
+                      ul.ul
+                        li.list
+                          a(href="#A")
+                            | A
+                        li.list
+                          a(href="#B")
+                            | B
+                        li.list
+                          a(href="#C")
+                            | C
+                        li.list
+                          a(href="#D")
+                            | D
+                        li.list
+                          a(href="#E")
+                            | E
+                        li.list
+                          a(href="#F")
+                            | F
+                        li.list
+                          a(href="#G")
+                            | G
+                        li.list
+                          a(href="#H")
+                            | H
+                        li.list
+                          a(href="#I")
+                            | I
+                        li.list
+                          a(href="#J")
+                            | J
+                        li.list
+                          a(href="#K")
+                            | K
+                        li.list
+                          a(href="#L")
+                            | L
+                        li.list
+                          a(href="#M")
+                            | M
+                        li.list
+                          a(href="#N")
+                            | N
+                        li.list
+                          a(href="#O")
+                            | O
+                        li.list
+                          a(href="#P")
+                            | P
+                        li.list
+                          a(href="#Q")
+                            | Q
+                        li.list
+                          a(href="#R")
+                            | R
+                        li.list
+                          a(href="#S")
+                            | S
+                        li.list
+                          a(href="#T")
+                            | T
+                        li.list
+                          a(href="#U")
+                            | U
+                        li.list
+                          a(href="#V")
+                            | V
+            
+                    div.container__Materias.jsAppendEditMateries.col.l12.col.s12
+
+                      each m, index in mate
+  
+                        - var a = m.name
+                        - var b = a.split('-');
+
+                        - var e = 0;
+
+                        each n in user.materias[0].clases
+
+                          
+                          if m._id == n.id
+
+                            - e = 1;
+
+                            div.jsMateriasOn.fieldset__Group.col.l3.col.m4.col.s6.letterA#A
+                              input.jsOneData(type="hidden", name="clases[#{index}][id]", value="#{m._id}")
+                              input.jsTwoData(type="hidden", name="clases[#{index}][idmateria]", value="#{m._id}")
+                              input.jsTreeData(type="hidden", name="clases[#{index}][_id]", value="#{m._id}")
+                              
+                              input.jsFourData(type="checkbox", checked, id="#{m._id}", name="clases[#{index}][name]", value="#{m.name}")
+
+                              label(for="#{m._id}")
+                                span.carrer
+                                  |#{b[0]}
+                                p.grade
+                                  | #{b[1]}
+
+                        if e != 1
+
+                          div.jsMateriasOn.fieldset__Group.col.l3.col.m4.col.s6.letterA#A
+                            input.jsOneData(type="hidden", name="clases[#{index}][id]", value="#{m._id}")
+
+                            input.jsTwoData(type="hidden", name="clases[#{index}][idmateria]", value="#{m._id}")
+                            input.jsTreeData(type="hidden", name="clases[#{index}][_id]", value="#{m._id}")
+                            
+                            input.jsFourData(type="checkbox", id="#{m._id}", name="clases[#{index}][name]", value="#{m.name}")
+
+                            label(for="#{m._id}")
+                              span.carrer
+                                |#{b[0]}
+                              p.grade
+                                | #{b[1]}
+
+
+
+
+
+
+
+
+
+
+              
+                  form.form__Two(action="/save/teacher/update2", method="post", onsubmit="return validateForm(this);").col.l12.col.s12
+                    
+                    div.appendMaterias
+
+                       each m, index in mate
+  
+                        - var a = m.name
+                        - var b = a.split('-');
+
+                        - var e = 0;
+
+                        each n in user.materias[0].clases
+
+                          
+                          if m._id == n.id
+
+                            - e = 1;
+
+                            div.elements(class="#{m._id}")
+                              input(type="hidden", name="clases[#{index}][id]", value="#{m._id}")
+                              input(type="hidden", name="clases[#{index}][idmateria]", value="#{m._id}")
+
+                              input(type="hidden", name="clases[#{index}][_id]", value="#{m._id}")
+
+                              input(type="hidden", name="clases[#{index}][name]", value="#{m.name}")
+                          
+                        
+                    div.fieldset__Ultimate.col.l8
+                      fieldset.fieldset__Header.col.l12.down.textLeft.marginCero
+                        label ¿Cuál es tu nivel de estudios?
+                      fieldset.fieldset.col.l12.col.s12
+                        if user.materias[0].status == 'Cursando'
+                          
+                          select.browser-default(name="lvlstude", required)
+                            option(value="", disabled, selected) Eliga sus estudios
+                            option(value="No recibido") No recibido
+                            option(value="Cursando", selected) En Curso
+                            option(value="Recibido") Recibido
+
+                        else if user.materias[0].status == 'No recibido'
+
+                          select.browser-default(name="lvlstude", required)
+                            option(value="", disabled, selected) Eliga sus estudios
+                            option(value="No recibido", selected) No recibido
+                            option(value="Cursando") En Curso
+                            option(value="Recibido") Recibido
+
+                        else if user.materias[0].status == 'Recibido'
+
+                          select.browser-default(name="lvlstude", required)
+                            option(value="", disabled, selected) Eliga sus estudios
+                            option(value="No recibido") No recibido
+                            option(value="Cursando") En Curso
+                            option(value="Recibido", selected) Recibido
+
+                        else
+
+                          select.browser-default(name="lvlstude", required)
+                            option(value="", disabled, selected) Eliga sus estudios
+                            option(value="No recibido") No recibido
+                            option(value="Cursando") En Curso
+                            option(value="Recibido") Recibido
+
+                    
+                    fieldset.fieldset.col.l12.col.s12
+                      input.btn.right(type="submit", value="Actualizar")
+
+            else
+              section.teacher__Register--Steps--Container.col.l12.col.m12.col.s12
+               article.show__User--Exist
+                h3.show
+                  | Usted ya completo el paso 2
+    
+    include inc/footer
+    script.
+      function onSubmit() 
+          { 
+              var fields = $("input[type='checkbox']").serializeArray(); 
+              console.log(fields);
+              if (fields.length === 0) 
+              { 
+                  $(".modalProfile").css('display','block');
+                  // cancel submit
+                  return false;
+              } 
+              else 
+              { 
+                  //alert(fields.length + " items selected"); 
+              }
+          }
+
+      $('.form__Two').submit(onSubmit);
+
+
+      $(document).ready(function(){
+        
+          var materiasUser = !{JSON.stringify(user.materias[0].clases)};
+          var materias = !{JSON.stringify(mate)};
+          //console.log(materiasUser);
+          //console.log(materias);
+         
+          for(var j = 0; j < materias.length; j++) {
+            var e = 0;
+            for(var i = 0; i < materiasUser.length; i++) {
+                if(materias[j]._id == materiasUser[i].id){
+                  e = 1;
+                  console.log('mis materias: ' + materias[j].name);
+                }
+            }
+            if(e != 1) {
+              console.log('otras: ' + materias[j].name);
+            }
+            
+            /*var id_m = materias.indexOf(materiasUser[i].id);
+            console.log(id_m);*/
+
+          }
+
+
+      });
+
+
+    
+
+   

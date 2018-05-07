@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+    include inc/basetwo
+  body.searchBG
+    include inc/header
+
+    
+    #modal2.modal.none.modelNew.tCenter
+        .modal-content
+          h4 Contactá al profe
+          p 
+            b #{teacher[0].teacher[0].nombreTeacher}  #{teacher[0].teacher[0].apellidoTeacher} está esperando que te pongas en contacto
+        .model-subcontent
+          h4 Su teléfono es #{teacher[0].contacto[0].telefono}
+          hr
+          p Le brindamos tu mail al profe para que en caso de no poderte comunicarte te contacte a la brevedad
+        .modal-footer.tCenter
+          button.closeJsTeacher.waves-effect.waves-light.btn
+            | Entendido
+    main.main
+
+      section.profileTeacher.container
+        div.row.uMargin
+          header.profileTeacher__Header.col.l12.col.m12.card.col.s12
+            figure.col.l3.col.m4.col.s4.profileTeacher__Header--Avatar
+               if teacher[0].teacher[0].fotoTeacher.search('.jpg') == -1
+                img(src="/users/avataraprendidos.jpg", alt="", width="160px", height="160px")
+               else
+                img(src="#{teacher[0].teacher[0].fotoTeacher}", alt="", width="160px", height="160px")
+            div.col.l7.col.m8.col.s8.profileTeacher__Header--Description
+              div.description__Name
+                h2.title
+                  | #{teacher[0].teacher[0].nombreTeacher} #{teacher[0].teacher[0].apellidoTeacher}
+              div.description__Start
+                  - var resultadoHeader = 0
+                  - var resultadoHeader_One
+                  - var resultadoHeader_Final
+                  - var resultadoSingle = 0
+
+                  if teacher[0].calificacion
+
+                    if teacher[0].calificacion.length == 1
+                      
+                      - resultadoHeader_Final = teacher[0].calificacion[0].calificacion
+
+                    else
+
+                      each r in teacher[0].calificacion
+                        - resultadoSingle += Number(r.calificacionCant)
+                        - resultadoHeader += Number(r.calificacionResult)
+
+                      - resultadoHeader_One = resultadoHeader / resultadoSingle
+                      - resultadoHeader_Final = parseInt(resultadoHeader_One.toFixed(2))
+
+              
+                    if resultadoHeader_Final == 1
+                      ul.ul
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+
+                    else if resultadoHeader_Final == 2
+                      ul.ul
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+
+                    else if resultadoHeader_Final == 3
+                      ul.ul
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+
+                    else if resultadoHeader_Final == 4
+                      ul.ul
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.notReview
+
+                    else if resultadoHeader_Final == 5
+                      ul.ul
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.visitedReview
+                        li.list
+                          i.fa.fa-star.visitedReview
+
+                    else
+                      ul.ul
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+
+                  else
+                      ul.ul
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+                        li.list
+                          i.fa.fa-star.notReview
+
+                  div.description__Like
+                    if teacher[0].liketeacher
+
+                      if teacher[0].liketeacher.length > 0
+
+                        h5.likeShow.jsLikeTxt
+                          | #{teacher[0].liketeacher.length} 
+                          span
+                            i.fa.fa-thumbs-o-up
+
+              div.description__Time
+                // Fecha register and Fecha State
+                - var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+                - var date = teacher[0].createdAt
+                - var dateReal = new Date()
+
+                - var monthActual  =  dateReal.getMonth() + 1
+                - var monthRegister = date.getMonth()
+                - var resultadoMonth = meses[monthRegister]
+                - var resultadoYear = date.getFullYear()
+                
+                //View register Fecha
+
+                span.show
+                  | En Aprendidos desde #{resultadoMonth} del #{resultadoYear}
+            div.col.l2.col.m12.col.s12.profileTeacher__Header--Options
+              div.options__Top.col.l12.col.m4.col.s4
+                if user
+                  
+                  //verify if to like
+                  if user.mylike
+                     if teacher[0].liketeacher
+
+                        each tn in teacher[0].liketeacher
+                          if user._id == String(tn.idUser)
+                              i.fa.fa-thumbs-o-up.jsRemoveLike.viewBlack(data-id="#{teacher[0].teacher[0].idUser}", data-user="#{user._id}", data-idremove="#{tn.id}")
+                        
+                          else
+
+                     else
+                      i.fa.fa-thumbs-o-up.jsLike(data-id="#{teacher[0].teacher[0].idUser}", data-user="#{user._id}")
+
+                  else if String(user._id) === String(teacher[0].teacher[0].idUser)
+                    i.fa.fa-thumbs-o-up(title="No puedes calificarte")
+
+
+                  else
+
+                    i.fa.fa-thumbs-o-up.jsLike(data-id="#{teacher[0].teacher[0].idUser}", data-user="#{user._id}")
+
+                else
+                  i.fa.fa-thumbs-o-up(onclick="window.location.href = '/register' ")
+              div.options__Years.col.l12.col.m4.col.s4
+                - var completBirthday = teacher[0].teacher[0].nacimientoTeacher
+                - var isYear = completBirthday.split(",")
+                - var isDate = new Date()
+                - var isResult = isDate.getFullYear() - Number(isYear[1])
+                p.show
+                  | #{isResult}
+                span.show__Year
+                  | Años
+              div.options__Recibido.col.l12.col.m4.col.s4
+                if teacher[0].materias[0].status == "Recibido"
+                   i.fa.fa-graduation-cap.isRecibido
+                else if teacher[0].materias[0].status == "Cursando"
+                   i.fa.fa-graduation-cap.isCursando
+                else
+                  i.fa.fa-graduation-cap
+        div.row.uMargin  
+          section.profileTeacher__Second.col.l6.col.m12.col.s12
+             if user
+              article.second__Iz.col.l12.col.m12.activeJs.card.col.s12(data-email="#{teacher[0].teacher[0].emailTeacher}")
+                header.show__Icon
+                  i.fa.fa-address-card
+                div.show__Txt
+                  h3.title
+                    | Contactar a 
+                    span.capitalizeCase #{teacher[0].teacher[0].nombreTeacher}
+              article.secondd__Iz.col.l12.col.m12.none.card.col.s12
+                header.secondd__Iz--Header
+                  h4.title
+                    | Información de contacto
+                div.secondd__Iz--Phone
+                  strong.isPhone
+                    i.fa.fa-volume-control-phone
+                    | Teléfono:
+                  span.isNumber
+                    | #{teacher[0].contacto[0].telefono}
+                div.secondd__Iz--Contact
+                  div.Contact__Iz
+                    if teacher[0].contacto[0].mensajealumnos == "true"
+                      i.fa.fa-mobile.isSiContactone
+                      span.name.isSiContactone
+                        | Si recibe SMS
+                    else
+                      i.fa.fa-mobile
+                      span.name
+                        | No recibe SMS
+                  div.Contact__De
+                    if teacher[0].contacto[0].mensajewtp == "true"
+                      i.fa.fa-whatsapp.isSiContacttwo
+                      span.name.isSiContact
+                        | Si Usa WhatsApp
+                    else
+                      i.fa.fa-whatsapp
+                      span.name
+                        | No Usa WhatsApp
+             else
+              article.jsClickRegister.second__Iz.col.l12.card.col.s12
+                header.show__Icon
+                  i.fa.fa-address-card
+                div.show__Txt
+                  h3.title
+                    a(href="/register")
+                      | Contactar a 
+                     span.capitalizeCase #{teacher[0].teacher[0].nombreTeacher}
+          aside.profileTeacher__Tree.col.l6.col.m12
+            article.second__De--Container.card
+                header.second__De--Header
+                  h4.title
+                    | Clases
+                div.second__De--List.col.l12.col.s12
+                  ul.ul
+                    li.list.col.l4.col.s4
+                      div.list__Icon
+                          if teacher[0].opciones[0].tipoclases
+
+                            if teacher[0].opciones[0].tipoclases.length
+                                //verify one
+                                if teacher[0].opciones[0].tipoclases.length == 1
+
+                                    if teacher[0].opciones[0].tipoclases[0].name == 'grupales'
+                                       i.fa.fa-user
+                                       i.fa.fa-users.isVerde
+                                    else
+                                       //individuales
+                                       i.fa.fa-user.isVerde
+                                       i.fa.fa-users
+
+                                else if teacher[0].opciones[0].tipoclases.length == 2
+                                    
+                                    //verify two
+                                    if teacher[0].opciones[0].tipoclases[0].name == 'grupales'
+                                      i.fa.fa-user.isVerde
+                                      i.fa.fa-users.isVerde
+
+                                    if teacher[0].opciones[0].tipoclases[0].name == 'individuales'
+                                      i.fa.fa-user.isVerde
+                                      i.fa.fa-users.isVerde
+                                
+                                else 
+                                  i.fa.fa-user
+                                  i.fa.fa-users
+
+
+                                  
+                          else
+                            i.fa.fa-user
+                            i.fa.fa-users
+
+                      span.list__Name Individuales/Grupales
+                    li.list.col.l4.col.s4
+                      if teacher[0].opciones[0].domicilio == "true"
+                        div.list__Icon
+                          i.fa.fa-car.isAddressTrue
+                        span.list__Name.isAddressTrue Si va domicilio
+                      else
+                        div.list__Icon
+                          i.fa.fa-car
+                        span.list__Name No va domicilio
+                    li.list.col.l4.col.s4
+                      if teacher[0].opciones[0].precio == 0
+                        
+                        div.list__Icon
+                          p.show
+                            strong Curso
+                        span.list__Name
+                            | 
+
+                      else
+
+                        div.list__Icon
+                          p.show
+                            strong $ #{teacher[0].opciones[0].precio}
+                        span.list__Name
+                            | Por hora
+                div.description.col.l12
+                  p.show
+                    | El precio de las clases es aproximado y puede variar de acuerdo a diversos factores (por ejemplo si la clase es individual o grupal)
+        div.row.uMargin
+          section.profileTeacher__Four.col.l6.col.m6.col.s12
+            article.profile_Teacher__Four--Container.col.l12.col.s12
+              
+
+              if user
+                header.profileTeacher__Four--Header.col.l12.col.s12
+                  h3.title
+                    | Distancia Actual 
+                    span.showKm.jsDateKm
+                      | ...
+              else
+                header.profileTeacher__Four--Header.col.l12.col.s12
+                  h3.title
+                    | Distancia Actual 
+                    span.showKm.jsDateKm
+                      | ...
+              div.profileTeacher__Four--Map.jsObtainData(data-lat="#{teacher[0].opciones[0].latitud }", data-lon="#{teacher[0].opciones[0].longitud}")
+               
+                //iframe(width="100%", height="155px", style="border:none;", src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC2U_3vueYI-kWtt4b01PAnvLXo4m8ueGU&q=#{teacher[0].opciones[0].mapa}")
+
+                img(src="https://maps.googleapis.com/maps/api/staticmap?center=#{teacher[0].opciones[0].mapa}&zoom=14&size=472x160&key=AIzaSyCfOIm6Ivgj314FEet0-dE-appvIPdUw8I", alt="")
+                
+              
+          aside.profileTeacher__Five.col.l6.col.m6.col.s12
+            article.profileTeacher__Fiver--Container.card
+              header.profileTeacher__Five--Header
+                h3.title
+                  | Horarios
+              div.profileTeacher__Five--Options.col.l12.col.m12.col.s12
+                
+                if teacher[0].opciones[0].horarios
+                    if teacher[0].opciones[0].horarios.length
+                      //view to cant horarios
+                      if teacher[0].opciones[0].horarios.length == 1
+
+                        //view to name horarios to one
+                        if teacher[0].opciones[0].horarios[0].name == 'mañana'
+                         
+                             ul.ul.col.s12.col.m12
+                                  li.list.col.l4.col.m4.col.s4
+                                    
+                                        div.list__Icon
+                                          i.fa.fa-sun-o.siManana
+                                        div.list__Name
+                                          span.show.siManana
+                                            | Mañana
+                                  li.list.col.l4.col.m4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-circle-o-notch
+                                      div.list__Name
+                                        span.show
+                                          | Tarde
+                                  li.list.col.l4.col.m4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-moon-o
+                                      div.list__Name
+                                        span.show
+                                          | Noche
+                      
+                        else if teacher[0].opciones[0].horarios[0].name == 'tarde'
+                              ul.ul.col.s12
+                                  li.list.col.l4.col.m4.col.s4
+                                    
+                                        div.list__Icon
+                                          i.fa.fa-sun-o
+                                        div.list__Name
+                                          span.show
+                                            | Mañana
+                                  li.list.col.l4.col.m4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-circle-o-notch.siTarde
+                                      div.list__Name
+                                        span.show.siTarde
+                                          | Tarde
+                                  li.list.col.l4.col.m4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-moon-o
+                                      div.list__Name
+                                        span.show
+                                          | Noche
+                        
+                        else
+                              ul.ul.col.s12
+                                  li.list.col.l4.col.m4.col.s4
+                                    
+                                        div.list__Icon
+                                          i.fa.fa-sun-o
+                                        div.list__Name
+                                          span.show
+                                            | Mañana
+                                  li.list.col.l4.col.m4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-circle-o-notch
+                                      div.list__Name
+                                        span.show
+                                          | Tarde
+                                  li.list.col.l4.col.m4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-moon-o.siNoche
+                                      div.list__Name
+                                        span.show.siNoche
+                                          | Noche
+
+                      else if teacher[0].opciones[0].horarios.length == 2
+                       
+                        if teacher[0].opciones[0].horarios[0].name == 'mañana' && teacher[0].opciones[0].horarios[1].name == 'tarde' || teacher[0].opciones[0].horarios[0].name == 'tarde' && teacher[0].opciones[0].horarios[1].name == 'mañana'
+                        
+                          ul.ul.col.s12
+                                  li.list.col.l4.col.s4
+                                    
+                                        div.list__Icon
+                                          i.fa.fa-sun-o.siManana
+                                        div.list__Name
+                                          span.show.siManana
+                                            | Mañana
+                                  li.list.col.l4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-circle-o-notch.siTarde
+                                      div.list__Name
+                                        span.show.siTarde
+                                          | Tarde
+                                  li.list.col.l4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-moon-o
+                                      div.list__Name
+                                        span.show
+                                          | Noche
+                        
+                        else if teacher[0].opciones[0].horarios[0].name == 'mañana' && teacher[0].opciones[0].horarios[1].name == 'noche' || teacher[0].opciones[0].horarios[0].name == 'noche' && teacher[0].opciones[0].horarios[1].name == 'mañana'
+
+                          ul.ul.col.s12
+                                  li.list.col.l4.col.s4
+                                    
+                                        div.list__Icon
+                                          i.fa.fa-sun-o.siManana
+                                        div.list__Name
+                                          span.show.siManana
+                                            | Mañana
+                                  li.list.col.l4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-circle-o-notch
+                                      div.list__Name
+                                        span.show
+                                          | Tarde
+                                  li.list.col.l4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-moon-o.siNoche
+                                      div.list__Name
+                                        span.show.siNoche
+                                          | Noche
+
+                        else if teacher[0].opciones[0].horarios[0].name == 'tarde' && teacher[0].opciones[0].horarios[1].name == 'noche' || teacher[0].opciones[0].horarios[0].name == 'noche' && teacher[0].opciones[0].horarios[1].name == 'tarde'
+
+                          ul.ul.col.s12
+                                  li.list.col.l4.col.s4
+                                    
+                                        div.list__Icon
+                                          i.fa.fa-sun-o
+                                        div.list__Name
+                                          span.show
+                                            | Mañana
+                                  li.list.col.l4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-circle-o-notch.siTarde
+                                      div.list__Name.siTarde
+                                        span.show
+                                          | Tarde
+                                  li.list.col.l4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-moon-o.siNoche
+                                      div.list__Name
+                                        span.show.siNoche
+                                          | Noche
+
+
+                      else if teacher[0].opciones[0].horarios.length == 3
+                        if teacher[0].opciones[0].horarios[0].name === 'mañana'
+                          ul.ul.col.s12
+                                  li.list.col.l4.col.s4
+                                    
+                                        div.list__Icon
+                                          i.fa.fa-sun-o.siManana
+                                        div.list__Name
+                                          span.show.siManana
+                                            | Mañana
+                                  li.list.col.l4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-circle-o-notch.siTarde
+                                      div.list__Name.siTarde
+                                        span.show
+                                          | Tarde
+                                  li.list.col.l4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-moon-o.siNoche
+                                      div.list__Name
+                                        span.show.siNoche
+                                          | Noche
+                        else if teacher[0].opciones[0].horarios[0].name === 'tarde'
+                          ul.ul.col.s12
+                                  li.list.col.l4.col.s4
+                                    
+                                        div.list__Icon
+                                          i.fa.fa-sun-o.siManana
+                                        div.list__Name
+                                          span.show.siManana
+                                            | Mañana
+                                  li.list.col.l4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-circle-o-notch.siTarde
+                                      div.list__Name.siTarde
+                                        span.show
+                                          | Tarde
+                                  li.list.col.l4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-moon-o.siNoche
+                                      div.list__Name
+                                        span.show.siNoche
+                                          | Noche
+                        else
+                          ul.ul.col.s12
+                                  li.list.col.l4.col.s4
+                                    
+                                        div.list__Icon
+                                          i.fa.fa-sun-o.siManana
+                                        div.list__Name
+                                          span.show.siManana
+                                            | Mañana
+                                  li.list.col.l4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-circle-o-notch.siTarde
+                                      div.list__Name.siTarde
+                                        span.show
+                                          | Tarde
+                                  li.list.col.l4.col.s4
+                                   
+                                      div.list__Icon
+                                        i.fa.fa-moon-o.siNoche
+                                      div.list__Name
+                                        span.show.siNoche
+                                          | Noche
+
+                      else
+                         ul.ul.col.s12
+                              li.list.col.l4.col.s4
+                                
+                                    div.list__Icon
+                                      i.fa.fa-sun-o
+                                    div.list__Name
+                                      span.show
+                                        | Mañana
+                              li.list.col.l4.col.s4
+                               
+                                  div.list__Icon
+                                    i.fa.fa-circle-o-notch
+                                  div.list__Name
+                                    span.show
+                                      | Tarde
+                              li.list.col.l4.col.s4
+                               
+                                  div.list__Icon
+                                    i.fa.fa-moon-o
+                                  div.list__Name
+                                    span.show
+                                      | Noche
+                    //view end to cant horarios
+                else
+                  ul.ul.col.s12
+                        li.list.col.l4
+                          
+                              div.list__Icon
+                                i.fa.fa-sun-o
+                              div.list__Name
+                                span.show
+                                  | Mañana
+                        li.list.col.l4
+                         
+                            div.list__Icon
+                              i.fa.fa-circle-o-notch
+                            div.list__Name
+                              span.show
+                                | Tarde
+                        li.list.col.l4
+                         
+                            div.list__Icon
+                              i.fa.fa-moon-o
+                            div.list__Name
+                              span.show
+                                | Noche
+              div.profileTeacher__Five--Description.col.l12
+                p.description
+                  | Para averiguar los horarios exactos en los que #{teacher[0].teacher[0].nombreTeacher} da clases, ponete en contacto.
+        
+        div.row.uMargin
+          section.profileTeacher__Six.col.l12.col.m12.col.s12
+            article.profileTeacher__Six--Container.card.col.l12.col.m12.col.s12
+              header.profileTeacher__Six--Header
+                h3.title
+                  | Materias Dictadas
+              div.profileTeacher__Six--Materias.col.l12.col.s12
+                ul.ul
+                  if teacher[0].materias[0]
+                    each materias, index in teacher[0].materias[0].clases
+                      if materias.name
+                        - var a = materias.name
+                        - var b = a.split('-');
+                        li.list.col.l4.col.m4.col.s6(data-id="#{materias.id}")
+                          div.list__Name
+                            strong.name
+                              | #{b[0]}
+                          div.list__Nivel
+                            span.nivel
+                              | #{b[1]}
+
+        if teacher[0].contacto[0].details
+          div.row.uMargin
+            section.profileTeacher__Six.col.l12.col.s12
+              article.profileTeacher__Six--Container.card.col.l12.col.s12
+                header.profileTeacher__Six--Header
+                  h3.title
+                    | Más información
+                div.profileTeacher__Six--Materias.col.l12
+                  blockquote.description
+                    | #{teacher[0].contacto[0].details}
+        div.row.uMargin
+          section.profileTeacher__Sevent.col.l6.col.m6.col.s12
+            article.profileTeacher__Sevent--Container.col.l12.card.col.s12
+              header.profileTeacher__Sevent--Header
+                h4.title
+                  | Puntaje
+              div.profileTeacher__Sevent--Cantidad
+                - var resultado = 0
+                - var resultado_One
+                - var final
+                - var finality
+                - var resultadoStartSingle = 0
+
+                if teacher[0].calificacion
+                  if teacher[0].calificacion.length == 1
+                    - finality = teacher[0].calificacion[0].calificacion
+                  else
+                    each r in teacher[0].calificacion
+                      - resultado += Number(r.calificacionResult)
+                      - resultadoStartSingle += Number(r.calificacionCant)
+                    - final = resultado / resultadoStartSingle
+                    - finality = parseInt(final.toFixed(2))
+
+                
+                header.header__Cantidad.col.l12.col.s12
+                  h5.title
+                    if final
+                      | #{finality}.00
+                    else
+                      | #{finality}.00
+                div.cant__Start.col.l12.col.s12
+                  if finality == 1
+                    ul.ul
+                      li.listHidden.col.1
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+                  else if finality == 2
+                    ul.ul
+                      li.listHidden.col.1
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+                  else if finality == 3
+                    ul.ul
+                      li.listHidden.col.1
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+
+                  else if finality == 4
+                    ul.ul
+                      li.listHidden.col.1
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+
+                  else if finality == 5
+                    ul.ul
+                      li.listHidden.col.1
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star.visitedReview
+
+                  else
+                    ul.ul
+                      li.listHidden.col.1
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+                      li.list.col.l2.col.s2
+                        i.fa.fa-star
+
+
+          aside.profileTeacher__Eight.col.l6.col.m6.col.s12
+            article.profileTeacher__Eight--Container.col.l12.card.col.s12
+              if user
+                if String(user._id) === String(teacher[0].teacher[0].idUser)
+                  header.profileTeacher__Eight--Header
+                    h4.title
+                      | Mi Calificación
+                  div.profileTeacher__Eight--Btn
+                    button.btn.amber.colorAprendidos
+                      | No puedes calificarte
+                else if user._id != teacher[0].teacher[0].idUser
+                    
+                  //verify comment
+
+                  if teacher[0].calificacion
+
+                      if teacher[0].calificacion.length == 0
+                        header.profileTeacher__Eight--Header
+                            h4.title
+                              | Mi Calificación
+                        div.profileTeacher__Eight--Btn
+                                a.btn.amber.colorAprendidos(href="/teacher/#{teacher[0]._id}/review#profilereview?name=#{teacher[0].teacher[0].nombreTeacher}")
+                                  | Calificar
+                      else if teacher[0].calificacion.length >= 1
+                            
+
+                            if user.mycalification
+
+                              //Verify Algoritm
+                              each c in teacher[0].calificacion
+                                
+                                if c.idReview == String(user._id)
+                                  header.profileTeacher__Eight--Header
+                                    h4.title
+                                      | Mi Calificación
+
+                                  article.profileTeacher__Calification(data-id="#{c.idTeacher}", data-remove="#{c.idReview}", data-idreview="#{c.id}")
+                                    figure.figure
+                                      img(src="#{teacher[0].teacher[0].fotoTeacher}", alt="", width="50px")
+                                    div.details
+                                      h5.show
+                                        | Tienes una calificacion en 
+                                        b #{teacher[0].teacher[0].nombreTeacher}
+                                    div.close.jsCloseReview
+                                      i.fa.fa-times
+                                else
+                            
+                            else
+
+                              header.profileTeacher__Eight--Header
+                                h4.title
+                                  | Mi Calificación
+                              div.profileTeacher__Eight--Btn
+                                a.btn.amber.colorAprendidos(href="/teacher/#{teacher[0]._id}/review#profilereview?name=#{teacher[0].teacher[0].nombreTeacher}")
+                                  | Calificar
+
+                      else 
+                        //
+                          
+                  else
+                          header.profileTeacher__Eight--Header
+                            h4.title
+                              | Mi Calificación
+                          div.profileTeacher__Eight--Btn
+                            a.btn.amber.colorAprendidos(href="/teacher/#{teacher[0]._id}/review#profilereview?name=#{teacher[0].teacher[0].nombreTeacher}")
+                              | Calificar
+
+              else
+                header.profileTeacher__Eight--Header
+                  h4.title
+                    | Mi Calificación
+                div.profileTeacher__Eight--Btn
+                  a.btn.amber.colorAprendidos(href="/register")
+                    | Calificar
+          
+
+
+
+        if teacher[0].calificacion
+
+          if teacher[0].calificacion.length > 0
+            div.row.uMargin
+                section.profileTeacher__Six.col.l12.col.m12.col.s12
+                  article.profileTeacher__Six--Container.card.col.l12.col.m12.col.s12
+                    header.profileTeacher__Six--Header.paddingBottom
+                      h3.title
+                        | Últimas calificaciones
+                    div.profileTeacher__Six--Materias.paddingBottom.flex.isFlexWrap.col.l12.col.m12.col.s12
+                      each c in teacher[0].calificacion
+                        article.reviewTeacher.col.l6.isMarginBottom.col.m6.col.s12
+                          header.reviewTeacher__Header.col.l2.col.m3
+                            div.reviewTeacher__Header--Figure
+                              img(src="#{c.fotoReview}", alt="#{c.nombreReview}", width="50px")
+                          aside.reviewTeacher__Details.col.l10.col.m9
+                            header.reviewTeacher__Details--Header
+                              div.reviewTeacher__Details--Header--Name
+                                span.name
+                                  | #{c.nombreReview}
+                              div.reviewTeacher__Details--Header--Start
+                                if c.calificacion == 1
+                                  ul.ul
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                                else if c.calificacion == 2
+                                  ul.ul
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                                else if c.calificacion == 3
+                                  ul.ul
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+
+                                else if c.calificacion == 4
+                                  ul.ul
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+
+                                else if c.calificacion == 5
+                                  ul.ul
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startView
+                                    li.list
+                                      i.fa.fa-star.startView
+                                else
+                                  ul.ul
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                                    li.list
+                                      i.fa.fa-star.startNotView
+                            
+                            div.reviewTeacher__Details--Description
+                              p.description
+                                | #{c.mensaje}
+                            div.reviewTeacher__Details--Date
+                              - var isData = c.date
+                              - var date_Two = isData.toISOString().slice('0,-5')
+                              time.date.timeago(datetime="#{date_Two}")
+                                | ...
+
+                    
+        div.row.uMargin
+          section.profileTeacher__Shared.col.l12.col.s12
+            header.profileTeacher__Shared--Header.col.l12.col.s12
+              h5.title
+                | Compartir Este Perfil
+            div.profileTeacher__Shared--Icons.col.l12.col.s12
+              ul.ul
+                li.list
+                  a.facebook.jsSharedFacebook()
+                    i.fa.fa-facebook-square
+                li.list
+                  a.twitter.jsSharedTwiitter
+                    i.fa.fa-twitter-square
+                li.list
+                 script.
+                   var name = "#{teacher[0].teacher[0].nombreTeacher}"
+                   var urlWeb = window.location.href;
+
+                   document.write('<a class="wtp" href="whatsapp://send?text=Aprendidos, profesores a un clic de distancia, Profesor: '+name+ ' ' +urlWeb+'"><i class="fa fa-whatsapp"></i></a>');
+
+    include inc/footer
+    script.
+      $(document).ready(function(){
+          var url = window.location.pathname;
+          var urlReplace = url.replace('/teacher/', '');
+          var urlLogic = url.split('/');
+          var name = $(".description__Name .title").text();
+          var img = $(".profileTeacher__Header--Avatar img").attr('src');
+
+          var namehash = window.location.hash;
+          var namehashReplace = namehash.replace('#profile?name=', '');
+
+          if(window.location.hash == '#profile?name='+namehashReplace){
+            
+
+               $.ajax({
+                 url: '/save/teacher/visited',
+                 type: 'post',
+                 dataType: 'JSON',
+                 contentType: 'application/json',
+                 data: JSON.stringify({
+                   idteacher: urlReplace,
+                   nameteacher: name,
+                   imgteacher: img
+                 }),
+                 success: function(data){
+                  alert('funciono');
+                 }
+               })
+            
+          }
+
+
+      });
+
+
+
+
+      

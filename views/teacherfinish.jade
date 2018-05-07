@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body.searchBG
+    include inc/header
+
+    main.main
+      section.teacher__Register.container
+        div.row
+          section.teacher__Register--Container.card.col.l12.col.s12
+            header.teacher__Register--Header.col.l12.col.s12
+              h2.title
+                | Bienvenido al registro de Profesor
+            section.teacher__Register--Steps--Menu.col.l12.col.s12
+              ul.ul
+                li.list.col.l3.col.s3(onclick=" window.location.href = '/teacher/register/stepone';")
+                  div.list__Icon
+                    i.fa.fa-id-card.activeItem
+                  div.list__Name
+                    span.name.activeItem
+                      | Datos Personales
+                li.list.col.l3.col.s3(onclick="window.location.href = '/teacher/register/steptwo'; ")
+                  div.list__Icon
+                    i.fa.fa-book.activeItem
+                  div.list__Name
+                    span.name.activeItem
+                      | Materias
+                li.list.col.l3.col.s3(onclick="window.location.href = '/teacher/register/steptree';")
+                  div.list__Icon
+                    i.fa.fa-user-circle-o.activeItem
+                  div.list__Name
+                    span.name.activeItem
+                      | Tus Clases
+                li.list.col.l3.col.s3(onclick="window.location.href = '/teacher/register/stepfour';")
+                  div.list__Icon
+                    i.fa.fa-comment.activeItem
+                  div.list__Name
+                    span.name.activeItem
+                      | Contacto
+            section.teacher__Register--Steps--Container.col.l12.col.s12
+              
+              article.teacher__Register__Steps--Five.col.l8.col.s12
+                  header.header
+                    h3.title
+                      if user.statusteacher
+                        | Su perfil se actualizo correctamente
+                      else
+                        | Gracias por completa el registro :) 
+
+                    p
+                      strong
+                        | Redireccionando...
+                  if user.teacher && user.materias
+
+                    article.preview.card.col.l12.col.m8.col.s12
+                      figure.preview__Figure.col.l3.col.s4
+                        img(src="#{user.photo}", alt="", width="100%")
+                      div.preview__Description.col.l9.col.s8
+                        header.preview__Description--Header.col.l12.col.s12
+                          h4.title
+                            | #{user.name}
+                        div.preview__Description--Options.col.l12.col.s12
+                          ul.ul.col.l5.col.s12
+                            li.list.col.l3.col.s3
+                              if user.materias[0].status == 'No recibido'
+                                i.fa.fa-graduation-cap.noRecibido
+                              if user.materias[0].status == 'Recibido'
+                                i.fa.fa-graduation-cap.siRecibido
+                              if user.materias[0].status == 'Cursando'
+                                i.fa.fa-graduation-cap.siPosgrado
+                            if user.opciones
+                                if user.opciones[0].tipoclases
+                                  if user.opciones[0].tipoclases.length == 1
+                                    if user.opciones[0].tipoclases == 'grupales'
+                                      li.list.col.l3.col.s3
+                                        i.fa.fa-users.isVerde
+                                      li.list.col.l3.col.s3
+                                        i.fa.fa-user.isVerde
+                                    else
+                                       li.list.col.l3.col.s3
+                                        i.fa.fa-users.isVerde
+                                      li.list.col.l3.col.s3
+                                        i.fa.fa-user.isVerde
+
+                                  else if user.opciones[0].tipoclases.length == 2
+                                      li.list.col.l3.col.s3
+                                        i.fa.fa-users.isVerde
+                                      li.list.col.l3.col.s3
+                                        i.fa.fa-user.isVerde
+
+                                  else
+                                    li.list.col.l3.col.s3
+                                        i.fa.fa-users
+                                    li.list.col.l3.col.s3
+                                        i.fa.fa-user
+                            else
+                                li.list.col.l3.col.s3
+                                        i.fa.fa-users
+                                li.list.col.l3.col.s3
+                                        i.fa.fa-user
+                            li.list.col.l3.col.s3
+                                if user.opciones[0].domicilio == 'true'
+                                   i.fa.fa-car.siDomicilio
+                                else
+                                  i.fa.fa-car
+                         
+                          ul.col.l2.col.s12
+                          if user.opciones[0].horarios
+                                  if user.opciones[0].horarios.length
+                                    
+                                    if user.opciones[0].horarios.length == 1
+
+                                      if user.opciones[0].horarios[0].name == 'mañana'
+                                        ul.ul.col.l5.col.s12
+                                            li.list.col.l4.col.s3
+                                                i.fa.fa-sun-o.siManana
+                                            li.list.col.l4.col.s3
+                                                i.fa.fa-circle-o-notch
+                                            li.list.col.l4.col.s3
+                                                i.fa.fa-moon-o
+
+                                      else if user.opciones[0].horarios[0].name == 'tarde'
+                                         ul.ul.col.l5.col.s12
+                                            li.list.col.l4.col.s3
+                                                i.fa.fa-sun-o
+                                            li.list.col.l4.col.s3
+                                                i.fa.fa-circle-o-notch.siTarde
+                                            li.list.col.l4.col.s3
+                                                i.fa.fa-moon-o
+
+                                      else
+                                        ul.ul.col.l5.col.s12
+                                            li.list.col.l4.col.s3
+                                                i.fa.fa-sun-o
+                                            li.list.col.l4.col.s3
+                                                i.fa.fa-circle-o-notch
+                                            li.list.col.l4.col.s3
+                                                i.fa.fa-moon-o.siNoche
+
+                                    else if user.opciones[0].horarios.length == 2
+
+                                          if user.opciones[0].horarios[0].name == 'mañana' && user.opciones[0].horarios[1].name == 'tarde' || user.opciones[0].horarios[0].name == 'tarde' && user.opciones[0].horarios[1].name == 'mañana'
+
+                                              ul.ul.col.l5.col.s12
+                                                li.list.col.l4.col.s3
+                                                    i.fa.fa-sun-o.siManana
+                                                li.list.col.l4.col.s3
+                                                    i.fa.fa-circle-o-notch.siTarde
+                                                li.list.col.l4.col.s3
+                                                    i.fa.fa-moon-o
+
+                                          else if user.opciones[0].horarios[0].name == 'mañana' && user.opciones[0].horarios[1].name == 'noche' || user.opciones[0].horarios[0].name == 'noche' && user.opciones[0].horarios[1].name == 'mañana'
+
+                                              ul.ul.col.l5.col.s12
+                                                  li.list.col.l4.col.s3
+                                                      i.fa.fa-sun-o.siManana
+                                                  li.list.col.l4.col.s3
+                                                      i.fa.fa-circle-o-notch
+                                                  li.list.col.l4.col.s3
+                                                      i.fa.fa-moon-o.siNoche
+
+                                          else if user.opciones[0].horarios[0].name == 'tarde' && user.opciones[0].horarios[1].name == 'noche' || user.opciones[0].horarios[0].name == 'noche' && user.opciones[0].horarios[1].name == 'tarde'
+
+                                              ul.ul.col.l5.col.s12
+                                                  li.list.col.l4.col.s3
+                                                      i.fa.fa-sun-o
+                                                  li.list.col.l4.col.s3
+                                                      i.fa.fa-circle-o-notch.siTarde
+                                                  li.list.col.l4.col.s3
+                                                      i.fa.fa-moon-o.siNoche
+                                    
+                                    else if user.opciones[0].horarios.length == 3
+
+                                          ul.ul.col.l5.col.s12
+                                                li.list.col.l4.col.s3
+                                                    i.fa.fa-sun-o.siManana
+                                                li.list.col.l4.col.s3
+                                                    i.fa.fa-circle-o-notch.siTarde
+                                                li.list.col.l4.col.s3
+                                                    i.fa.fa-moon-o.siNoche
+
+                                    else
+                                       ul.ul.col.l5.col.s12
+                                                li.list.col.l4.col.s3
+                                                    i.fa.fa-sun-o
+                                                li.list.col.l4.col.s3
+                                                    i.fa.fa-circle-o-notch
+                                                li.list.col.l4.col.s3
+                                                    i.fa.fa-moon-o
+
+
+
+
+
+
+                                  else
+
+                                    ul.ul.col.l5.col.s12
+                                        li.list.col.l4.col.s3
+                                            i.fa.fa-sun-o
+                                        li.list.col.l4.col.s3
+                                            i.fa.fa-circle-o-notch
+                                        li.list.col.l4.col.s3
+                                            i.fa.fa-moon-o
+
+
+                          else
+                                  ul.ul.col.l5.col.s12
+                                        li.list.col.l4.col.s3
+                                            i.fa.fa-sun-o
+                                        li.list.col.l4.col.s3
+                                            i.fa.fa-circle-o-notch
+                                        li.list.col.l4.col.s3
+                                            i.fa.fa-moon-o
+                            
+                              //
+                      
+                      script.
+                        var urlProfile = "#{user._id}"
+                        var urlShow = '/teacher/#{user._id}#profile?name=#{user.teacher[0].nombreTeacher}';
+
+                        setTimeout(function(){
+
+                          window.location.href = urlShow;
+
+                        }, 1500);
+                  else
+                    //
+    
+    include inc/footer

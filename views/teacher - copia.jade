@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="description", content="#{teacher[0].teacher[0].nombreTeacher} #{teacher[0].teacher[0].nombreTeacher} Profesor en Aprendidos, Encuentra tu profesor cerca de donde te encuentras, contacta con el/ella, clases particulares & grupales.")
+    include inc/base
+  body.searchBG
+    include inc/header
+
+    main.main
+      section.profileTeacher.container
+        div.row.uMargin
+          header.profileTeacher__Header.col.l12.card
+            figure.col.l3.profileTeacher__Header--Avatar
+              img(src="#{teacher[0].teacher[0].fotoTeacher}", alt="", width="160px", height="160px")
+            div.col.l7.profileTeacher__Header--Description
+              div.description__Name
+                h2.title
+                  | #{teacher[0].teacher[0].nombreTeacher} #{teacher[0].teacher[0].apellidoTeacher}
+              div.description__Start
+                ul.ul
+                  li.list
+                    i.fa.fa-star
+                  li.list
+                    i.fa.fa-star
+                  li.list
+                    i.fa.fa-star
+                  li.list
+                    i.fa.fa-star
+                  li.list
+                    i.fa.fa-star
+              div.description__Time
+                // Fecha register and Fecha State
+                - var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+                - var date = teacher[0].createdAt
+                - var dateReal = new Date()
+
+                - var monthActual  =  dateReal.getMonth() + 1
+                - var monthRegister = date.getMonth()
+                - var resultadoMonth = meses[monthRegister]
+                - var resultadoYear = date.getFullYear()
+                
+                //View register Fecha
+
+                span.show
+                  | En Aprendidos desde #{resultadoMonth} del #{resultadoYear}
+            div.col.l2.profileTeacher__Header--Options
+              div.options__Top
+                i.fa.fa-thumbs-o-up
+              div.options__Years
+                - var completBirthday = teacher[0].teacher[0].nacimientoTeacher
+                - var isYear = completBirthday.split(",")
+                - var isDate = new Date()
+                - var isResult = isDate.getFullYear() - Number(isYear[1])
+                p.show
+                  | #{isResult}
+                span.show__Year
+                  | Años
+              div.options__Recibido
+                if teacher[0].materias[0].status == "Recibido"
+                   i.fa.fa-graduation-cap.isRecibido
+                else if teacher[0].materias[0].status == "Posgrado"
+                   i.fa.fa-graduation-cap.isPosgrado
+                else
+                  i.fa.fa-graduation-cap
+        div.row.uMargin  
+          section.profileTeacher__Second.col.l6
+             if user
+              article.second__Iz.col.l12.activeJs.card
+                header.show__Icon
+                  i.fa.fa-address-card
+                div.show__Txt
+                  h3.title
+                    | Contactar a Edinson
+              article.secondd__Iz.col.l12.none.card
+                header.secondd__Iz--Header
+                  h4.title
+                    | Información de contacto
+                div.secondd__Iz--Phone
+                  strong.isPhone
+                    i.fa.fa-volume-control-phone
+                    | Teléfono:
+                  span.isNumber
+                    | #{teacher[0].contacto[0].telefono}
+                div.secondd__Iz--Contact
+                  div.Contact__Iz
+                    if teacher[0].contacto[0].mensajealumnos == "true"
+                      i.fa.fa-mobile.isSiContactone
+                      span.name.isSiContactone
+                        | Si recibe SMS
+                    else
+                      i.fa.fa-mobile
+                      span.name
+                        | No recibe SMS
+                  div.Contact__De
+                    if teacher[0].contacto[0].mensajewtp == "true"
+                      i.fa.fa-whatsapp.isSiContacttwo
+                      span.name.isSiContact
+                        | Si Usa WhatsApp
+                    else
+                      i.fa.fa-whatsapp
+                      span.name
+                        | No Usa WhatsApp
+             else
+              article.second__Iz.col.l12.card
+                header.show__Icon
+                  i.fa.fa-address-card
+                div.show__Txt
+                  h3.title
+                    | Contactar a Edinson
+          aside.profileTeacher__Tree.col.l6
+            article.second__De--Container.card
+                header.second__De--Header
+                  h4.title
+                    | Clases
+                div.second__De--List.col.l12
+                  ul.ul
+                    li.list.col.l4
+                      div.list__Icon
+                          if teacher[0].opciones[0].tipoclases
+                            if teacher[0].opciones[0].tipoclases == "grupales"
+                              i.fa.fa-user.isVerde
+                            else
+                              i.fa.fa-user
+                            if teacher[0].opciones[0].tipoclases == "individuales"
+                              i.fa.fa-users.isVerde
+                            else
+                              i.fa.fa-users
+                          else
+                            i.fa.fa-user
+                            i.fa.fa-users
+
+                      span.list__Name Individuales/Grupales
+                    li.list.col.l4
+                      if teacher[0].opciones[0].domicilio == "true"
+                        div.list__Icon
+                          i.fa.fa-car.isAddressTrue
+                        span.list__Name.isAddressTrue Si va domicilio
+                      else
+                        div.list__Icon
+                          i.fa.fa-car
+                        span.list__Name No va domicilio
+                    li.list.col.l4
+                      div.list__Icon
+                        p.show
+                          strong $ #{teacher[0].opciones[0].precio}
+                      span.list__Name
+                          | Por hora
+                div.description.col.l12
+                  p.show
+                    | El precio de las clases es aproximado y puede variar de acuerdo a diversos factores (por ejemplo si la clase es individual o grupal)
+        div.row.uMargin
+          section.profileTeacher__Four.col.l6
+            article.profile_Teacher__Four--Container.col.l12
+              header.profileTeacher__Four--Header.col.l12
+                h3.title
+                  | Distancia
+              div.profileTeacher__Four--Map
+                - var address = teacher[0].opciones[0].direccion
+                - var resultAddressOne = address.split(' - ').join(',');
+                iframe(width="100%", height="155px", style="border:none;", src="https://www.google.com/maps/embed/v1/place?key=AIzaSyALGLB40i4b40QkIEDE9i0Wo3RJVh0IVW0&q=Scottish+Rite+Hamilton+ON")
+                //img(src="http://cdn.newsapi.com.au/image/v1/0a0ceda4bda18e664ffac1a8fa86a7d1", alt="", width="100%", height="155px")
+          aside.profileTeacher__Five.col.l6
+            article.profileTeacher__Fiver--Container.card
+              header.profileTeacher__Five--Header
+                h3.title
+                  | Horarios
+              div.profileTeacher__Five--Options.col.l12
+                ul.ul
+                  li.list.col.l4
+                    if teacher[0].opciones[0].horarios[0].name == "mañana"
+                        div.list__Icon
+                          i.fa.fa-sun-o.siManana
+                        div.list__Name
+                          span.show.siManana
+                            | Mañana
+                    else
+                        div.list__Icon
+                          i.fa.fa-sun-o
+                        div.list__Name
+                          span.show
+                            | Mañana
+
+                  li.list.col.l4
+                    if teacher[0].opciones[0].horarios[1].name == "tarde"
+                      div.list__Icon
+                        i.fa.fa-circle-o-notch.siTarde
+                      div.list__Name
+                        span.show.siTarde
+                          | Tarde
+                    else
+                      div.list__Icon
+                        i.fa.fa-circle-o-notch
+                      div.list__Name
+                        span.show
+                          | Tarde
+                  li.list.col.l4
+                    if teacher[0].opciones[0].horarios[2].name == "noche"
+                      div.list__Icon
+                        i.fa.fa-moon-o.siNoche
+                      div.list__Name
+                        span.show.siNoche
+                          | Noche
+                    else
+                      div.list__Icon
+                        i.fa.fa-moon-o
+                      div.list__Name
+                        span.show
+                          | Noche
+              div.profileTeacher__Five--Description.col.l12
+                p.description
+                  | Para averiguar los horarios exactos en los que Edinson da clases, ponete en contacto.
+        div.row.uMargin
+          section.profileTeacher__Six.col.l12
+            article.profileTeacher__Six--Container.card.col.l12
+              header.profileTeacher__Six--Header
+                h3.title
+                  | Materias Dictadas
+              div.profileTeacher__Six--Materias.col.l12
+                ul.ul
+                  li.list.col.l4
+                    div.list__Name
+                      strong.name
+                        | Administración financiera
+                    div.list__Nivel
+                      span.nivel
+                        | Universitario
+                  li.list.col.l4
+                    div.list__Name
+                      strong.name
+                        | Administración financiera
+                    div.list__Nivel
+                      span.nivel
+                        | Universitario
+                  li.list.col.l4
+                    div.list__Name
+                      strong.name
+                        | Administración financiera
+                    div.list__Nivel
+                      span.nivel
+                        | Universitario
+                  li.list.col.l4
+                    div.list__Name
+                      strong.name
+                        | Administración financiera
+                    div.list__Nivel
+                      span.nivel
+                        | Universitario
+                  li.list.col.l4
+                    div.list__Name
+                      strong.name
+                        | Administración financiera
+                    div.list__Nivel
+                      span.nivel
+                        | Universitario
+                  li.list.col.l4
+                    div.list__Name
+                      strong.name
+                        | Administración financiera
+                    div.list__Nivel
+                      span.nivel
+                        | Universitario
+        div.row.uMargin
+          section.profileTeacher__Sevent.col.l6
+            article.profileTeacher__Sevent--Container.col.l12.card
+              header.profileTeacher__Sevent--Header
+                h4.title
+                  | Puntaje
+              div.profileTeacher__Sevent--Cantidad
+                header.header__Cantidad.col.l12
+                  h5.title
+                    | 0,00
+                div.cant__Start.col.l12
+                  ul.ul
+                    li.list.col.l2
+                      i.fa.fa-star
+                    li.list.col.l2
+                      i.fa.fa-star
+                    li.list.col.l2
+                      i.fa.fa-star
+                    li.list.col.l2
+                      i.fa.fa-star
+                    li.list.col.l2
+                      i.fa.fa-star
+          aside.profileTeacher__Eight.col.l6
+            article.profileTeacher__Eight--Container.col.l12.card
+              if user
+                if String(user._id) === String(teacher[0].teacher[0].idUser)
+                  header.profileTeacher__Eight--Header
+                    h4.title
+                      | Mi Calificación
+                  div.profileTeacher__Eight--Btn
+                    button.btn.amber
+                      | No puedes calificarte
+                else if user._id != teacher[0].teacher[0].idUser
+                  header.profileTeacher__Eight--Header
+                    h4.title
+                      | Mi Calificación
+                  div.profileTeacher__Eight--Btn
+                    button.btn.amber
+                      | Calificar
+              else
+                header.profileTeacher__Eight--Header
+                  h4.title
+                    | Mi Calificación
+                div.profileTeacher__Eight--Btn
+                  button.btn.amber
+                    | Calificar
+    include inc/footer

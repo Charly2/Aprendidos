@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    include inc/base
+  body.searchBG
+    include inc/header
+
+    main.main
+      section.teacher__Register.container
+        div.row
+          section.teacher__Register--Container.card.col.l12.col.m12.col.s12
+            header.teacher__Register--Header.col.l12.col.m12.col.s12
+              h2.title
+                if user.statusteacher
+                  h2.title
+                    | Editar perfil de profesor
+                else
+                  h2.title
+                    | Bienvenido al registro de Profesor
+            section.teacher__Register--Steps--Menu.col.l12.col.m12.col.s12
+              ul.ul
+                li.list.col.l3.col.m3.col.s3(onclick=" window.location.href = '/teacher/register/stepone';")
+                  div.list__Icon
+                    i.fa.fa-id-card.activeItem
+                  div.list__Name
+                    span.name.activeItem
+                      | Datos Personales
+                li.list.col.l3.col.m3.col.s3(onclick="window.location.href = '/teacher/register/steptwo'; ")
+                  div.list__Icon
+                    i.fa.fa-book.activeItem
+                  div.list__Name
+                    span.name.activeItem
+                      | Materias
+                li.list.col.l3.col.m3.col.s3(onclick="window.location.href = '/teacher/register/steptree';")
+                  div.list__Icon
+                    i.fa.fa-user-circle-o.activeItem
+                  div.list__Name
+                    span.name.activeItem
+                      | Tus Clases
+                li.list.col.l3.col.m3.col.s3(onclick="window.location.href = '/teacher/register/stepfour';")
+                  div.list__Icon
+                    i.fa.fa-comment
+                  div.list__Name
+                    span.name
+                      | Contacto
+            if user.statusteacher
+
+              section.teacher__Register--Steps--Container.col.l12.col.s12
+                article.teacher__Register__Steps--Tree.col.l8
+                  form.form__Tree(action="/save/teacher/update3", method="post").col.l12
+                    if user.teacher && user.materias
+                      article.preview.card.col.l12.col.m10.col.s12
+                        figure.preview__Figure.col.l3.col.s4
+                          img(src="#{user.photo}", alt="", width="100%")
+                        div.preview__Description.col.l9.col.s8
+                          header.preview__Description--Header.col.l12.col.s12
+                            h4.title
+                              | #{user.name}
+                          div.preview__Description--Options.col.l12.col.s12
+                            ul.ul.col.l5.col.s12
+                              li.list.col.l3.col.s3
+                                if user.materias[0].status == 'No recibido'
+                                  i.fa.fa-graduation-cap.noRecibido
+                                if user.materias[0].status == 'Recibido'
+                                  i.fa.fa-graduation-cap.isRecibido
+                                if user.materias[0].status == 'Cursando'
+                                  i.fa.fa-graduation-cap.siPosgrado
+                              li.list.col.l3.col.s3
+                                i.fa.fa-users
+                              li.list.col.l3.col.s3
+                                i.fa.fa-user
+                              li.list.col.l3.col.s3
+                                i.fa.fa-car
+                            ul.col.l2.col.s2
+                            ul.ul.col.l5.col.s12
+                              li.list.col.l4.col.s3
+                                i.fa.fa-sun-o
+                              li.list.col.l4.col.s3
+                                i.fa.fa-circle-o-notch
+                              li.list.col.l4.col.s3
+                                i.fa.fa-moon-o
+                    else
+                      //
+                    
+                    //inputs hidden
+                   
+                    input.jsLinkMap(type="hidden", name="mapa", value="#{user.opciones[0].mapa}")
+                    input.jsLatitud(type="hidden", name="latitud", value="#{user.opciones[0].latitud}")
+                    input.jsLongitud(type="hidden", name="longitud", value="#{user.opciones[0].longitud}")
+
+                    - if (messages.info)
+                      fieldset.fieldset__Header.col.l12.col.m12.col.s12.uError
+                        label= messages.info
+
+                    fieldset.fieldset__Header.col.l12.col.m12.col.s12
+                      label
+                        | ¿Cuál es la dirección del lugar donde das clases particulares?
+                      br
+                      label
+                        | Tu dirección exacta no será mostrada, el alumno verá sólo la distancia a esta dirección.
+                    fieldset.fieldset.col.l12.col.m12.col.s12
+                      input(id="pac-input", type="text", placeholder="#{user.opciones[0].direccion}", name="direccion", value="#{user.opciones[0].direccion}" required)
+                    
+                    if user.opciones[0].barrio != null
+
+                      if user.opciones[0].barrio.length > 1
+
+                        div.fieldset__Header.col.l11.col.m12.col.s12.jsViewCity
+                          label
+                              | Ciudades agregadas
+                          div.appendCityHidden
+                            each ch in user.opciones[0].barrio
+                              div.isHidden(data-remove="#{ch.id}", data-name="#{ch.name}")
+                                input(type="hidden" name="barrio[#{ch.id}][name]", value="#{ch.name}")
+                                input(type="hidden" name="barrio[#{ch.id}][id]", value="#{ch.id}")
+
+                            
+                          ul.ul.jsAppendSumCity
+                            each ci in user.opciones[0].barrio
+                              li.list.chip(data-id="#{ci.id}")
+                                |#{ci.name} 
+                                i.fa.fa-times-circle.jsItemCityRemove
+
+                        div.fieldset__Header.jsBefore.col.l11.col.m8.col.s12
+                          label
+                            | Seleccione su ciudad o ciudades donde ofrece las clases
+                          input(id="pac-input", type="text", class="cityregister jsSumCity", placeholder="Escriba su ciudad", autocomplete="off")
+                        
+                          div.jsAppendCity
+
+                        div.fieldset__Header.relative.sumContainer.col.l1.col.m4.col.s12
+                          div.sumCity.absolute
+                            a.jsClClickOther(href="#")
+                             i.fa.fa-plus
+
+
+                      else
+
+                        div.fieldset__Header.col.l11.col.m12.col.s12.none.jsViewCity
+                          label
+                              | Ciudades agregadas
+                          div.appendCityHidden
+                            
+                          ul.ul.jsAppendSumCity
+
+                        div.fieldset__Header.jsBefore.col.l11.col.m8.col.s12
+                          label
+                            | Seleccione su ciudad o ciudades donde ofrece las clases
+                          input(type="text",class="cityregister", autocomplete="off", required, value="#{user.opciones[0].barrio[0].name}", minlength="3")
+                        
+                          div.jsAppendCity
+
+                        div.fieldset__Header.relative.sumContainer.col.l1.col.m4.col.s12
+                          div.sumCity.absolute
+                            a.jsClClickOther(href="#")
+                             i.fa.fa-plus
+
+                    else
+
+                      div.fieldset__Header.col.l11.col.m12.col.s12.none.jsViewCity
+                          label
+                              | Ciudades agregadas
+                          div.appendCityHidden
+                            
+                          ul.ul.jsAppendSumCity
+
+                      div.fieldset__Header.jsBefore.col.l11.col.m8.col.s12
+                          label
+                            | Seleccione su ciudad o ciudades donde ofrece las clases
+                          input(type="text",class="cityregister", autocomplete="off", required, minlength="3")
+                        
+                          div.jsAppendCity
+
+                      div.fieldset__Header.relative.sumContainer.col.l1.col.m4.col.s12
+                          div.sumCity.absolute
+                            a.jsClClickOther(href="#")
+                             i.fa.fa-plus
+
+
+                    fieldset.fieldset__Header.col.l12.col.m12.col.s12
+                      label
+                        | ¿Das también clases a domicilio?
+                    fieldset.fieldset.col.l12.col.m12.col.s12
+                      if user.opciones[0].domicilio == 'true'
+                        div.col.l2.col.m6
+                          input(type="radio", id="isNo", name="domicilio", value="false")
+                          label(for="isNo")
+                            | No
+                        div.col.l3.col.m6
+                          input(type="radio", checked, id="isSi", name="domicilio", value="true")
+                          label(for="isSi")
+                            | Si
+                      else
+                        div.col.l2.col.m6
+                          input(type="radio", checked, id="isNo", name="domicilio", value="false")
+                          label(for="isNo")
+                            | No
+                        div.col.l3.col.m6
+                          input(type="radio", id="isSi", name="domicilio", value="true")
+                          label(for="isSi")
+                            | Si
+
+                    fieldset.fieldset__Header.col.l12.col.s12
+                      label
+                        | ¿En qué horarios das clases normalmente?
+                    fieldset.fieldset.col.l12.col.m12.col.s12
+                      if user.opciones[0].horarios
+                        //Step view horarios
+                        
+                        if user.opciones[0].horarios.length
+
+                          if user.opciones[0].horarios.length == 1
+
+                            //view to name horarios to one
+                            if user.opciones[0].horarios[0].name == 'mañana'
+                         
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", checked, id="goodMorning", name="horarios[0][name]", value="mañana")
+                                label(for="goodMorning")
+                                  | Mañana
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", id="goodAfter", name="horarios[1][name]", value="tarde")
+                                label(for="goodAfter")
+                                  | Tarde
+                              div.col.l4.col.m4.col.s12
+                                input(type="checkbox", id="goodNight", name="horarios[2][name]", value="noche")
+                                label(for="goodNight")
+                                  | Noche
+
+                            else if user.opciones[0].horarios[0].name == 'tarde'
+
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", id="goodMorning", name="horarios[0][name]", value="mañana")
+                                label(for="goodMorning")
+                                  | Mañana
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", checked, id="goodAfter", name="horarios[1][name]", value="tarde")
+                                label(for="goodAfter")
+                                  | Tarde
+                              div.col.l4.col.m4.col.s12
+                                input(type="checkbox", id="goodNight", name="horarios[2][name]", value="noche")
+                                label(for="goodNight")
+                                  | Noche
+
+                          else if user.opciones[0].horarios.length == 2
+
+                            if user.opciones[0].horarios[0].name == 'mañana' && user.opciones[0].horarios[1].name == 'tarde' || user.opciones[0].horarios[0].name == 'tarde' && user.opciones[0].horarios[1].name == 'mañana'
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", checked, id="goodMorning", name="horarios[0][name]", value="mañana")
+                                label(for="goodMorning")
+                                  | Mañana
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", checked, id="goodAfter", name="horarios[1][name]", value="tarde")
+                                label(for="goodAfter")
+                                  | Tarde
+                              div.col.l4.col.m4.col.s12
+                                input(type="checkbox", id="goodNight", name="horarios[2][name]", value="noche")
+                                label(for="goodNight")
+                                  | Noche
+
+                            else if user.opciones[0].horarios[0].name == 'mañana' && user.opciones[0].horarios[1].name == 'noche' || user.opciones[0].horarios[0].name == 'noche' && user.opciones[0].horarios[1].name == 'mañana'
+
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", checked, id="goodMorning", name="horarios[0][name]", value="mañana")
+                                label(for="goodMorning")
+                                  | Mañana
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", id="goodAfter", name="horarios[1][name]", value="tarde")
+                                label(for="goodAfter")
+                                  | Tarde
+                              div.col.l4.col.m4.col.s12
+                                input(type="checkbox", checked, id="goodNight", name="horarios[2][name]", value="noche")
+                                label(for="goodNight")
+                                  | Noche
+
+                            else if user.opciones[0].horarios[0].name == 'tarde' && user.opciones[0].horarios[1].name == 'noche' || user.opciones[0].horarios[0].name == 'noche' && user.opciones[0].horarios[1].name == 'tarde'
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", id="goodMorning", name="horarios[0][name]", value="mañana")
+                                label(for="goodMorning")
+                                  | Mañana
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", checked, id="goodAfter", name="horarios[1][name]", value="tarde")
+                                label(for="goodAfter")
+                                  | Tarde
+                              div.col.l4.col.m4.col.s12
+                                input(type="checkbox", checked, id="goodNight", name="horarios[2][name]", value="noche")
+                                label(for="goodNight")
+                                  | Noche
+
+                          else if user.opciones[0].horarios.length == 3
+
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", checked, id="goodMorning", name="horarios[0][name]", value="mañana")
+                                label(for="goodMorning")
+                                  | Mañana
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", checked, id="goodAfter", name="horarios[1][name]", value="tarde")
+                                label(for="goodAfter")
+                                  | Tarde
+                              div.col.l4.col.m4.col.s12
+                                input(type="checkbox", checked, id="goodNight", name="horarios[2][name]", value="noche")
+                                label(for="goodNight")
+                                  | Noche
+
+
+                          else
+
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", id="goodMorning", name="horarios[0][name]", value="mañana")
+                                label(for="goodMorning")
+                                  | Mañana
+                              div.col.l4.col.m4.col.s6
+                                input(type="checkbox", id="goodAfter", name="horarios[1][name]", value="tarde")
+                                label(for="goodAfter")
+                                  | Tarde
+                              div.col.l4.col.m4.col.s12
+                                input(type="checkbox", checked, id="goodNight", name="horarios[2][name]", value="noche")
+                                label(for="goodNight")
+                                  | Noche
+
+
+
+
+
+                        
+
+                        else
+                          div.col.l4.col.m4.col.s6
+                            input(type="checkbox", id="goodMorning", name="horarios[0][name]", value="mañana")
+                            label(for="goodMorning")
+                              | Mañana
+                          div.col.l4.col.m4.col.s6
+                            input(type="checkbox", id="goodAfter", name="horarios[1][name]", value="tarde")
+                            label(for="goodAfter")
+                              | Tarde
+                          div.col.l4.col.m4.col.s12
+                            input(type="checkbox", id="goodNight", name="horarios[2][name]", value="noche")
+                            label(for="goodNight")
+                              | Noche
+
+                      else
+                        div.col.l4.col.m4.col.s6
+                          input(type="checkbox", id="goodMorning", name="horarios[0][name]", value="mañana")
+                          label(for="goodMorning")
+                            | Mañana
+                        div.col.l4.col.m4.col.s6
+                          input(type="checkbox", id="goodAfter", name="horarios[1][name]", value="tarde")
+                          label(for="goodAfter")
+                            | Tarde
+                        div.col.l4.col.m4.col.s12
+                          input(type="checkbox", id="goodNight", name="horarios[2][name]", value="noche")
+                          label(for="goodNight")
+                            | Noche
+
+                    fieldset.fieldset__Header.col.l12.col.m12.col.s12
+                      label
+                        | ¿Cómo son las clases que das?
+                    fieldset.fieldset.col.l12.col.m12.col.s12
+                      if user.opciones[0].tipoclases
+                        if user.opciones[0].tipoclases.length
+                          if user.opciones[0].tipoclases.length == 1
+                            
+                            if user.opciones[0].tipoclases[0].name == 'grupales'
+                              div.col.l4.col.m6.col.s6
+                                input(type="checkbox", checked, id="grupales", name="tipoclases[1][name]", value="grupales")
+                                label(for="grupales")
+                                  | Grupales
+                              div.col.l4.col.m6.col.s6
+                                input(type="checkbox", id="individuales", name="tipoclases[2][name]", value="individuales")
+                                label(for="individuales")
+                                  | Individuales
+                            else
+                              div.col.l4.col.m6.col.s6
+                                input(type="checkbox", id="grupales", name="tipoclases[1][name]", value="grupales")
+                                label(for="grupales")
+                                  | Grupales
+                              div.col.l4.col.m6.col.s6
+                                input(type="checkbox", checked, id="individuales", name="tipoclases[2][name]", value="individuales")
+                                label(for="individuales")
+                                  | Individuales
+
+                          else if user.opciones[0].tipoclases.length == 2
+                            div.col.l4.col.m6.col.s6
+                              input(type="checkbox", checked, id="grupales", name="tipoclases[1][name]", value="grupales")
+                              label(for="grupales")
+                                | Grupales
+                            div.col.l4.col.m6.col.s6
+                              input(type="checkbox", checked, id="individuales", name="tipoclases[2][name]", value="individuales")
+                              label(for="individuales")
+                                | Individuales
+
+                          else
+                            div.col.l4.col.m6.col.s6
+                              input(type="checkbox", id="grupales", name="tipoclases[1][name]", value="grupales")
+                              label(for="grupales")
+                                | Grupales
+                            div.col.l4.col.m6.col.s6
+                              input(type="checkbox", id="individuales", name="tipoclases[2][name]", value="individuales")
+                              label(for="individuales")
+                                | Individuales
+
+
+                      else
+                          div.col.l4.col.m6.col.s6
+                            input(type="checkbox", id="grupales", name="tipoclases[1][name]", value="grupales")
+                            label(for="grupales")
+                              | Grupales
+                          div.col.l4.col.m6.col.s6
+                            input(type="checkbox", id="individuales", name="tipoclases[2][name]", value="individuales")
+                            label(for="individuales")
+                              | Individuales
+
+                    
+
+                    fieldset.fieldset__Header.col.l12.col.m12.col.s12
+                      label
+                        | Tipo
+                    fieldset.fieldset.col.l12.col.m12.col.s12
+                      
+                      if user.opciones[0].precio == 0
+                        div.col.l4.col.m6.col.s6
+                          input(type="radio", id="clases", name="typeClass", value="clases")
+                          label(for="clases")
+                            | Clases
+                        div.col.l4.col.m6.col.s6
+                          input(type="radio", checked, id="curso", name="typeClass", value="curso")
+                          label(for="curso")
+                            | Curso
+                      else
+
+                        div.col.l4.col.m6.col.s6
+                          input(type="radio", checked, id="clases", name="typeClass", value="clases")
+                          label(for="clases")
+                            | Clases
+                        div.col.l4.col.m6.col.s6
+                          input(type="radio", id="curso", name="typeClass", value="curso")
+                          label(for="curso")
+                            | Curso
+
+
+                    if user.opciones[0].precio == 0
+
+                      fieldset.fieldset__Header.col.l12.col.m12.col.s12.priceJS.none
+                        label
+                          | ¿Qué precio cobrás por hora de clase?
+                        br
+                        label
+                          | Este precio es estimado, podés detallarlo más adelante en tu descripción.
+                      fieldset.fieldset.col.l12.col.m12.col.s12.priceJS.none
+                        span.col.l1.cost.col.m1.col.s2
+                          | $
+                        input.col.l4.col.m11.col.s10(type="number", placeholder="#{user.opciones[0].precio}", value="#{user.opciones[0].precio}", name="precio", required)
+
+                    else
+
+                      fieldset.fieldset__Header.col.l12.col.m12.col.s12.priceJS
+                        label
+                          | ¿Qué precio cobrás por hora de clase?
+                        br
+                        label
+                          | Este precio es estimado, podés detallarlo más adelante en tu descripción.
+                      fieldset.fieldset.col.l12.col.m12.col.s12.priceJS
+                        span.col.l1.cost.col.m1.col.s2
+                          | $
+                        input.col.l4.col.m11.col.s10(type="number", placeholder="#{user.opciones[0].precio}", value="#{user.opciones[0].precio}", name="precio", required)
+
+
+                    fieldset.fieldset.col.l12.col.s12
+                      input.btn.right(type="submit", value="Actualizar")
+
+            else
+              section.teacher__Register--Steps--Container.col.l12.col.m12.col.s12
+               article.show__User--Exist
+                h3.show
+                  | Usted ya completo el paso 3
+    
+    include inc/footer
